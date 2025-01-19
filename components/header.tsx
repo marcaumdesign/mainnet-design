@@ -2,6 +2,7 @@ import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import * as FancyButton from '@/components/ui/fancy-button';
 import { Button } from './ui/file-upload';
+import { RainbowButton } from "@/components/ui/rainbow-button";
 
 const DynamicThemeSwitch = dynamic(() => import('./theme-switch'), {
   ssr: false,
@@ -24,8 +25,9 @@ export default function Header() {
           <div className="text-title-h4 text-text-strong-950">Mainnet</div>
         </Link>
 
-    <FancyButton.Root variant='neutral'>Get Started</FancyButton.Root>
-
+    
+    <RainbowButton>Get Started</RainbowButton>
+   
 
       </header>
     </>

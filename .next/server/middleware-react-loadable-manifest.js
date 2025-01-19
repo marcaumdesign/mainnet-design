@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{}"
+self.__REACT_LOADABLE_MANIFEST="{\"components/header.tsx -> ./theme-switch\":{\"id\":\"components/header.tsx -> ./theme-switch\",\"files\":[\"static/chunks/_app-pages-browser_components_theme-switch_tsx.js\"]}}"
