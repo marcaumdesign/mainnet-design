@@ -298,6 +298,12 @@
     --stable-base: var(--teal-500);
     --stable-light: var(--teal-200);
     --stable-lighter: var(--teal-50);
+    --radius: 0.5rem;
+    --color-1: 0 100% 63%;
+    --color-2: 270 100% 63%;
+    --color-3: 210 100% 63%;
+    --color-4: 195 100% 63%;
+    --color-5: 90 100% 63%;
   }
 
   .dark {
@@ -381,6 +387,11 @@
     --social-tidal: #fff;
     --social-amazon: #fff;
     --social-zendesk: #fff;
+    --color-1: 0 100% 63%;
+    --color-2: 270 100% 63%;
+    --color-3: 210 100% 63%;
+    --color-4: 195 100% 63%;
+    --color-5: 90 100% 63%;
   }
   /*#endregion Colors */
 }
