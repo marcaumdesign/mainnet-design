@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/Users/marcus/GitHub/Mainnet Design/mainnet-ui/app/layout\":[\"static/media/a34f9d1faa5f3315-s.p.woff2\",\"static/media/c39eadd14305e40a-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"
