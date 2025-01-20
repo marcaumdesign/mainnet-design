@@ -22,17 +22,21 @@ import {
   RiMovie2Line,
 } from '@remixicon/react';
 
+import React, { useRef } from 'react';
 import Header from '@/components/header';
 import { RainbowButton } from '@/components/ui/rainbow-button';
 import HyperText from '@/components/ui/hyper-text';
 import VerticalRuler from '@/components/vertical-ruler';
 
 export default function Home() {
+
+  const parentRef = useRef(null);
+
   return (
     <div className='flex w-full flex-col items-center'>
       <Header />
-      <div className='flex h-fit w-full max-w-[600px] flex-col items-center justify-center gap-32 border-l border-r border-stroke-soft-200 p-8'>
-        <VerticalRuler />
+      <div className='relative flex h-fit w-full max-w-[600px] flex-col items-center justify-center gap-32 border-l border-r border-stroke-soft-200 p-8' ref={parentRef}>
+        <VerticalRuler parentRef={parentRef}/>
 
         <div className='flex h-[500px] flex-col items-start justify-end gap-2.5 self-stretch'>
           <HyperText className='text-text-sub-600'>
