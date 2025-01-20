@@ -52,7 +52,7 @@ const AccordionTrigger = React.forwardRef<
       ref={forwardedRef}
       className={cnExt(
         // base
-        'w-[calc(100%+theme(space.7))] text-left text-paragraph-md text-text-strong-950',
+        'w-[calc(100%+theme(space.7))] text-left text-paragraph-lg text-text-strong-950',
         'grid auto-cols-auto grid-flow-col grid-cols-[auto,minmax(0,1fr)] items-center gap-2.5',
         '-m-3.5 p-3.5 outline-none',
         // focus
@@ -76,7 +76,7 @@ function AccordionIcon<T extends React.ElementType>({
 
   return (
     <Component
-      className={cnExt('size-5 text-text-sub-600', className)}
+      className={cnExt('size-6 text-text-sub-600', className)}
       {...rest}
     />
   );

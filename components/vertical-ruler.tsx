@@ -35,7 +35,7 @@ export default function VerticalRuler() {
             className="absolute left-0 flex items-center"
             style={{ top: `${i * 50}px` }}
           >
-            <span className="text-xs text-gray-300 w-8 text-right pr-1">
+            <span className="text-subheading-2xs text-text-soft-400 w-8 text-right pr-1">
               {i * 50}
             </span>
             <div className="w-3 border-t border-gray-300" />
