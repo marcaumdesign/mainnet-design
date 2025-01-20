@@ -322,6 +322,9 @@ export default function Home() {
             />
           </div>
         </div>
+
+        {/* FAQ */}
+
         <div className='flex h-fit flex-col items-start justify-start self-stretch'>
           <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border border-stroke-soft-200 px-8 py-32'>
             <div className='self-stretch'>
@@ -377,39 +380,6 @@ export default function Home() {
                 </Accordion.Content>
               </Accordion.Item>
             </Accordion.Root>
-          </div>
-
-          <div className='flex h-fit flex-col items-start justify-start self-stretch'>
-            <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-8'>
-              <div className='text-paragraph-md text-text-sub-600'>
-                What question should I ask you?
-              </div>
-              <div className='relative h-6 w-6 overflow-hidden' />
-            </div>
-            <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-8'>
-              <div className='text-paragraph-md text-text-sub-600'>
-                What question should I ask you?
-              </div>
-              <div className='relative h-6 w-6 overflow-hidden' />
-            </div>
-            <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-8'>
-              <div className='text-paragraph-md text-text-sub-600'>
-                What question should I ask you?
-              </div>
-              <div className='relative h-6 w-6 overflow-hidden' />
-            </div>
-            <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-8'>
-              <div className='text-paragraph-md text-text-sub-600'>
-                What question should I ask you?
-              </div>
-              <div className='relative h-6 w-6 overflow-hidden' />
-            </div>
-            <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-8'>
-              <div className='text-paragraph-md text-text-sub-600'>
-                What question should I ask you?
-              </div>
-              <div className='relative h-6 w-6 overflow-hidden' />
-            </div>
           </div>
         </div>
         <div className='flex h-[512px] flex-col items-start justify-start self-stretch'>
