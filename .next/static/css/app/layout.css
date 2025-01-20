@@ -1671,6 +1671,9 @@ video {
 .grid-cols-\[auto\2c minmax\(0\2c 1fr\)\] {
   grid-template-columns: auto minmax(0,1fr);
 }
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
 .flex-col {
   flex-direction: column;
 }
@@ -2315,6 +2318,9 @@ video {
 }
 .font-mono {
   font-family: var(--font-geist-mono);
+}
+.font-sans {
+  font-family: var(--font-sans);
 }
 .text-\[11px\] {
   font-size: 11px;
