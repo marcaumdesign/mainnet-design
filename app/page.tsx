@@ -244,7 +244,7 @@ export default function Home() {
           <Accordion.Root type='single' collapsible className='w-full'>
               <Accordion.Item value='a'>
                 <Accordion.Trigger>
-                  <Accordion.Icon as={RiUserLine} />
+                  <Accordion.Icon as={RiUserLine}/>
                   Solopreneurs
                   <Accordion.Arrow />
                 </Accordion.Trigger>
