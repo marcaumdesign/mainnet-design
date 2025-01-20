@@ -19,6 +19,7 @@ import {
   RiAccountCircleLine,
   RiMapPinTimeLine,
   RiQuestionLine,
+  RiMovie2Line,
 } from '@remixicon/react';
 
 import Header from '@/components/header';
@@ -77,7 +78,9 @@ export default function Home() {
         </div>
       </div>
       <div className='flex h-fit w-full max-w-[600px] flex-col items-start justify-start'>
+       
         {/* What? */}
+
         <div className='flex h-fit flex-col items-start justify-start self-stretch'>
           <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border border-stroke-soft-200 px-8 py-32'>
             <div className='self-stretch'>
@@ -88,76 +91,79 @@ export default function Home() {
               </span>
             </div>
           </div>
-          <div className='inline-flex items-center justify-start self-stretch'>
-            <div className='inline-flex shrink grow basis-0 flex-col items-start justify-center gap-8 border border-stroke-soft-200 px-8 py-2'>
-              <div className='text-subheading-sm text-text-sub-600'>
-                DEVELOPMENT
-              </div>
-            </div>
-            <div className='inline-flex shrink grow basis-0 flex-col items-start justify-center gap-8 border border-stroke-soft-200 px-8 py-2'>
-              <div className='text-subheading-sm text-text-sub-600'>DESIGN</div>
-            </div>
-          </div>
-          <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 px-8 py-[15px]'>
-            <div className='flex h-fit w-[264px] items-center justify-start gap-4'>
-              <RiTv2Line className='text-text-sub-600'/>
-              <div className='text-paragraph-lg text-text-strong-950'>
-                Web Apps
-              </div>
-            </div>
-          </div>
-          <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 px-8 py-[15px]'>
-            <div className='flex h-fit w-[264px] items-center justify-start gap-4'>
-              <RiPhoneFindLine className='text-text-sub-600'/>
-              <div className='text-paragraph-lg text-text-strong-950'>
-                Mobile Apps
-              </div>
-            </div>
-          </div>
-          <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 px-8 py-[15px]'>
-            <div className='flex h-fit w-[264px] items-center justify-start gap-4'>
-              <RiRocket2Line className='text-text-sub-600'/>
-              <div className='text-paragraph-lg text-text-strong-950'>
-                Landing Pages
-              </div>
-            </div>
-          </div>
-          <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 px-8 py-[15px]'>
-            <div className='flex h-fit w-[264px] items-center justify-start gap-4'>
-              <RiCursorLine className='text-text-sub-600'/>
-              <div className='text-paragraph-lg text-text-strong-950'>
-                Websites
-              </div>
-            </div>
-          </div>
-          <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 px-8 py-[15px]'>
-            <div className='flex h-fit w-[264px] items-center justify-start gap-4'>
-              <RiCompassDiscoverLine className='text-text-sub-600'/>
-              <div className='text-paragraph-lg text-text-strong-950'>
-                Design Systems
-              </div>
-            </div>
-          </div>
-          <div className='inline-flex items-start justify-start self-stretch'>
-            <div className='flex h-fit shrink grow basis-0 items-start justify-start gap-10 border border-stroke-soft-200 px-8 py-[15px]'>
-              <div className='flex h-fit w-[264px] items-center justify-start gap-4'>
-                <RiBook2Line className='text-text-sub-600'/>
+            <div className='grid grid-cols-2 self-stretch'>
+            <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 px-8 py-[15px]'>
+              <div className='flex h-fit w-full items-center justify-start gap-4'>
+                <RiTv2Line className='text-text-sub-600' />
                 <div className='text-paragraph-lg text-text-strong-950'>
-                  Branding
+                  Web Apps
                 </div>
               </div>
             </div>
-          </div>
-          <div className='inline-flex items-start justify-start self-stretch'>
+            <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 px-8 py-[15px]'>
+              <div className='flex h-fit w-full items-center justify-start gap-4'>
+                <RiPhoneFindLine className='text-text-sub-600' />
+                <div className='text-paragraph-lg text-text-strong-950'>
+                  Mobile Apps
+                </div>
+              </div>
+            </div>
+            <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 px-8 py-[15px]'>
+              <div className='flex h-fit w-full items-center justify-start gap-4'>
+                <RiRocket2Line className='text-text-sub-600' />
+                <div className='text-paragraph-lg text-text-strong-950'>
+                  Landing Pages
+                </div>
+              </div>
+            </div>
+            <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 px-8 py-[15px]'>
+              <div className='flex h-fit w-full items-center justify-start gap-4'>
+                <RiCursorLine className='text-text-sub-600' />
+                <div className='text-paragraph-lg text-text-strong-950'>
+                  Websites
+                </div>
+              </div>
+            </div>
+            <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 px-8 py-[15px]'>
+              <div className='flex h-fit w-full items-center justify-start gap-4'>
+                <RiCompassDiscoverLine className='text-text-sub-600' />
+                <div className='text-paragraph-lg text-text-strong-950'>
+                  Design Systems
+                </div>
+              </div>
+            </div>
+            <div className='inline-flex items-start justify-start self-stretch'>
+              <div className='flex h-fit shrink grow basis-0 items-start justify-start gap-10 border border-stroke-soft-200 px-8 py-[15px]'>
+                <div className='flex h-fit w-full items-center justify-start gap-4'>
+                  <RiBook2Line className='text-text-sub-600' />
+                  <div className='text-paragraph-lg text-text-strong-950'>
+                    Branding
+                  </div>
+                </div>
+              </div>
+            </div>
             <div className='flex shrink grow basis-0 items-start justify-start gap-10 self-stretch border border-stroke-soft-200 px-8 py-[15px]'>
-              <div className='flex h-fit w-[264px] items-center justify-start gap-4'>
-                <RiInstagramLine className='text-text-sub-600'/>
+              <div className='flex h-fit w-full items-center justify-start gap-4'>
+                <RiInstagramLine className='text-text-sub-600' />
                 <div className='text-paragraph-lg text-text-strong-950'>
                   Social Media
                 </div>
               </div>
             </div>
+
+            <div className='flex shrink grow basis-0 items-start justify-start gap-10 self-stretch border border-stroke-soft-200 px-8 py-[15px]'>
+              <div className='flex h-fit w-full items-center justify-start gap-4'>
+                <RiMovie2Line className='text-text-sub-600'/>
+                <div className='text-paragraph-lg text-text-strong-950'>
+                  Motion Design
+                </div>
+              </div>
+            </div>
           </div>
+
+          
+            
+
         </div>
         <div className='flex h-fit flex-col items-start justify-start self-stretch'>
           <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border border-stroke-soft-200 px-8 py-32'>
@@ -171,7 +177,7 @@ export default function Home() {
           </div>
           <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-8'>
             <div className='flex h-fit w-[264px] items-center justify-start gap-4'>
-              <RiSearch2Line className='text-text-sub-600'/>
+              <RiSearch2Line className='text-text-sub-600' />
               <div className='text-paragraph-lg text-text-strong-950'>
                 Research
               </div>
@@ -183,7 +189,7 @@ export default function Home() {
           </div>
           <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-8'>
             <div className='flex h-fit w-[264px] items-center justify-start gap-4'>
-              <RiRulerLine className='text-text-sub-600'/>
+              <RiRulerLine className='text-text-sub-600' />
               <div className='text-paragraph-lg text-text-strong-950'>
                 Definition
               </div>
@@ -195,7 +201,7 @@ export default function Home() {
           </div>
           <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-8'>
             <div className='flex h-fit w-[264px] items-center justify-start gap-4'>
-              <RiHammerLine className='text-text-sub-600'/>
+              <RiHammerLine className='text-text-sub-600' />
               <div className='text-paragraph-lg text-text-strong-950'>
                 Building
               </div>
@@ -207,7 +213,7 @@ export default function Home() {
           </div>
           <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-8'>
             <div className='flex h-fit w-[264px] items-center justify-start gap-4'>
-              <RiGift2Line className='text-text-sub-600'/>
+              <RiGift2Line className='text-text-sub-600' />
               <div className='text-paragraph-lg text-text-strong-950'>
                 Delivery
               </div>
@@ -230,7 +236,7 @@ export default function Home() {
           </div>
           <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-8'>
             <div className='flex h-fit w-[264px] items-center justify-start gap-4'>
-              <RiUserLine className='text-text-sub-600'/>
+              <RiUserLine className='text-text-sub-600' />
               <div className='text-paragraph-lg text-text-strong-950'>
                 Solopreneurs
               </div>
@@ -242,7 +248,7 @@ export default function Home() {
           </div>
           <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-8'>
             <div className='flex h-fit w-[264px] items-center justify-start gap-4'>
-              <RiGroupLine className='text-text-sub-600'/>
+              <RiGroupLine className='text-text-sub-600' />
               <div className='text-paragraph-lg text-text-strong-950'>
                 Startups
               </div>
@@ -254,7 +260,7 @@ export default function Home() {
           </div>
           <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-8'>
             <div className='flex h-fit w-[264px] items-center justify-start gap-4'>
-              <RiBuilding4Line className='text-text-sub-600'/>
+              <RiBuilding4Line className='text-text-sub-600' />
               <div className='text-paragraph-lg text-text-strong-950'>
                 Companies
               </div>
