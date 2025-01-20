@@ -1,60 +1,48 @@
 'use client'
 
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react'
 
-const VerticalRuler = ({ parentRef }: { parentRef: React.RefObject<HTMLElement> }) => {
-  const [height, setHeight] = useState(0);
-  const [position, setPosition] = useState({ top: 0, left: 0 });
+export default function VerticalRuler() {
+  const [height, setHeight] = useState(0)
 
   useEffect(() => {
     const updateHeight = () => {
       setHeight(Math.max(
         document.documentElement.scrollHeight,
         document.body.scrollHeight
-      ));
-    };
+      ))
+    }
 
-    const updatePosition = () => {
-      if (parentRef.current) {
-        const parentRect = parentRef.current.getBoundingClientRect();
-        setPosition({
-          top: parentRect.top + window.scrollY,
-          left: parentRect.left + window.scrollX,
-        });
-      }
-    };
-
-    updateHeight();
-    updatePosition();
-    window.addEventListener('resize', updateHeight);
-    window.addEventListener('resize', updatePosition);
-    window.addEventListener('scroll', updatePosition);
-    window.addEventListener('load', updateHeight);
-    window.addEventListener('load', updatePosition);
+    updateHeight()
+    window.addEventListener('resize', updateHeight)
+    window.addEventListener('load', updateHeight)
 
     return () => {
-      window.removeEventListener('resize', updateHeight);
-      window.removeEventListener('resize', updatePosition);
-      window.removeEventListener('scroll', updatePosition);
-      window.removeEventListener('load', updateHeight);
-      window.removeEventListener('load', updatePosition);
-    };
-  }, [parentRef]);
+      window.removeEventListener('resize', updateHeight)
+      window.removeEventListener('load', updateHeight)
+    }
+  }, [])
 
   return (
-    <div
-      className="fixed pointer-events-none select-none z-50"
-      style={{
-        top: `${position.top}px`,
-        left: `${position.left}px`,
-        height: `${height}px`,
-      }}
-    >
-      <div className="relative w-full h-full">
-        {/* Conteúdo do VerticalRuler */}
+    <div className="fixed left-0 top-0 h-full w-12 pointer-events-none select-none z-50">
+      <div 
+        className="relative w-full"
+        style={{ height: `${height}px` }}
+      >
+        {[...Array(Math.ceil(height / 50))].map((_, i) => (
+          <div 
+            key={i} 
+            className="absolute left-0 flex items-center"
+            style={{ top: `${i * 50}px` }}
+          >
+            <span className="text-xs text-gray-300 w-8 text-right pr-1">
+              {i * 50}
+            </span>
+            <div className="w-3 border-t border-gray-300" />
+          </div>
+        ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default VerticalRuler;
