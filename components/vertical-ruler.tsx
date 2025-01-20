@@ -24,7 +24,7 @@ export default function VerticalRuler() {
   }, [])
 
   return (
-    <div className="fixed left-0 top-0 h-full w-12 pointer-events-none select-none z-50">
+    <div className="fixed top-0 max-h-[100vh] w-12 pointer-events-none select-none z-50">
       <div 
         className="relative w-full"
         style={{ height: `${height}px` }}

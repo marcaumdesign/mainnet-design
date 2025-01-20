@@ -27,6 +27,7 @@ import Header from '@/components/header';
 import { RainbowButton } from '@/components/ui/rainbow-button';
 import HyperText from '@/components/ui/hyper-text';
 import VerticalRuler from '@/components/vertical-ruler';
+import { MarqueeDemo } from '@/components/ticker';
 
 export default function Home() {
 
@@ -35,8 +36,8 @@ export default function Home() {
   return (
     <div className='flex w-full flex-col items-center'>
       <Header />
-      <div className='relative flex h-fit w-full max-w-[600px] flex-col items-center justify-center gap-32 border-l border-r border-stroke-soft-200 p-8'>
-        <VerticalRuler/>
+      <div className='relative flex h-fit w-full max-w-[600px] flex-col items-center justify-center gap-32 border-l border-r border-stroke-soft-200 p-8' >
+        <div className="left-[-50px] absolute flex w-full items-start"><VerticalRuler/></div>
 
         <div className='flex h-[500px] flex-col items-start justify-end gap-2.5 self-stretch'>
           <HyperText className='text-text-sub-600'>
@@ -49,6 +50,8 @@ export default function Home() {
         </div>
       </div>
       {/* Portoflio */}
+      
+
       <div className='z-50 inline-flex items-start justify-start self-stretch'>
         <div className='inline-flex w-[842px] flex-col items-start justify-start border border-stroke-soft-200'>
           <img
@@ -396,8 +399,8 @@ export default function Home() {
             </Accordion.Root>
           </div>
         </div>
-        <div className='flex h-[512px] flex-col items-start justify-start self-stretch'>
-          <div className='flex h-[352px] flex-col items-start justify-start gap-2 self-stretch border border-stroke-soft-200 px-8 py-32'>
+        <div className='flex h-fit flex-col items-start justify-start self-stretch'>
+          <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border border-stroke-soft-200 px-8 py-32'>
             <div className='self-stretch'>
               <span className='text-title-h3 text-text-strong-950'>
                 Refer and earn.
@@ -417,7 +420,7 @@ export default function Home() {
             <RainbowButton>Refer Client</RainbowButton>
           </div>
         </div>
-        <div className='inline-flex items-center justify-between self-stretch border border-stroke-soft-200 px-8 py-2.5'>
+        <footer className='inline-flex items-center justify-between self-stretch border border-stroke-soft-200 px-8 py-2.5'>
           <div>
             <span className='text-paragraph-sm text-text-strong-950'>
               Mainnet Design © 2025.{' '}
@@ -439,7 +442,7 @@ export default function Home() {
             </span>
             <span className='text-paragraph-sm text-text-strong-950'> W</span>
           </div>
-        </div>
+        </footer>
       </div>
     </div>
   );
