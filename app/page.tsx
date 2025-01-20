@@ -179,54 +179,54 @@ export default function Home() {
               </span>
             </div>
           </div>
-          <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-8'>
-            <div className='flex h-fit w-[264px] items-center justify-start gap-4'>
-              <RiSearch2Line className='text-text-sub-600' />
-              <div className='text-paragraph-lg text-text-strong-950'>
-                Research
-              </div>
-            </div>
-            <div className='text-paragraph-md text-text-sub-600'>
-              Starts broad, narrows focus for problem definition, then expands
-              and iterates for solutions.
-            </div>
-          </div>
-          <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-8'>
-            <div className='flex h-fit w-[264px] items-center justify-start gap-4'>
-              <RiRulerLine className='text-text-sub-600' />
-              <div className='text-paragraph-lg text-text-strong-950'>
-                Definition
-              </div>
-            </div>
-            <div className='text-paragraph-md text-text-sub-600'>
-              Involves understanding user needs and defining the problem,
-              followed by ideation and prototyping solutions.
-            </div>
-          </div>
-          <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-8'>
-            <div className='flex h-fit w-[264px] items-center justify-start gap-4'>
-              <RiHammerLine className='text-text-sub-600' />
-              <div className='text-paragraph-lg text-text-strong-950'>
-                Building
-              </div>
-            </div>
-            <div className='text-paragraph-md text-text-sub-600'>
-              Refining concepts into detailed solutions, testing and iterating
-              for final implementation.
-            </div>
-          </div>
-          <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-8'>
-            <div className='flex h-fit w-[264px] items-center justify-start gap-4'>
-              <RiGift2Line className='text-text-sub-600' />
-              <div className='text-paragraph-lg text-text-strong-950'>
-                Delivery
-              </div>
-            </div>
-            <div className='text-paragraph-md text-text-sub-600'>
-              Finalizing and implementing the solutions, and evaluating success
-              for further improvement and iteration.
-            </div>
-          </div>
+
+          <Accordion.Root type='single' collapsible className='w-full'>
+              <Accordion.Item value='a'>
+                <Accordion.Trigger>
+                  <Accordion.Icon as={RiSearch2Line}/>
+                  Research
+                  <Accordion.Arrow />
+                </Accordion.Trigger>
+                <Accordion.Content className='px-[30px]'>
+                We are going to search together with all the best references and analyze them 
+                to check what's going on in this specific world we are diving into.
+                </Accordion.Content>
+              </Accordion.Item>
+
+              <Accordion.Item value='b'>
+                <Accordion.Trigger>
+                  <Accordion.Icon as={RiRulerLine} />
+                  Definition
+                  <Accordion.Arrow />
+                </Accordion.Trigger>
+                <Accordion.Content className='px-[30px]'>
+                After that, we are going to analyze which properties of our references
+                are better for your business growth. Then create a mixed draft of all those properties to define our prefered way to build.                </Accordion.Content>
+              </Accordion.Item>
+
+              <Accordion.Item value='c'>
+                <Accordion.Trigger>
+                  <Accordion.Icon as={RiHammerLine} />
+                  Building
+                  <Accordion.Arrow />
+                </Accordion.Trigger>
+                <Accordion.Content className='px-[30px]'>
+                  After we decided together which is the best way to build you dreams, we are going 
+                  build it! This part is more introspective with our studio.
+                </Accordion.Content>
+              </Accordion.Item>
+              <Accordion.Item value='d'>
+                <Accordion.Trigger>
+                  <Accordion.Icon as={RiGift2Line} />
+                  Delivery
+                  <Accordion.Arrow />
+                </Accordion.Trigger>
+                <Accordion.Content className='px-[30px]'>
+                  After your feedbacks, we are going to reiterate and polish the whole project to
+                  leave your and your client experience seamless. After that we launch your project online!
+                </Accordion.Content>
+              </Accordion.Item>
+            </Accordion.Root>
         </div>
 
         {/* Who */}
