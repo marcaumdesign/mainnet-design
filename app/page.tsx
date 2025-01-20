@@ -228,52 +228,56 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        {/* Who */}
+
         <div className='flex h-fit flex-col items-start justify-start self-stretch'>
           <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border border-stroke-soft-200 px-8 py-32'>
             <div className='self-stretch'>
               <span className='text-title-h3 text-text-strong-950'>Who? </span>
-              <span className='text-title-h3 text-text-soft-400'>W</span>
               <span className='text-title-h3 text-text-soft-400'>
-                ho believe on a better world by design.
+                Who believe on a better world by design.
               </span>
             </div>
           </div>
-          <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-8'>
-            <div className='flex h-fit w-[264px] items-center justify-start gap-4'>
-              <RiUserLine className='text-text-sub-600' />
-              <div className='text-paragraph-lg text-text-strong-950'>
-                Solopreneurs
-              </div>
-            </div>
-            <div className='text-paragraph-md text-text-sub-600'>
-              Refining concepts into detailed solutions, testing and iterating
-              for final implementation.
-            </div>
-          </div>
-          <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-8'>
-            <div className='flex h-fit w-[264px] items-center justify-start gap-4'>
-              <RiGroupLine className='text-text-sub-600' />
-              <div className='text-paragraph-lg text-text-strong-950'>
-                Startups
-              </div>
-            </div>
-            <div className='text-paragraph-md text-text-sub-600'>
-              Involves understanding user needs and defining the problem,
-              followed by ideation and prototyping solutions.
-            </div>
-          </div>
-          <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-8'>
-            <div className='flex h-fit w-[264px] items-center justify-start gap-4'>
-              <RiBuilding4Line className='text-text-sub-600' />
-              <div className='text-paragraph-lg text-text-strong-950'>
-                Companies
-              </div>
-            </div>
-            <div className='text-paragraph-md text-text-sub-600'>
-              Refining concepts into detailed solutions, testing and iterating
-              for final implementation.
-            </div>
-          </div>
+
+          <Accordion.Root type='single' collapsible className='w-full'>
+              <Accordion.Item value='a'>
+                <Accordion.Trigger>
+                  <Accordion.Icon as={RiUserLine} />
+                  Solopreneurs
+                  <Accordion.Arrow />
+                </Accordion.Trigger>
+                <Accordion.Content className='px-[30px]'>
+                  Have the best experience with a designer ever on your entire life
+                  while you upgrade your design to scale your business.
+                </Accordion.Content>
+              </Accordion.Item>
+
+              <Accordion.Item value='b'>
+                <Accordion.Trigger>
+                  <Accordion.Icon as={RiGroupLine} />
+                  Startups
+                  <Accordion.Arrow />
+                </Accordion.Trigger>
+                <Accordion.Content className='px-[30px]'>
+                  Let's kick-off even futher your business with a Brand Book, Product Design
+                  and an awesome landing page.
+                </Accordion.Content>
+              </Accordion.Item>
+
+              <Accordion.Item value='c'>
+                <Accordion.Trigger>
+                  <Accordion.Icon as={RiBuilding4Line} />
+                  Companies
+                  <Accordion.Arrow />
+                </Accordion.Trigger>
+                <Accordion.Content className='px-[30px]'>
+                  If you feel a little bit oudated or with #FOMO, we should have talked yesterday. 
+                  We really need to update your deisgn
+                </Accordion.Content>
+              </Accordion.Item>
+            </Accordion.Root>
         </div>
         <div className='flex h-fit flex-col items-start justify-start self-stretch'>
           <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border border-stroke-soft-200 px-8 py-32'>
