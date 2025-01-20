@@ -1,14 +1,12 @@
 'use client';
 
-import Link from 'next/link';
-import * as Button from '@/components/ui/button';
+import * as Accordion from '@/components/ui/accordion2';
 import {
   RiBook2Line,
   RiBuilding4Line,
   RiCompassDiscoverLine,
   RiCursorLine,
   RiGift2Line,
-  RiGithubFill,
   RiGroupLine,
   RiHammerLine,
   RiInstagramLine,
@@ -18,30 +16,35 @@ import {
   RiSearch2Line,
   RiTv2Line,
   RiUserLine,
+  RiAccountCircleLine,
+  RiMapPinTimeLine,
+  RiQuestionLine,
 } from '@remixicon/react';
-import * as FancyButton from '@/components/ui/fancy-button';
+
 import Header from '@/components/header';
-import FlickeringGrid from '@/components/ui/flickering-grid';
 import { RainbowButton } from '@/components/ui/rainbow-button';
 import HyperText from '@/components/ui/hyper-text';
-import { AuroraText } from '@/components/ui/aurora-text';
-import TextReveal from '@/components/ui/text-reveal';
+import VerticalRuler from '@/components/vertical-ruler';
 
 export default function Home() {
   return (
     <div className='flex w-full flex-col items-center'>
+      <Header />
       <div className='flex h-fit w-full max-w-[600px] flex-col items-center justify-center gap-32 border-l border-r border-stroke-soft-200 p-8'>
-        <Header />
-        <div className='flex h-fit flex-col items-start justify-start gap-2.5 self-stretch'>
-          
-            <HyperText className='text-text-sub-600'> 16:20:23 (AMERICA/SAO PAULO) </HyperText>
-          
+        <VerticalRuler />
+
+        <div className='flex h-[500px] flex-col items-start justify-end gap-2.5 self-stretch'>
+          <HyperText className='text-text-sub-600'>
+            16:20:23 (AMERICA/SAO PAULO)
+          </HyperText>
+
           <div className='text-title-h0 text-text-strong-950'>
             Design made to last.
           </div>
         </div>
       </div>
-      <div className='inline-flex items-start justify-start self-stretch'>
+      {/* Portoflio */}
+      <div className='z-50 inline-flex items-start justify-start self-stretch'>
         <div className='inline-flex w-[842px] flex-col items-start justify-start border border-stroke-soft-200'>
           <img
             className='h-[621px] self-stretch'
@@ -87,63 +90,58 @@ export default function Home() {
           </div>
           <div className='inline-flex items-center justify-start self-stretch'>
             <div className='inline-flex shrink grow basis-0 flex-col items-start justify-center gap-8 border border-stroke-soft-200 px-8 py-2'>
-              <div className='text-subheading-md text-text-sub-600'>
+              <div className='text-subheading-sm text-text-sub-600'>
                 DEVELOPMENT
               </div>
             </div>
             <div className='inline-flex shrink grow basis-0 flex-col items-start justify-center gap-8 border border-stroke-soft-200 px-8 py-2'>
-              <div className='text-subheading-md text-text-sub-600'>DESIGN</div>
+              <div className='text-subheading-sm text-text-sub-600'>DESIGN</div>
             </div>
           </div>
           <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 px-8 py-[15px]'>
-            <div className='w-[264px] flex h-8 items-center justify-start gap-4'>
-              <RiTv2Line />
+            <div className='flex h-fit w-[264px] items-center justify-start gap-4'>
+              <RiTv2Line className='text-text-sub-600'/>
               <div className='text-paragraph-lg text-text-strong-950'>
                 Web Apps
               </div>
             </div>
           </div>
           <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 px-8 py-[15px]'>
-            <div className='w-[264px] flex h-8 items-center justify-start gap-4'>
-              <RiPhoneFindLine />
+            <div className='flex h-fit w-[264px] items-center justify-start gap-4'>
+              <RiPhoneFindLine className='text-text-sub-600'/>
               <div className='text-paragraph-lg text-text-strong-950'>
                 Mobile Apps
               </div>
             </div>
           </div>
           <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 px-8 py-[15px]'>
-            <div className='w-[264px] flex h-8 items-center justify-start gap-4'>
-              <RiRocket2Line />
+            <div className='flex h-fit w-[264px] items-center justify-start gap-4'>
+              <RiRocket2Line className='text-text-sub-600'/>
               <div className='text-paragraph-lg text-text-strong-950'>
                 Landing Pages
               </div>
             </div>
           </div>
           <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 px-8 py-[15px]'>
-            <div className='w-[264px] flex h-8 items-center justify-start gap-4'>
-              <RiCursorLine />
+            <div className='flex h-fit w-[264px] items-center justify-start gap-4'>
+              <RiCursorLine className='text-text-sub-600'/>
               <div className='text-paragraph-lg text-text-strong-950'>
                 Websites
               </div>
             </div>
           </div>
           <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 px-8 py-[15px]'>
-            <div className='w-[264px] flex h-8 items-center justify-start gap-4'>
-              <RiCompassDiscoverLine />
+            <div className='flex h-fit w-[264px] items-center justify-start gap-4'>
+              <RiCompassDiscoverLine className='text-text-sub-600'/>
               <div className='text-paragraph-lg text-text-strong-950'>
                 Design Systems
               </div>
             </div>
           </div>
           <div className='inline-flex items-start justify-start self-stretch'>
-            <div className='flex h-64 items-center justify-center overflow-hidden border border-stroke-soft-200'>
-              <div className='bg-background relative w-full overflow-hidden rounded-lg border'>
-                
-              </div>
-            </div>
             <div className='flex h-fit shrink grow basis-0 items-start justify-start gap-10 border border-stroke-soft-200 px-8 py-[15px]'>
-              <div className='w-[264px] flex h-8 items-center justify-start gap-4'>
-                <RiBook2Line/>
+              <div className='flex h-fit w-[264px] items-center justify-start gap-4'>
+                <RiBook2Line className='text-text-sub-600'/>
                 <div className='text-paragraph-lg text-text-strong-950'>
                   Branding
                 </div>
@@ -151,12 +149,9 @@ export default function Home() {
             </div>
           </div>
           <div className='inline-flex items-start justify-start self-stretch'>
-            <div className='flex h-64 items-center justify-center overflow-hidden border border-stroke-soft-200'>
-            
-            </div>
             <div className='flex shrink grow basis-0 items-start justify-start gap-10 self-stretch border border-stroke-soft-200 px-8 py-[15px]'>
-              <div className='w-[264px] flex h-8 items-center justify-start gap-4'>
-                <RiInstagramLine/>
+              <div className='flex h-fit w-[264px] items-center justify-start gap-4'>
+                <RiInstagramLine className='text-text-sub-600'/>
                 <div className='text-paragraph-lg text-text-strong-950'>
                   Social Media
                 </div>
@@ -164,8 +159,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className='flex h-[848px] flex-col items-start justify-start self-stretch'>
-          <div className='flex h-[400px] flex-col items-start justify-start gap-2 self-stretch border border-stroke-soft-200 px-8 py-32'>
+        <div className='flex h-fit flex-col items-start justify-start self-stretch'>
+          <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border border-stroke-soft-200 px-8 py-32'>
             <div className='self-stretch'>
               <span className='text-title-h3 text-text-strong-950'>How? </span>
               <span className='text-title-h3 text-text-soft-400'>
@@ -175,49 +170,49 @@ export default function Home() {
             </div>
           </div>
           <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-8'>
-            <div className='w-[264px] flex h-8 items-center justify-start gap-4'>
-              <RiSearch2Line/>
+            <div className='flex h-fit w-[264px] items-center justify-start gap-4'>
+              <RiSearch2Line className='text-text-sub-600'/>
               <div className='text-paragraph-lg text-text-strong-950'>
                 Research
               </div>
             </div>
-            <div className='text-paragraph-md text-text-strong-950'>
+            <div className='text-paragraph-md text-text-sub-600'>
               Starts broad, narrows focus for problem definition, then expands
               and iterates for solutions.
             </div>
           </div>
           <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-8'>
-            <div className='w-[264px] flex h-8 items-center justify-start gap-4'>
-              <RiRulerLine/>
+            <div className='flex h-fit w-[264px] items-center justify-start gap-4'>
+              <RiRulerLine className='text-text-sub-600'/>
               <div className='text-paragraph-lg text-text-strong-950'>
                 Definition
               </div>
             </div>
-            <div className='text-paragraph-md text-text-strong-950'>
+            <div className='text-paragraph-md text-text-sub-600'>
               Involves understanding user needs and defining the problem,
               followed by ideation and prototyping solutions.
             </div>
           </div>
           <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-8'>
-            <div className='w-[264px] flex h-8 items-center justify-start gap-4'>
-              <RiHammerLine/>
+            <div className='flex h-fit w-[264px] items-center justify-start gap-4'>
+              <RiHammerLine className='text-text-sub-600'/>
               <div className='text-paragraph-lg text-text-strong-950'>
                 Building
               </div>
             </div>
-            <div className='text-paragraph-md text-text-strong-950'>
+            <div className='text-paragraph-md text-text-sub-600'>
               Refining concepts into detailed solutions, testing and iterating
               for final implementation.
             </div>
           </div>
           <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-8'>
-            <div className='w-[264px] flex h-8 items-center justify-start gap-4'>
-              <RiGift2Line/>
+            <div className='flex h-fit w-[264px] items-center justify-start gap-4'>
+              <RiGift2Line className='text-text-sub-600'/>
               <div className='text-paragraph-lg text-text-strong-950'>
                 Delivery
               </div>
             </div>
-            <div className='text-paragraph-md text-text-strong-950'>
+            <div className='text-paragraph-md text-text-sub-600'>
               Finalizing and implementing the solutions, and evaluating success
               for further improvement and iteration.
             </div>
@@ -234,44 +229,44 @@ export default function Home() {
             </div>
           </div>
           <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-8'>
-            <div className='w-[264px] flex h-8 items-center justify-start gap-4'>
-              <RiUserLine/>
+            <div className='flex h-fit w-[264px] items-center justify-start gap-4'>
+              <RiUserLine className='text-text-sub-600'/>
               <div className='text-paragraph-lg text-text-strong-950'>
                 Solopreneurs
               </div>
             </div>
-            <div className='text-paragraph-md text-text-strong-950'>
+            <div className='text-paragraph-md text-text-sub-600'>
               Refining concepts into detailed solutions, testing and iterating
               for final implementation.
             </div>
           </div>
           <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-8'>
-            <div className='w-[264px] flex h-8 items-center justify-start gap-4'>
-              <RiGroupLine/>
+            <div className='flex h-fit w-[264px] items-center justify-start gap-4'>
+              <RiGroupLine className='text-text-sub-600'/>
               <div className='text-paragraph-lg text-text-strong-950'>
                 Startups
               </div>
             </div>
-            <div className='text-paragraph-md text-text-strong-950'>
+            <div className='text-paragraph-md text-text-sub-600'>
               Involves understanding user needs and defining the problem,
               followed by ideation and prototyping solutions.
             </div>
           </div>
           <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-8'>
-            <div className='w-[264px] flex h-8 items-center justify-start gap-4'>
-              <RiBuilding4Line/>
+            <div className='flex h-fit w-[264px] items-center justify-start gap-4'>
+              <RiBuilding4Line className='text-text-sub-600'/>
               <div className='text-paragraph-lg text-text-strong-950'>
                 Companies
               </div>
             </div>
-            <div className='text-paragraph-md text-text-strong-950'>
+            <div className='text-paragraph-md text-text-sub-600'>
               Refining concepts into detailed solutions, testing and iterating
               for final implementation.
             </div>
           </div>
         </div>
-        <div className='flex h-[824px] flex-col items-start justify-start self-stretch'>
-          <div className='flex h-[352px] flex-col items-start justify-start gap-2 self-stretch border border-stroke-soft-200 px-8 py-32'>
+        <div className='flex h-fit flex-col items-start justify-start self-stretch'>
+          <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border border-stroke-soft-200 px-8 py-32'>
             <div className='self-stretch'>
               <span className='text-title-h3 text-text-strong-950'>
                 Who's behind Mainnet?{' '}
@@ -322,13 +317,13 @@ export default function Home() {
               </span>
             </div>
             <img
-              className='h-[154px] w-[154px] rounded-full object-cover sticky top-[150px]'
+              className='sticky top-[150px] h-[154px] w-[154px] rounded-full object-cover'
               src='images/marcaum.jpg'
             />
           </div>
         </div>
-        <div className='flex h-[784px] flex-col items-start justify-start self-stretch'>
-          <div className='flex h-[304px] flex-col items-start justify-start gap-2 self-stretch border border-stroke-soft-200 px-8 py-32'>
+        <div className='flex h-fit flex-col items-start justify-start self-stretch'>
+          <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border border-stroke-soft-200 px-8 py-32'>
             <div className='self-stretch'>
               <span className='text-title-h3 text-text-strong-950'>
                 Questions?
@@ -342,33 +337,75 @@ export default function Home() {
               </span>
             </div>
           </div>
-          <div className='flex h-[480px] flex-col items-start justify-start self-stretch'>
+
+          <div className='w-full'>
+            <Accordion.Root type='single' collapsible className='w-full'>
+              <Accordion.Item value='a'>
+                <Accordion.Trigger>
+                  <Accordion.Icon as={RiAccountCircleLine} />
+                  How do I update my account information?
+                  <Accordion.Arrow />
+                </Accordion.Trigger>
+                <Accordion.Content className='px-[30px]'>
+                  Insert the accordion description here. It would look better as
+                  two lines of text.
+                </Accordion.Content>
+              </Accordion.Item>
+
+              <Accordion.Item value='b'>
+                <Accordion.Trigger>
+                  <Accordion.Icon as={RiQuestionLine} />
+                  What payment methods are accepted?
+                  <Accordion.Arrow />
+                </Accordion.Trigger>
+                <Accordion.Content className='px-[30px]'>
+                  Major credit and debit cards like Visa, MasterCard, and
+                  American Express, as well as digital payment options like
+                  PayPal and Apple Pay.
+                </Accordion.Content>
+              </Accordion.Item>
+
+              <Accordion.Item value='c'>
+                <Accordion.Trigger>
+                  <Accordion.Icon as={RiMapPinTimeLine} />
+                  How can I track my order?
+                  <Accordion.Arrow />
+                </Accordion.Trigger>
+                <Accordion.Content className='px-[30px]'>
+                  Insert the accordion description here. It would look better as
+                  two lines of text.
+                </Accordion.Content>
+              </Accordion.Item>
+            </Accordion.Root>
+          </div>
+
+          <div className='flex h-fit flex-col items-start justify-start self-stretch'>
             <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-8'>
-              <div className='text-paragraph-md text-text-strong-950'>
+              <div className='text-paragraph-md text-text-sub-600'>
                 What question should I ask you?
               </div>
               <div className='relative h-6 w-6 overflow-hidden' />
             </div>
             <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-8'>
-              <div className='text-paragraph-md text-text-strong-950'>
+              <div className='text-paragraph-md text-text-sub-600'>
                 What question should I ask you?
               </div>
               <div className='relative h-6 w-6 overflow-hidden' />
             </div>
             <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-8'>
-              <div className='text-paragraph-md text-text-strong-950'>
+              <div className='text-paragraph-md text-text-sub-600'>
                 What question should I ask you?
               </div>
               <div className='relative h-6 w-6 overflow-hidden' />
             </div>
             <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-8'>
-              <div className='text-paragraph-md text-text-strong-950'>
+              <div className='text-paragraph-md text-text-sub-600'>
                 What question should I ask you?
               </div>
               <div className='relative h-6 w-6 overflow-hidden' />
             </div>
             <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-8'>
-              <div className='text-paragraph-md text-text-strong-950'>
+              <div className='text-paragraph-md text-text-sub-600'>
                 What question should I ask you?
               </div>
               <div className='relative h-6 w-6 overflow-hidden' />
@@ -388,12 +425,12 @@ export default function Home() {
             </div>
           </div>
           <div className='inline-flex items-center justify-start gap-4 self-stretch border border-stroke-soft-200 p-8'>
-            <div className='text-paragraph-md text-text-strong-950'>
+            <div className='text-paragraph-md text-text-sub-600'>
               Too busy to work? Send some clients on our way and receive $250
               for each project closed doing absolutely nothing, free money!
             </div>
 
-                <RainbowButton>Refer Client</RainbowButton>
+            <RainbowButton>Refer Client</RainbowButton>
           </div>
         </div>
         <div className='inline-flex items-center justify-between self-stretch border border-stroke-soft-200 px-8 py-2.5'>
