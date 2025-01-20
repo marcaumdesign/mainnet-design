@@ -13,7 +13,7 @@ export default function Header() {
   
   return (
     <>
-      <header className='bg-bg-white-0 border border-stroke-soft-200 px-8 py-10 fixed w-full flex h-14 max-w-[600px] items-center justify-between'>
+      <header className='z-10 bg-bg-white-0 border border-stroke-soft-200 px-8 py-10 fixed w-full flex h-14 max-w-[600px] items-center justify-between'>
         <Link
           href='/'
           className='flex items-center text-title-h6 text-text-strong-950'
