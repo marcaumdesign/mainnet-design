@@ -40,9 +40,11 @@ export default function Home() {
   const parentRef = useRef(null);
 
   return (
+    
     <div className='flex w-full flex-col items-center'>
+      
       <Header />
-      <div className='relative flex h-fit w-full max-w-[600px] flex-col items-center justify-center gap-32 border-l border-r border-stroke-soft-200 p-8' >
+      <div className='relative flex h-fit w-full bg-bg-white-0 max-w-[600px] flex-col items-center justify-center gap-32 border-l border-r border-stroke-soft-200 p-8' >
         <div className="left-[-50px] absolute flex w-full items-start"><VerticalRuler/></div>
 
         <div className='flex h-[500px] flex-col items-start justify-end gap-2.5 self-stretch'>
@@ -56,10 +58,12 @@ export default function Home() {
         </div>
       </div>
       {/* Portoflio */}
+
+      <MarqueeDemo/>
       
-      <div className="z-50 w-full flex shadow-[0px_16px_32px_-12px_rgba(14,18,27,0.10)]"><PortfolioCard variant={'website'} title={'Studio™ 222'} link={'https://s222.framer.ai/'} imageUrl={'images/portoflio/studio222/website.png'}/><PortfolioCard variant={'mobile'} title={'Travla'} link={'https://travla.ai'} imageUrl={'images/portoflio/travla/mobile-app.png'}/></div>
+      {/* <div className="z-50 w-full flex shadow-[0px_16px_32px_-12px_rgba(14,18,27,0.10)]"><PortfolioCard work={'landing-page'} title={'Studio™ 222'} link={'https://s222.framer.ai/'} imageUrl={'images/portoflio/studio222/website.png'}/><PortfolioCard variant={'mobile'} title={'Travla'} link={'https://travla.ai'} imageUrl={'images/portoflio/travla/mobile-app.png'}/></div> */}
       
-      <div className='flex h-fit w-full max-w-[600px] flex-col items-start justify-start'>
+      <div className='flex h-fit w-full bg-bg-white-0 max-w-[600px] flex-col items-start justify-start'>
        
         {/* What? */}
 
