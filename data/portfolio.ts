@@ -21,69 +21,7 @@ export interface PortfolioCardProps {
 }
 
 export const portfolio: PortfolioCardProps[] = 
-
 [
-  {
-    "name": "travla",
-    "publishedAt": "11/2024",
-    "link": "https://www.travla.ai/",
-    "description": "",
-    "work": ["landing-page", "mobile-app", "branding"],
-    "type": "project",
-    "framework": ["Framer", "Figma"],
-    "craftedIn": "Rio de Janeiro, Brasil"
-  },
-  {
-    "name": "Velvet",
-    "publishedAt": "2023",
-    "link": "velvet.investments",
-    "description": "Velvet is a simple and captivating branding and website project designed to gather investors and vibrancy into the private markets.",
-    "work": ["landing-page"],
-    "type": "project",
-    "framework": ["Figma", "Framer"],
-    "craftedIn": "Rio de Janeiro, Brasil"
-  },
-
-  {
-    "name": "Stattus4",
-    "publishedAt": "2023",
-    "link": "https://liveproject.com/stattus4",
-    "description": "Stattus4 is an institutional website displaying beautifully sustainable benefits and water services from Stattus4. The website is composed by 5 pages.",
-    "work": ["website"],
-    "type": "project",
-    "framework": ["Figma", "Framer"],
-    "craftedIn": "Rio de Janeiro, Brasil"
-  },
-  {
-    "name": "Off-White",
-    "publishedAt": "2021",
-    "link": "https://liveproject.com/off-white",
-    "description": "A master-piece on how an ultracool branding can become even 'awesomer' with an app with pages for Shop & for Branding.",
-    "work": ["mobile-app"],
-    "type": "template",
-    "framework": ["Figma"],
-    "craftedIn": "Rio de Janeiro, Brasil"
-  },
-  {
-    "name": "GoPark",
-    "publishedAt": "2023",
-    "link": "https://liveproject.com/gopark",
-    "description": "GoPark is a startup looking to improve Brazilian urban mobility in parking. Being a multidisciplinary project, where I developed the branding, website and application.",
-    "work": ["branding", "website"],
-    "type": "project",
-    "framework": ["Figma", "Framer"],
-    "craftedIn": "Rio de Janeiro, Brasil"
-  },
-  {
-    "name": "Casinha",
-    "publishedAt": "2022",
-    "link": "https://liveproject.com/casinha",
-    "description": "Casinha is an elegant website project for a catering & food service located in São Paulo. The site is designed to show the events, the place, the food and the team in a unique and fancy way.",
-    "work": ["website"],
-    "type": "project",
-    "framework": ["Framer"],
-    "craftedIn": "Rio de Janeiro, Brasil"
-  },
   {
     "name": "bee-company",
     "publishedAt": "11/2024",
@@ -92,6 +30,16 @@ export const portfolio: PortfolioCardProps[] =
     "work": ["dashboard"],
     "type": "project",
     "framework": ["Figma","Next.JS"],
+    "craftedIn": "Rio de Janeiro, Brasil"
+  },
+  {
+    "name": "Casinha",
+    "publishedAt": "2022",
+    "link": "https://casinhabanqueteria.com.br",
+    "description": "Casinha is an elegant website project for a catering & food service located in São Paulo. The site is designed to show the events, the place, the food and the team in a unique and fancy way.",
+    "work": ["website"],
+    "type": "project",
+    "framework": ["Framer"],
     "craftedIn": "Rio de Janeiro, Brasil"
   },
   {
@@ -131,6 +79,16 @@ export const portfolio: PortfolioCardProps[] =
     "description": "",
     "work": ["web-app","landing-page"],
     "type": "template",
+    "framework": ["Figma", "Framer"],
+    "craftedIn": "Rio de Janeiro, Brasil"
+  },
+  {
+    "name": "GoPark",
+    "publishedAt": "2023",
+    "link": "https://liveproject.com/gopark",
+    "description": "GoPark is a startup looking to improve Brazilian urban mobility in parking. Being a multidisciplinary project, where I developed the branding, website and application.",
+    "work": ["branding", "website"],
+    "type": "project",
     "framework": ["Figma", "Framer"],
     "craftedIn": "Rio de Janeiro, Brasil"
   },
@@ -195,6 +153,16 @@ export const portfolio: PortfolioCardProps[] =
     "craftedIn": "Rio de Janeiro, Brasil"
   },
   {
+    "name": "Off-White",
+    "publishedAt": "2021",
+    "link": "https://liveproject.com/off-white",
+    "description": "A master-piece on how an ultracool branding can become even 'awesomer' with an app with pages for Shop & for Branding.",
+    "work": ["mobile-app"],
+    "type": "template",
+    "framework": ["Figma"],
+    "craftedIn": "Rio de Janeiro, Brasil"
+  },
+  {
     "name": "orange-financial",
     "publishedAt": "",
     "link": "https://orange.financial/",
@@ -202,6 +170,16 @@ export const portfolio: PortfolioCardProps[] =
     "work": ["landing-page"],
     "type": "project",
     "framework": ["Framer", "Figma"],
+    "craftedIn": "Rio de Janeiro, Brasil"
+  },
+  {
+    "name": "Stattus4",
+    "publishedAt": "2023",
+    "link": "https://liveproject.com/stattus4",
+    "description": "Stattus4 is an institutional website displaying beautifully sustainable benefits and water services from Stattus4. The website is composed by 5 pages.",
+    "work": ["website"],
+    "type": "project",
+    "framework": ["Figma", "Framer"],
     "craftedIn": "Rio de Janeiro, Brasil"
   },
   {
@@ -222,6 +200,16 @@ export const portfolio: PortfolioCardProps[] =
     "work": ["landing-page", "mobile-app", "branding"],
     "type": "project",
     "framework": ["Framer", "Figma"],
+    "craftedIn": "Rio de Janeiro, Brasil"
+  },
+  {
+    "name": "Velvet",
+    "publishedAt": "2023",
+    "link": "velvet.investments",
+    "description": "Velvet is a simple and captivating branding and website project designed to gather investors and vibrancy into the private markets.",
+    "work": ["landing-page"],
+    "type": "project",
+    "framework": ["Figma", "Framer"],
     "craftedIn": "Rio de Janeiro, Brasil"
   },
   {
