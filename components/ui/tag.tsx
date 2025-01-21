@@ -15,13 +15,13 @@ const TAG_DISMISS_ICON_NAME = 'TagDismissIcon';
 export const tagVariants = tv({
   slots: {
     root: [
-      'group/tag inline-flex h-6 items-center gap-2 rounded-md px-2 text-label-xs text-text-sub-600',
+      'group/tag inline-flex h-7 items-center gap-2 rounded-md px-2 text-label-sm text-text-sub-600',
       'transition duration-200 ease-out',
       'ring-1 ring-inset',
     ],
     icon: [
       // base
-      '-mx-1 size-4 shrink-0 text-text-soft-400 transition duration-200 ease-out',
+      '-mx-1 size-5 shrink-0 text-text-soft-400 transition duration-200 ease-out',
       // hover
       'group-hover/tag:text-text-sub-600',
     ],
