@@ -28,6 +28,8 @@ import { RainbowButton } from '@/components/ui/rainbow-button';
 import HyperText from '@/components/ui/hyper-text';
 import VerticalRuler from '@/components/vertical-ruler';
 import { MarqueeDemo } from '@/components/ticker';
+import PortfolioCard from '@/components/portoflio/portfolio-card';
+import PortfolioTag from '@/components/portoflio/portfolio-tag';
 
 export default function Home() {
 
@@ -40,9 +42,9 @@ export default function Home() {
         <div className="left-[-50px] absolute flex w-full items-start"><VerticalRuler/></div>
 
         <div className='flex h-[500px] flex-col items-start justify-end gap-2.5 self-stretch'>
-          <HyperText className='text-text-sub-600'>
-            16:20:23 (AMERICA/SAO PAULO)
-          </HyperText>
+            <HyperText className='text-text-sub-600'>
+            {new Date().toLocaleTimeString(undefined, { timeZoneName: 'short' })}
+            </HyperText>
 
           <div className='text-title-h0 text-text-strong-950'>
             Design made to last.
@@ -51,39 +53,8 @@ export default function Home() {
       </div>
       {/* Portoflio */}
       
-
-      <div className='z-50 inline-flex items-start justify-start self-stretch'>
-        <div className='inline-flex w-[842px] flex-col items-start justify-start border border-stroke-soft-200'>
-          <img
-            className='h-[621px] self-stretch'
-            src='https://picsum.photos/842/621'
-          />
-          <div className='inline-flex items-center justify-between self-stretch border-t border-stroke-soft-200 bg-bg-white-0 p-4'>
-            <div className="font-['Inter Display'] text-[32px] font-medium leading-10 text-text-strong-950">
-              Flora™
-            </div>
-            <div className='text-paragraph-md text-text-sub-600'>
-              From premium visual design services to open-source tools for
-              builders.
-            </div>
-          </div>
-        </div>
-        <div className='inline-flex w-[842px] flex-col items-start justify-start border border-stroke-soft-200'>
-          <img
-            className='h-[621px] w-[894px]'
-            src='https://picsum.photos/842/621'
-          />
-          <div className='inline-flex items-center justify-between self-stretch border-t border-stroke-soft-200 bg-bg-white-0 p-4'>
-            <div className="font-['Inter Display'] text-[32px] font-medium leading-10 text-text-strong-950">
-              Whoop®
-            </div>
-            <div className='text-paragraph-md text-text-sub-600'>
-              From premium visual design services to open-source tools for
-              builders.
-            </div>
-          </div>
-        </div>
-      </div>
+      <div className="z-50 w-full flex shadow-[0px_16px_32px_-12px_rgba(14,18,27,0.10)]"><PortfolioCard variant={'website'} title={'Studio™ 222'} link={'https://s222.framer.ai/'} imageUrl={'images/portoflio/studio222/website.png'}/><PortfolioCard variant={'mobile'} title={'Travla'} link={'https://travla.ai'} imageUrl={'images/portoflio/travla/mobile-app.png'}/></div>
+      
       <div className='flex h-fit w-full max-w-[600px] flex-col items-start justify-start'>
        
         {/* What? */}
