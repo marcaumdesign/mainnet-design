@@ -20,6 +20,9 @@ import {
   RiMapPinTimeLine,
   RiQuestionLine,
   RiMovie2Line,
+  RiDashboard2Line,
+  RiStore2Line,
+  RiGlobalLine,
 } from '@remixicon/react';
 
 import React, { useRef } from 'react';
@@ -30,6 +33,7 @@ import VerticalRuler from '@/components/vertical-ruler';
 import { MarqueeDemo } from '@/components/ticker';
 import PortfolioCard from '@/components/portoflio/portfolio-card';
 import PortfolioTag from '@/components/portoflio/portfolio-tag';
+import { StripedBackground } from '@/components/striped-background';
 
 export default function Home() {
 
@@ -96,7 +100,7 @@ export default function Home() {
             </div>
             <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 px-8 py-[15px]'>
               <div className='flex h-fit w-full items-center justify-start gap-4'>
-                <RiCursorLine className='text-text-sub-600' />
+                <RiGlobalLine className='text-text-sub-600' />
                 <div className='text-paragraph-lg text-text-strong-950'>
                   Websites
                 </div>
@@ -134,6 +138,22 @@ export default function Home() {
                 <RiMovie2Line className='text-text-sub-600'/>
                 <div className='text-paragraph-lg text-text-strong-950'>
                   Motion Design
+                </div>
+              </div>
+            </div>
+            <div className='flex shrink grow basis-0 items-start justify-start gap-10 self-stretch border border-stroke-soft-200 px-8 py-[15px]'>
+              <div className='flex h-fit w-full items-center justify-start gap-4'>
+                <RiStore2Line className='text-text-sub-600'/>
+                <div className='text-paragraph-lg text-text-strong-950'>
+                  E-Commerces
+                </div>
+              </div>
+            </div>
+            <div className='flex shrink grow basis-0 items-start justify-start gap-10 self-stretch border border-stroke-soft-200  px-8 py-[15px]'>
+            <div className='flex h-fit w-full items-center justify-start gap-4'>
+                <RiDashboard2Line className='text-text-sub-600'/>
+                <div className='text-paragraph-lg text-text-strong-950'>
+                  Dashboards
                 </div>
               </div>
             </div>
