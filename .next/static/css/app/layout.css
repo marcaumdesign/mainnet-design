@@ -2866,6 +2866,9 @@ video {
 .\!\[mask-composite\:intersect\] {
   mask-composite: intersect !important;
 }
+.\[mask-image\:radial-gradient\(450px_circle_at_center\2c white\2c transparent\)\] {
+  mask-image: radial-gradient(450px circle at center,white,transparent);
+}
 .\[mask\:linear-gradient\(transparent\2c transparent\)\2c linear-gradient\(white\2c white\)\] {
   mask: linear-gradient(transparent,transparent),linear-gradient(white,white);
 }
