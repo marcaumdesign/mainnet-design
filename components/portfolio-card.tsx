@@ -73,7 +73,7 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({
         width={imageWidth}
         height={imageHeight}
       />
-      <div className='flex items-center justify-between border border-stroke-soft-200 px-4 py-4'>
+      <div className='flex items-center justify-between border-[0px] border-t border-b border-stroke-soft-200 px-4 py-4'>
         <div className='text-label-md text-text-strong-950'>{name}</div>
         <div className='flex items-center gap-2'>
           {/* { {isMobile || (<PortfolioTag variant={variant}/>) } } */}
