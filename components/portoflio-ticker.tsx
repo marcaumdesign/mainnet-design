@@ -14,7 +14,7 @@ const secondRow = portfolio.slice(portfolio.length / 2);
 
 export function PortfolioTicker() {
   return (
-    <div className="z-50 bg-bg-white-0 relative flex h-fit w-full flex-col items-center justify-center overflow-hidden bg-background md:shadow-xl">
+    <div className="z-50 bg-bg-white-0 relative flex h-auto w-full flex-col items-center justify-center overflow-hidden bg-background md:shadow-xl">
       <Marquee pauseOnHover className="[--duration:20s]">
         {firstRow.map((portfolio) => (
           <PortfolioCard key={portfolio.name} {...portfolio}/>

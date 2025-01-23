@@ -61,22 +61,19 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({
   const variant = Array.isArray(work) && work.length > 1 ? work[0] : work[0];
   const isProject = type === 'project';
   const imageWidth = 864;
-  const imageHeight = 540;
   const imageUrl = `/images/portfolio/${toSlug(name)}/${variant}.png`;
 
   return (
     <div className='bg-bg-white-0'>
       <img
-        className='object-fit'
+        className='object-fit lg:h-[540px] h-fill'
         src={imageUrl}
         alt={name}
-        width={imageWidth}
-        height={imageHeight}
       />
       <div className='flex items-center justify-between border-[0px] border-t border-b border-stroke-soft-200 px-4 py-4'>
         <div className='text-label-md text-text-strong-950'>{name}</div>
         <div className='flex items-center gap-2'>
-          {/* { {isMobile || (<PortfolioTag variant={variant}/>) } } */}
+
         
             <Tag.Root variant='stroke'>
               <Tag.Icon as={icons[variant]} />

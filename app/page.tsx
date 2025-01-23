@@ -84,7 +84,7 @@ export default function Home() {
 
       {/* <div className="z-50 w-full flex shadow-[0px_16px_32px_-12px_rgba(14,18,27,0.10)]"><PortfolioCard work={'landing-page'} title={'Studio™ 222'} link={'https://s222.framer.ai/'} imageUrl={'images/portoflio/studio222/website.png'}/><PortfolioCard variant={'mobile'} title={'Travla'} link={'https://travla.ai'} imageUrl={'images/portoflio/travla/mobile-app.png'}/></div> */}
 
-      <div className='flex h-fit w-full max-w-[600px] flex-col items-start justify-start bg-bg-white-0 border-[0px] border-r border-l'>
+      <div className='flex h-fit w-full max-w-[600px] flex-col items-start justify-start bg-bg-white-0 border-[0px] border-r border-l border-stroke-soft-200'>
         {/* What? */}
 
         <div className='flex h-fit flex-col items-start justify-start self-stretch'>
@@ -436,7 +436,7 @@ export default function Home() {
               for each project closed doing absolutely nothing, free money! 
             </div>
 
-            <RainbowButton>Refer Client</RainbowButton>
+            <RainbowButton onClick={() => window.open("https://t.me/marcaumdesign", "_blank")}>Refer Client</RainbowButton>
           </div>
         </div>
         <footer className='inline-flex items-center justify-between self-stretch border-[0px] border-t border-stroke-soft-200 px-4 lg:px-8 py-2 '>
