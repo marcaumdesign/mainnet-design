@@ -30,9 +30,8 @@ import Header from '@/components/header';
 import { RainbowButton } from '@/components/ui/rainbow-button';
 import HyperText from '@/components/ui/hyper-text';
 import VerticalRuler from '@/components/vertical-ruler';
-import { MarqueeDemo } from '@/components/ticker';
-import PortfolioCard from '@/components/portoflio/portfolio-card';
-import PortfolioTag from '@/components/portoflio/portfolio-tag';
+import { PortfolioTicker } from '@/components/portoflio-ticker';
+import PortfolioCard from '@/components/portfolio-card';
 import { StripedBackground } from '@/components/striped-background';
 
 export default function Home() {
@@ -59,7 +58,7 @@ export default function Home() {
       </div>
       {/* Portoflio */}
 
-      <MarqueeDemo/>
+      <PortfolioTicker/>
       
       {/* <div className="z-50 w-full flex shadow-[0px_16px_32px_-12px_rgba(14,18,27,0.10)]"><PortfolioCard work={'landing-page'} title={'Studio™ 222'} link={'https://s222.framer.ai/'} imageUrl={'images/portoflio/studio222/website.png'}/><PortfolioCard variant={'mobile'} title={'Travla'} link={'https://travla.ai'} imageUrl={'images/portoflio/travla/mobile-app.png'}/></div> */}
       

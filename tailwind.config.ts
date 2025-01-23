@@ -618,6 +618,7 @@ const config = {
   			rainbow: 'rainbow var(--speed, 2s) infinite linear',
   			'border-beam': 'border-beam calc(var(--duration)*1s) infinite linear',
   			marquee: 'marquee var(--duration) infinite linear',
+  			marqueeslow: 'marquee calc(var(--duration)/2) infinite linear',
   			'marquee-vertical': 'marquee-vertical var(--duration) linear infinite'
   		},
   		keyframes: {
