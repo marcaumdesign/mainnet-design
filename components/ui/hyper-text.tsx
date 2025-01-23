@@ -23,6 +23,7 @@ interface HyperTextProps extends MotionProps {
   animateOnHover?: boolean;
   /** Custom character set for scramble effect. Defaults to uppercase alphabet */
   characterSet?: CharacterSet;
+  onlyOnce?: boolean;
 }
 
 const DEFAULT_CHARACTER_SET = Object.freeze(
@@ -34,6 +35,7 @@ const getRandomInt = (max: number): number => Math.floor(Math.random() * max);
 export default function HyperText({
   children,
   className,
+  onlyOnce,
   duration = 800,
   delay = 0,
   as: Component = "div",
@@ -42,6 +44,9 @@ export default function HyperText({
   characterSet = DEFAULT_CHARACTER_SET,
   ...props
 }: HyperTextProps) {
+
+  const [reloadCount, setReloadCount] = useState(0);
+
   const MotionComponent = motion.create(Component, {
     forwardMotionProps: true,
   });
@@ -90,6 +95,7 @@ export default function HyperText({
 
   // Handle scramble animation
   useEffect(() => {
+    if (reloadCount>0 && onlyOnce) return;
     if (!isAnimating) return;
 
     const intervalDuration = duration / (children.length * 10);
@@ -113,8 +119,18 @@ export default function HyperText({
       }
     }, intervalDuration);
 
+    setReloadCount(reloadCount+1)
+
     return () => clearInterval(interval);
   }, [children, duration, isAnimating, characterSet]);
+
+  useEffect(() => {
+    if (!onlyOnce) return;
+    setDisplayText(children.split("")) 
+
+  }, [children]
+
+  )
 
   return (
     <MotionComponent
