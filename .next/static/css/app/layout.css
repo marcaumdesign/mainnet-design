@@ -1816,6 +1816,9 @@ video {
 .overflow-hidden {
   overflow: hidden;
 }
+.overflow-visible {
+  overflow: visible;
+}
 .overflow-x-auto {
   overflow-x: auto;
 }
@@ -2258,6 +2261,10 @@ video {
 .py-\[5rem\] {
   padding-top: 5rem;
   padding-bottom: 5rem;
+}
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 .pb-2\.5 {
   padding-bottom: 0.625rem;
@@ -4094,6 +4101,24 @@ video {
     padding: 1.5rem;
   }
 
+  .sm\:p-2 {
+    padding: 0.5rem;
+  }
+
+  .sm\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .sm\:py-8 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .sm\:text-text-sub-600 {
+    color: var(--text-sub-600);
+  }
+
   .data-\[state\=closed\]\:sm\:slide-out-to-right-full[data-state="closed"] {
     --tw-exit-translate-x: 100%;
   }
@@ -4118,8 +4143,51 @@ video {
 }
 @media (min-width: 1024px) {
 
+  .lg\:grid {
+    display: grid;
+  }
+
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .lg\:p-1 {
     padding: 0.25rem;
+  }
+
+  .lg\:p-2 {
+    padding: 0.5rem;
+  }
+
+  .lg\:p-8 {
+    padding: 2rem;
+  }
+
+  .lg\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .lg\:py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .lg\:py-8 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .lg\:py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .lg\:text-paragraph-lg {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.015em;
+    font-weight: 400;
   }
 }
 .hover\:\[\&\:not\(\&\:has\(input\:focus\)\)\:has\(\>\:only-child\)\]\:before\:ring-error-base:not(.hover\:\[\&\:not\(\&\:has\(input\:focus\)\)\:has\(\>\:only-child\)\]\:before\:ring-error-base:has(input:focus)):has(>:only-child):hover::before::before {
