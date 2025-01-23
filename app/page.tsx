@@ -29,10 +29,13 @@ import React, { useEffect, useRef, useState } from 'react';
 import Header from '@/components/header';
 import { RainbowButton } from '@/components/ui/rainbow-button';
 import HyperText from '@/components/ui/hyper-text';
+import {Particles} from '@/components/ui/particles';
+
 import VerticalRuler from '@/components/vertical-ruler';
 import { PortfolioTicker } from '@/components/portoflio-ticker';
 import PortfolioCard from '@/components/portfolio-card';
 import { StripedBackground } from '@/components/striped-background';
+import FlickeringGrid from '@/components/ui/flickering-grid';
 
 export default function Home() {
 
@@ -56,10 +59,13 @@ export default function Home() {
 
   
 
+  function cn(arg0: string) {
+    throw new Error('Function not implemented.');
+  }
+
   return (
     
     <div className='flex w-full flex-col items-center'>
-      
       <Header />
       <div className='relative flex h-fit w-full bg-bg-white-0 max-w-[600px] flex-col items-center justify-center gap-32 border-l border-r border-stroke-soft-200 p-8' >
         <div className="left-[-50px] absolute flex w-full items-start"><VerticalRuler/></div>
@@ -76,6 +82,7 @@ export default function Home() {
         </div>
       </div>
       {/* Portoflio */}
+      
 
       <PortfolioTicker/>
       
@@ -86,7 +93,7 @@ export default function Home() {
         {/* What? */}
 
         <div className='flex h-fit flex-col items-start justify-start self-stretch'>
-          <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border border-stroke-soft-200 px-8 py-32'>
+          <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border border-stroke-soft-200 px-4 lg:px-8 py-32'>
             <div className='self-stretch'>
               <span className='text-title-h3 text-text-strong-950'>What? </span>
               <span className='text-title-h3 text-text-soft-400'>
@@ -95,8 +102,9 @@ export default function Home() {
               </span>
             </div>
           </div>
-            <div className='grid grid-cols-2 self-stretch'>
-            <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 px-8 py-[15px]'>
+
+            <div className='flex-col flex  lg:grid lg:grid-cols-2 self-stretch'>
+            <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-4 lg:p-8'>
               <div className='flex h-fit w-full items-center justify-start gap-4'>
                 <RiTv2Line className='text-text-sub-600' />
                 <div className='text-paragraph-lg text-text-strong-950'>
@@ -104,7 +112,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 px-8 py-[15px]'>
+            <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-4 lg:p-8'>
               <div className='flex h-fit w-full items-center justify-start gap-4'>
                 <RiPhoneFindLine className='text-text-sub-600' />
                 <div className='text-paragraph-lg text-text-strong-950'>
@@ -112,7 +120,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 px-8 py-[15px]'>
+            <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-4 lg:p-8'>
               <div className='flex h-fit w-full items-center justify-start gap-4'>
                 <RiRocket2Line className='text-text-sub-600' />
                 <div className='text-paragraph-lg text-text-strong-950'>
@@ -120,7 +128,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 px-8 py-[15px]'>
+            <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-4 lg:p-8'>
               <div className='flex h-fit w-full items-center justify-start gap-4'>
                 <RiGlobalLine className='text-text-sub-600' />
                 <div className='text-paragraph-lg text-text-strong-950'>
@@ -128,7 +136,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 px-8 py-[15px]'>
+            <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-4 lg:p-8'>
               <div className='flex h-fit w-full items-center justify-start gap-4'>
                 <RiCompassDiscoverLine className='text-text-sub-600' />
                 <div className='text-paragraph-lg text-text-strong-950'>
@@ -136,17 +144,16 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className='inline-flex items-start justify-start self-stretch'>
-              <div className='flex h-fit shrink grow basis-0 items-start justify-start gap-10 border border-stroke-soft-200 px-8 py-[15px]'>
-                <div className='flex h-fit w-full items-center justify-start gap-4'>
-                  <RiBook2Line className='text-text-sub-600' />
-                  <div className='text-paragraph-lg text-text-strong-950'>
-                    Branding
-                  </div>
+           
+            <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-4 lg:p-8'>
+              <div className='flex h-fit w-full items-center justify-start gap-4'>
+                <RiBook2Line className='text-text-sub-600' />
+                <div className='text-paragraph-lg text-text-strong-950'>
+                Branding
                 </div>
               </div>
             </div>
-            <div className='flex shrink grow basis-0 items-start justify-start gap-10 self-stretch border border-stroke-soft-200 px-8 py-[15px]'>
+            <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-4 lg:p-8'>
               <div className='flex h-fit w-full items-center justify-start gap-4'>
                 <RiInstagramLine className='text-text-sub-600' />
                 <div className='text-paragraph-lg text-text-strong-950'>
@@ -155,7 +162,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className='flex shrink grow basis-0 items-start justify-start gap-10 self-stretch border border-stroke-soft-200 px-8 py-[15px]'>
+            <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-4 lg:p-8'>
               <div className='flex h-fit w-full items-center justify-start gap-4'>
                 <RiMovie2Line className='text-text-sub-600'/>
                 <div className='text-paragraph-lg text-text-strong-950'>
@@ -163,7 +170,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className='flex shrink grow basis-0 items-start justify-start gap-10 self-stretch border border-stroke-soft-200 px-8 py-[15px]'>
+            <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-4 lg:p-8'>
               <div className='flex h-fit w-full items-center justify-start gap-4'>
                 <RiStore2Line className='text-text-sub-600'/>
                 <div className='text-paragraph-lg text-text-strong-950'>
@@ -171,7 +178,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className='flex shrink grow basis-0 items-start justify-start gap-10 self-stretch border border-stroke-soft-200  px-8 py-[15px]'>
+            <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-4 lg:p-8'>
             <div className='flex h-fit w-full items-center justify-start gap-4'>
                 <RiDashboard2Line className='text-text-sub-600'/>
                 <div className='text-paragraph-lg text-text-strong-950'>
