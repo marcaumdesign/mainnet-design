@@ -318,7 +318,7 @@ export default function Home() {
               className='lg:sticky top-[150px] h-[154px] w-[154px] rounded-full object-cover'
               src='images/marcaum.jpg'
             />
-            
+             
             <div className='shrink grow basis-0'>
               <span className='text-paragraph-md text-text-strong-950'>
               Hey there, I'm Marcus (also known as Marcaum), a 22-year-old
