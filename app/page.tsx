@@ -433,7 +433,7 @@ export default function Home() {
           <div className='flex flex-col lg:inline-flex items-start justify-start gap-4 self-stretch border border-stroke-soft-200 p-4 lg:p-8'>
             <div className='text-paragraph-md text-text-sub-600'>
               Too busy to work? Send some clients on our way and receive $250
-              for each project closed doing absolutely nothing, free money!
+              for each project closed doing absolutely nothing, free money! 
             </div>
 
             <RainbowButton>Refer Client</RainbowButton>
