@@ -56,16 +56,17 @@ export default function Marquee({
       {Array(repeat)
         .fill(0)
         .map((_, i) => (
-          <div
+            <div
             key={i}
             className={cn("flex shrink-0 justify-around", {
               "animate-marquee flex-row": !vertical,
               "animate-marquee-vertical flex-col": vertical,
               "[animation-direction:reverse]": reverse,
+              "[animation-duration:calc(var(--duration)*4)]": true,
             })}
-          >
+            >
             {children}
-          </div>
+            </div>
         ))}
     </div>
   );
