@@ -439,7 +439,7 @@ export default function Home() {
             <RainbowButton>Refer Client</RainbowButton>
           </div>
         </div>
-        <footer className='inline-flex items-center justify-between self-stretch border border-stroke-soft-200 px-4 lg:px-8 py-2'>
+        <footer className='inline-flex items-center justify-between self-stretch border border-stroke-soft-200 px-4 lg:px-8 py-2 '>
           <div>
             <span className='text-paragraph-sm text-text-strong-950'>
               Mainnet Design © 2025.{' '}
