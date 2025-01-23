@@ -25,7 +25,7 @@ import {
   RiGlobalLine,
 } from '@remixicon/react';
 
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Header from '@/components/header';
 import { RainbowButton } from '@/components/ui/rainbow-button';
 import HyperText from '@/components/ui/hyper-text';
@@ -38,6 +38,24 @@ export default function Home() {
 
   const parentRef = useRef(null);
 
+  const [currentTime, setCurrentTime] = useState(
+    new Date().toLocaleTimeString(undefined, { timeZoneName: 'short' })
+  );
+
+  useEffect(() => {
+    // Atualiza a hora a cada segundo
+    const interval = setInterval(() => {
+      setCurrentTime(
+        new Date().toLocaleTimeString(undefined, { timeZoneName: 'short' })
+      );
+    }, 1000);
+
+    // Limpa o intervalo ao desmontar o componente
+    return () => clearInterval(interval);
+  }, []);
+
+  
+
   return (
     
     <div className='flex w-full flex-col items-center'>
@@ -47,8 +65,9 @@ export default function Home() {
         <div className="left-[-50px] absolute flex w-full items-start"><VerticalRuler/></div>
 
         <div className='flex h-[500px] flex-col items-start justify-end gap-2.5 self-stretch'>
-            <HyperText className='text-text-sub-600'>
-            {new Date().toLocaleTimeString(undefined, { timeZoneName: 'short' })}
+        
+            <HyperText onlyOnce className='text-text-sub-600'>
+            {currentTime}
             </HyperText>
 
           <div className='text-title-h0 text-text-strong-950'>
