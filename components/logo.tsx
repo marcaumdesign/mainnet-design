@@ -6,11 +6,15 @@ interface LogoProps {
 
 const Logo: React.FC<LogoProps> = ({ className }) => {
   return (
-    <svg className={`fill-current ${className}`} width="63" height="45" viewBox="0 0 63 45" xmlns="http://www.w3.org/2000/svg">
-      <path d="M23.3691 3.00049L13.0026 3.00049L0.000483462 36.3054L10.367 36.3054L23.3691 3.00049Z"/>
-      <path d="M52.7305 3.00049L42.3639 3.00049L29.3618 36.3054L39.7284 36.3054L52.7305 3.00049Z"/>
-      <path d="M34.623 11.2969L24.2565 11.2969L11.2544 44.6018L21.6209 44.6018L34.623 11.2969Z"/>
-    </svg>
+    <div className='flex items-center gap-1'>
+      <svg width="56" height="56" viewBox="0 0 104 104" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M46.0626 11L25.6288 11L2.70541e-06 76.6483L20.4338 76.6483L46.0626 11Z" fill="black"/>
+<path d="M103.942 11L83.5087 11L57.8799 76.6483L78.3137 76.6483L103.942 11Z" fill="black"/>
+<path d="M68.2462 27.3516L47.8124 27.3516L22.1836 92.9998L42.6174 92.9998L68.2462 27.3516Z" fill="black"/>
+</svg>
+
+      <div className='text-title-h4 text-text-strong-950'>Mainnet</div>
+    </div>
   );
 };
 
