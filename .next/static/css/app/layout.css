@@ -1337,6 +1337,12 @@ video {
 .w-max {
   width: max-content;
 }
+.w-\[50\%\] {
+  width: 50%;
+}
+.w-\[70\%\] {
+  width: 70%;
+}
 .min-w-0 {
   min-width: 0px;
 }
@@ -2265,6 +2271,10 @@ video {
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 .pb-2\.5 {
   padding-bottom: 0.625rem;
@@ -4143,8 +4153,28 @@ video {
 }
 @media (min-width: 1024px) {
 
+  .lg\:sticky {
+    position: sticky;
+  }
+
+  .lg\:top-\[150px\] {
+    top: 150px;
+  }
+
+  .lg\:inline-flex {
+    display: inline-flex;
+  }
+
   .lg\:grid {
     display: grid;
+  }
+
+  .lg\:h-\[154px\] {
+    height: 154px;
+  }
+
+  .lg\:w-\[154px\] {
+    width: 154px;
   }
 
   .lg\:grid-cols-2 {
