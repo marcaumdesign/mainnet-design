@@ -22,7 +22,7 @@ export default function Header() {
           
         </Link>
     
-    <RainbowButton>Get Started</RainbowButton>
+    <RainbowButton onClick={() => window.open("https://calendly.com/marcaum/design", "_blank")}>Get Started</RainbowButton>
    
 
       </header>
