@@ -401,3 +401,14 @@
   transform: scale(0.8996);
   transform-origin: center;
 }
+
+/* Para navegadores Webkit (Chrome, Safari) */
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Para navegadores Firefox */
+.hide-scroll {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}

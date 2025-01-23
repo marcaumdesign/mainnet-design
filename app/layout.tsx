@@ -33,9 +33,9 @@ export default function RootLayout({
     <html
       lang='en'
       suppressHydrationWarning
-      className={cn(inter.variable, geistMono.variable, 'antialiased')}
+      className={cn(inter.variable, geistMono.variable, 'antialiased', "hide-scroll")}
     >
-      <body className='bg-bg-weak-50 text-text-strong-950'>
+      <body className='bg-bg-white-0  lg:bg-bg-weak-50 text-text-strong-950 overflow-auto '>
         <ThemeProvider attribute='class'>
           <TooltipProvider>
             <div className='flex min-h-screen flex-col'>
