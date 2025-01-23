@@ -442,7 +442,7 @@ export default function Home() {
         <footer className='inline-flex items-center justify-between self-stretch border border-stroke-soft-200 px-4 lg:px-8 py-2 '>
           <div>
             <span className='text-paragraph-sm text-text-strong-950'>
-              Mainnet Design © 2025.{' '}
+              Mainnet Design © {new Date().getFullYear()}.{' '}
             </span>
             <span className='text-paragraph-sm text-text-soft-400'>
               All Rights Reserved{' '}
