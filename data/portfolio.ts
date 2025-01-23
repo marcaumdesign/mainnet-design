@@ -85,9 +85,9 @@ export const portfolio: PortfolioCardProps[] =
   {
     "name": "GoPark",
     "publishedAt": "2023",
-    "link": "https://liveproject.com/gopark",
+    "link": "https://gopark.app.br",
     "description": "GoPark is a startup looking to improve Brazilian urban mobility in parking. Being a multidisciplinary project, where I developed the branding, website and application.",
-    "work": ["branding", "website"],
+    "work": ["web-app", "mobile-app", "website"],
     "type": "project",
     "framework": ["Figma", "Framer"],
     "craftedIn": "Rio de Janeiro, Brasil"
@@ -155,7 +155,7 @@ export const portfolio: PortfolioCardProps[] =
   {
     "name": "Off White",
     "publishedAt": "2021",
-    "link": "https://liveproject.com/off-white",
+    "link": "https://www.figma.com/community/file/1076507546428362439/off-white",
     "description": "A master-piece on how an ultracool branding can become even 'awesomer' with an app with pages for Shop & for Branding.",
     "work": ["mobile-app"],
     "type": "template",
@@ -175,7 +175,7 @@ export const portfolio: PortfolioCardProps[] =
   {
     "name": "Stattus4",
     "publishedAt": "2023",
-    "link": "https://liveproject.com/stattus4",
+    "link": "https://stattus4.com",
     "description": "Stattus4 is an institutional website displaying beautifully sustainable benefits and water services from Stattus4. The website is composed by 5 pages.",
     "work": ["website"],
     "type": "project",
@@ -205,7 +205,7 @@ export const portfolio: PortfolioCardProps[] =
   {
     "name": "Velvet",
     "publishedAt": "2023",
-    "link": "velvet.investments",
+    "link": "https://velvet.investments",
     "description": "Velvet is a simple and captivating branding and website project designed to gather investors and vibrancy into the private markets.",
     "work": ["landing-page"],
     "type": "project",
