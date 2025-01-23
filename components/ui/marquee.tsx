@@ -61,7 +61,6 @@ export default function Marquee({
             className={cn("flex shrink-0 justify-around", {
               "animate-marquee flex-row": !vertical,
               "animate-marquee-vertical flex-col": vertical,
-              "group-hover:[animation-play-state:paused]": pauseOnHover,
               "[animation-direction:reverse]": reverse,
             })}
           >

@@ -18,6 +18,21 @@ import {
   PortfolioCardProps
 } from "@/data/portfolio" 
 
+function toSlug(input: string): string {
+  return input
+    .toLowerCase() // Converte para minúsculas
+    .trim() // Remove espaços extras no início e no fim
+    .normalize("NFD") // Normaliza caracteres acentuados
+    .replace(/[\u0300-\u036f]/g, "") // Remove acentos
+    .replace(/[^a-z0-9\s-]/g, "") // Remove caracteres especiais
+    .replace(/\s+/g, "-") // Substitui espaços por hífens
+    .replace(/-+/g, "-"); // Remove hífens repetidos
+}
+
+// Exemplo de uso
+const slug = toSlug("Exemplo Nome");
+console.log(slug); // Saída: exemplo-nome
+
 const icons: Record<IconVariants, RemixiconComponentType> = {
   "mobile-app": RiSmartphoneFill,
   'landing-page': RiPagesFill,
@@ -41,12 +56,13 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({
   work,
   name,
   link,
+  type,
 }) => {
   const variant = Array.isArray(work) && work.length > 1 ? work[0] : work[0];
-  const isMobile = variant === 'mobile-app';
-  const imageWidth = isMobile ? 251 : 864;
+  const isProject = type === 'project';
+  const imageWidth = 864;
   const imageHeight = 540;
-  const imageUrl = `/images/portfolio/${name}/${variant}.png`;
+  const imageUrl = `/images/portfolio/${toSlug(name)}/${variant}.png`;
 
   return (
     <div className='bg-bg-white-0'>
@@ -61,15 +77,15 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({
         <div className='text-label-md text-text-strong-950'>{name}</div>
         <div className='flex items-center gap-2'>
           {/* { {isMobile || (<PortfolioTag variant={variant}/>) } } */}
-          {!isMobile && (
+        
             <Tag.Root variant='stroke'>
               <Tag.Icon as={icons[variant]} />
               {capitalizer(variant)}
             </Tag.Root>
-          )}
+          
           <Link href={link} passHref target='_blank'>
             <Button.Root size='xxsmall' variant='neutral' mode='filled'>
-              {isMobile ? 'Open' : 'Open Project'}
+              {isProject ? 'Open Template' : 'Open Project'}
             </Button.Root>
           </Link>
         </div>

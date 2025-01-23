@@ -23,7 +23,7 @@ export interface PortfolioCardProps {
 export const portfolio: PortfolioCardProps[] = 
 [
   {
-    "name": "bee-company",
+    "name": "Bee Company",
     "publishedAt": "11/2024",
     "link": "https://www.thatsbee.co/",
     "description": "",
@@ -43,7 +43,7 @@ export const portfolio: PortfolioCardProps[] =
     "craftedIn": "Rio de Janeiro, Brasil"
   },
   {
-    "name": "citadel-security",
+    "name": "Citadel Security",
     "publishedAt": "05/2024",
     "link": "https://citadelsecurity.com.br/",
     "description": "",
@@ -53,7 +53,7 @@ export const portfolio: PortfolioCardProps[] =
     "craftedIn": "Rio de Janeiro, Brasil"
   },
   {
-    "name": "crowdfy",
+    "name": "Crowdfy",
     "publishedAt": "10/2023",
     "link": "https://www.figma.com/community/file/1352089631471215847/crowdfy-dapp-design-system-shadcn-ui",
     "description": "",
@@ -63,7 +63,7 @@ export const portfolio: PortfolioCardProps[] =
     "craftedIn": "Rio de Janeiro, Brasil"
   },
   {
-    "name": "eternal-games",
+    "name": "Eternal Games",
     "publishedAt": "09/2024",
     "link": "https://eternalcreations.games/",
     "description": "",
@@ -73,11 +73,11 @@ export const portfolio: PortfolioCardProps[] =
     "craftedIn": "Rio de Janeiro, Brasil"
   },
   {
-    "name": "flora",
+    "name": "Flora",
     "publishedAt": "01/2025",
     "link": "https://flora.framer.media/",
     "description": "",
-    "work": ["web-app","landing-page"],
+    "work": ["website"],
     "type": "template",
     "framework": ["Figma", "Framer"],
     "craftedIn": "Rio de Janeiro, Brasil"
@@ -93,7 +93,7 @@ export const portfolio: PortfolioCardProps[] =
     "craftedIn": "Rio de Janeiro, Brasil"
   },
   {
-    "name": "green-goods",
+    "name": "Green Goods",
     "publishedAt": "11/2024",
     "link": "https://www.figma.com/design/aNmqUjGZ5wR4eNaRqfhbQZ/Green-Goods?m=auto&t=a0GfJFOxzXH6gpUF-6",
     "description": "",
@@ -103,7 +103,7 @@ export const portfolio: PortfolioCardProps[] =
     "craftedIn": "Rio de Janeiro, Brasil"
   },
   {
-    "name": "greenpill-brasil",
+    "name": "Greenpill Brasil",
     "publishedAt": "10/2024",
     "link": "https://www.instagram.com/greenpillbr/",
     "description": "",
@@ -113,7 +113,7 @@ export const portfolio: PortfolioCardProps[] =
     "craftedIn": "Rio de Janeiro, Brasil"
   },
   {
-    "name": "greenpill-commons",
+    "name": "Greenpill Commons",
     "publishedAt": "09/2024",
     "link": "https://www.figma.com/design/JupVc48WZas1QpgVtgExvY/Commons?m=auto&t=a0GfJFOxzXH6gpUF-6",
     "description": "",
@@ -123,7 +123,7 @@ export const portfolio: PortfolioCardProps[] =
     "craftedIn": "Rio de Janeiro, Brasil"
   },
   {
-    "name": "lemon-capital",
+    "name": "Lemon Capital",
     "publishedAt": "12/2023",
     "link": "https://hilemon.me/",
     "description": "",
@@ -132,18 +132,18 @@ export const portfolio: PortfolioCardProps[] =
     "framework": ["Figma","Framer"],
     "craftedIn": "Rio de Janeiro, Brasil"
   },
+  // {
+  //   "name": "Markado",
+  //   "publishedAt": "01/2025",
+  //   "link": "https://markado.framer.ai/",
+  //   "description": "",
+  //   "work": ["web-app", "landing-page"],
+  //   "type": "project",
+  //   "framework": ["Figma", "Framer", "Next.JS"],
+  //   "craftedIn": "Rio de Janeiro, Brasil"
+  // },
   {
-    "name": "markado",
-    "publishedAt": "01/2025",
-    "link": "https://markado.framer.ai/",
-    "description": "",
-    "work": ["web-app", "landing-page"],
-    "type": "project",
-    "framework": ["Figma", "Framer", "Next.JS"],
-    "craftedIn": "Rio de Janeiro, Brasil"
-  },
-  {
-    "name": "nerio-coffee",
+    "name": "Nerio Coffee",
     "publishedAt": "02/2025",
     "link": "https://nerio.coffee/",
     "description": "",
@@ -153,7 +153,7 @@ export const portfolio: PortfolioCardProps[] =
     "craftedIn": "Rio de Janeiro, Brasil"
   },
   {
-    "name": "Off-White",
+    "name": "Off White",
     "publishedAt": "2021",
     "link": "https://liveproject.com/off-white",
     "description": "A master-piece on how an ultracool branding can become even 'awesomer' with an app with pages for Shop & for Branding.",
@@ -163,7 +163,7 @@ export const portfolio: PortfolioCardProps[] =
     "craftedIn": "Rio de Janeiro, Brasil"
   },
   {
-    "name": "orange-financial",
+    "name": "Orange Financial",
     "publishedAt": "",
     "link": "https://orange.financial/",
     "description": "",
@@ -183,7 +183,7 @@ export const portfolio: PortfolioCardProps[] =
     "craftedIn": "Rio de Janeiro, Brasil"
   },
   {
-    "name": "studio222",
+    "name": "Studio222™",
     "publishedAt": "07/2024",
     "link": "https://s222.framer.ai/",
     "description": "",
@@ -193,7 +193,7 @@ export const portfolio: PortfolioCardProps[] =
     "craftedIn": "Rio de Janeiro, Brasil"
   },
   {
-    "name": "travla",
+    "name": "Travla",
     "publishedAt": "11/2024",
     "link": "https://www.travla.ai/",
     "description": "",
@@ -213,7 +213,7 @@ export const portfolio: PortfolioCardProps[] =
     "craftedIn": "Rio de Janeiro, Brasil"
   },
   {
-    "name": "web3dev",
+    "name": "Web3Dev",
     "publishedAt": "",
     "link": "https://www.w3d.community/",
     "description": "",
