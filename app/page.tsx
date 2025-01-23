@@ -29,7 +29,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import Header from '@/components/header';
 import { RainbowButton } from '@/components/ui/rainbow-button';
 import HyperText from '@/components/ui/hyper-text';
-import {Particles} from '@/components/ui/particles';
+import { Particles } from '@/components/ui/particles';
 
 import VerticalRuler from '@/components/vertical-ruler';
 import { PortfolioTicker } from '@/components/portoflio-ticker';
@@ -38,18 +38,17 @@ import { StripedBackground } from '@/components/striped-background';
 import FlickeringGrid from '@/components/ui/flickering-grid';
 
 export default function Home() {
-
   const parentRef = useRef(null);
 
   const [currentTime, setCurrentTime] = useState(
-    new Date().toLocaleTimeString(undefined, { timeZoneName: 'short' })
+    new Date().toLocaleTimeString(undefined, { timeZoneName: 'short' }),
   );
 
   useEffect(() => {
     // Atualiza a hora a cada segundo
     const interval = setInterval(() => {
       setCurrentTime(
-        new Date().toLocaleTimeString(undefined, { timeZoneName: 'short' })
+        new Date().toLocaleTimeString(undefined, { timeZoneName: 'short' }),
       );
     }, 1000);
 
@@ -57,24 +56,22 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
 
-  
-
   function cn(arg0: string) {
     throw new Error('Function not implemented.');
   }
 
   return (
-    
     <div className='flex w-full flex-col items-center'>
       <Header />
-      <div className='relative flex h-fit w-full bg-bg-white-0 max-w-[600px] flex-col items-center justify-center gap-32 border-l border-r border-stroke-soft-200 p-8' >
-        <div className="left-[-50px] absolute flex w-full items-start"><VerticalRuler/></div>
+      <div className='relative flex h-fit w-full max-w-[600px] flex-col items-center justify-center gap-32 border-l border-r border-stroke-soft-200 bg-bg-white-0 p-4 py-8 lg:p-8'>
+        <div className='absolute left-[-50px] flex w-full items-start'>
+          <VerticalRuler />
+        </div>
 
         <div className='flex h-[500px] flex-col items-start justify-end gap-2.5 self-stretch'>
-        
-            <HyperText onlyOnce className='text-text-sub-600'>
+          <HyperText onlyOnce className='text-text-sub-600'>
             {currentTime}
-            </HyperText>
+          </HyperText>
 
           <div className='text-title-h0 text-text-strong-950'>
             Design made to last.
@@ -82,18 +79,16 @@ export default function Home() {
         </div>
       </div>
       {/* Portoflio */}
-      
 
-      <PortfolioTicker/>
-      
+      <PortfolioTicker />
+
       {/* <div className="z-50 w-full flex shadow-[0px_16px_32px_-12px_rgba(14,18,27,0.10)]"><PortfolioCard work={'landing-page'} title={'Studio™ 222'} link={'https://s222.framer.ai/'} imageUrl={'images/portoflio/studio222/website.png'}/><PortfolioCard variant={'mobile'} title={'Travla'} link={'https://travla.ai'} imageUrl={'images/portoflio/travla/mobile-app.png'}/></div> */}
-      
-      <div className='flex h-fit w-full bg-bg-white-0 max-w-[600px] flex-col items-start justify-start'>
-       
+
+      <div className='flex h-fit w-full max-w-[600px] flex-col items-start justify-start bg-bg-white-0'>
         {/* What? */}
 
         <div className='flex h-fit flex-col items-start justify-start self-stretch'>
-          <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border border-stroke-soft-200 px-4 lg:px-8 py-32'>
+          <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border border-stroke-soft-200 px-4 py-32 lg:px-8'>
             <div className='self-stretch'>
               <span className='text-title-h3 text-text-strong-950'>What? </span>
               <span className='text-title-h3 text-text-soft-400'>
@@ -103,7 +98,7 @@ export default function Home() {
             </div>
           </div>
 
-            <div className='flex-col flex  lg:grid lg:grid-cols-2 self-stretch'>
+          <div className='flex flex-col self-stretch lg:grid lg:grid-cols-2'>
             <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-4 lg:p-8'>
               <div className='flex h-fit w-full items-center justify-start gap-4'>
                 <RiTv2Line className='text-text-sub-600' />
@@ -144,12 +139,12 @@ export default function Home() {
                 </div>
               </div>
             </div>
-           
+
             <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-4 lg:p-8'>
               <div className='flex h-fit w-full items-center justify-start gap-4'>
                 <RiBook2Line className='text-text-sub-600' />
                 <div className='text-paragraph-lg text-text-strong-950'>
-                Branding
+                  Branding
                 </div>
               </div>
             </div>
@@ -164,7 +159,7 @@ export default function Home() {
 
             <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-4 lg:p-8'>
               <div className='flex h-fit w-full items-center justify-start gap-4'>
-                <RiMovie2Line className='text-text-sub-600'/>
+                <RiMovie2Line className='text-text-sub-600' />
                 <div className='text-paragraph-lg text-text-strong-950'>
                   Motion Design
                 </div>
@@ -172,28 +167,27 @@ export default function Home() {
             </div>
             <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-4 lg:p-8'>
               <div className='flex h-fit w-full items-center justify-start gap-4'>
-                <RiStore2Line className='text-text-sub-600'/>
+                <RiStore2Line className='text-text-sub-600' />
                 <div className='text-paragraph-lg text-text-strong-950'>
                   E-Commerces
                 </div>
               </div>
             </div>
             <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-4 lg:p-8'>
-            <div className='flex h-fit w-full items-center justify-start gap-4'>
-                <RiDashboard2Line className='text-text-sub-600'/>
+              <div className='flex h-fit w-full items-center justify-start gap-4'>
+                <RiDashboard2Line className='text-text-sub-600' />
                 <div className='text-paragraph-lg text-text-strong-950'>
                   Dashboards
                 </div>
               </div>
             </div>
           </div>
-
-          
-            
-
         </div>
+
+        {/* How? */}
+
         <div className='flex h-fit flex-col items-start justify-start self-stretch'>
-          <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border border-stroke-soft-200 px-8 py-32'>
+          <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border border-stroke-soft-200 px-4 py-32 lg:px-8'>
             <div className='self-stretch'>
               <span className='text-title-h3 text-text-strong-950'>How? </span>
               <span className='text-title-h3 text-text-soft-400'>
@@ -204,58 +198,64 @@ export default function Home() {
           </div>
 
           <Accordion.Root type='single' collapsible className='w-full'>
-              <Accordion.Item value='a'>
-                <Accordion.Trigger>
-                  <Accordion.Icon as={RiSearch2Line}/>
-                  Research
-                  <Accordion.Arrow />
-                </Accordion.Trigger>
-                <Accordion.Content className='px-[30px]'>
-                We are going to search together with all the best references and analyze them 
-                to check what's going on in this specific world we are diving into.
-                </Accordion.Content>
-              </Accordion.Item>
+            <Accordion.Item value='a'>
+              <Accordion.Trigger>
+                <Accordion.Icon as={RiSearch2Line} />
+                Research
+                <Accordion.Arrow />
+              </Accordion.Trigger>
+              <Accordion.Content className='px-[30px]'>
+                We are going to search together with all the best references and
+                analyze them to check what's going on in this specific world we
+                are diving into.
+              </Accordion.Content>
+            </Accordion.Item>
 
-              <Accordion.Item value='b'>
-                <Accordion.Trigger>
-                  <Accordion.Icon as={RiRulerLine} />
-                  Definition
-                  <Accordion.Arrow />
-                </Accordion.Trigger>
-                <Accordion.Content className='px-[30px]'>
-                After that, we are going to analyze which properties of our references
-                are better for your business growth. Then create a mixed draft of all those properties to define our prefered way to build.                </Accordion.Content>
-              </Accordion.Item>
+            <Accordion.Item value='b'>
+              <Accordion.Trigger>
+                <Accordion.Icon as={RiRulerLine} />
+                Definition
+                <Accordion.Arrow />
+              </Accordion.Trigger>
+              <Accordion.Content className='px-[30px]'>
+                After that, we are going to analyze which properties of our
+                references are better for your business growth. Then create a
+                mixed draft of all those properties to define our prefered way
+                to build.{' '}
+              </Accordion.Content>
+            </Accordion.Item>
 
-              <Accordion.Item value='c'>
-                <Accordion.Trigger>
-                  <Accordion.Icon as={RiHammerLine} />
-                  Building
-                  <Accordion.Arrow />
-                </Accordion.Trigger>
-                <Accordion.Content className='px-[30px]'>
-                  After we decided together which is the best way to build you dreams, we are going 
-                  build it! This part is more introspective with our studio.
-                </Accordion.Content>
-              </Accordion.Item>
-              <Accordion.Item value='d'>
-                <Accordion.Trigger>
-                  <Accordion.Icon as={RiGift2Line} />
-                  Delivery
-                  <Accordion.Arrow />
-                </Accordion.Trigger>
-                <Accordion.Content className='px-[30px]'>
-                  After your feedbacks, we are going to reiterate and polish the whole project to
-                  leave your and your client experience seamless. After that we launch your project online!
-                </Accordion.Content>
-              </Accordion.Item>
-            </Accordion.Root>
+            <Accordion.Item value='c'>
+              <Accordion.Trigger>
+                <Accordion.Icon as={RiHammerLine} />
+                Building
+                <Accordion.Arrow />
+              </Accordion.Trigger>
+              <Accordion.Content className='px-[30px]'>
+                After we decided together which is the best way to build you
+                dreams, we are going build it! This part is more introspective
+                with our studio.
+              </Accordion.Content>
+            </Accordion.Item>
+            <Accordion.Item value='d'>
+              <Accordion.Trigger>
+                <Accordion.Icon as={RiGift2Line} />
+                Delivery
+                <Accordion.Arrow />
+              </Accordion.Trigger>
+              <Accordion.Content className='px-[30px]'>
+                After your feedbacks, we are going to reiterate and polish the
+                whole project to leave your and your client experience seamless.
+                After that we launch your project online!
+              </Accordion.Content>
+            </Accordion.Item>
+          </Accordion.Root>
         </div>
 
         {/* Who */}
 
         <div className='flex h-fit flex-col items-start justify-start self-stretch'>
-          <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border border-stroke-soft-200 px-8 py-32'>
+          <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border border-stroke-soft-200 px-4 py-32 lg:px-8'>
             <div className='self-stretch'>
               <span className='text-title-h3 text-text-strong-950'>Who? </span>
               <span className='text-title-h3 text-text-soft-400'>
@@ -265,45 +265,45 @@ export default function Home() {
           </div>
 
           <Accordion.Root type='single' collapsible className='w-full'>
-              <Accordion.Item value='a'>
-                <Accordion.Trigger>
-                  <Accordion.Icon as={RiUserLine}/>
-                  Solopreneurs
-                  <Accordion.Arrow />
-                </Accordion.Trigger>
-                <Accordion.Content className='px-[30px]'>
-                  Have the best experience with a designer ever on your entire life
-                  while you upgrade your design to scale your business.
-                </Accordion.Content>
-              </Accordion.Item>
+            <Accordion.Item value='a'>
+              <Accordion.Trigger>
+                <Accordion.Icon as={RiUserLine} />
+                Solopreneurs
+                <Accordion.Arrow />
+              </Accordion.Trigger>
+              <Accordion.Content className='px-[30px]'>
+                Have the best experience with a designer ever on your entire
+                life while you upgrade your design to scale your business.
+              </Accordion.Content>
+            </Accordion.Item>
 
-              <Accordion.Item value='b'>
-                <Accordion.Trigger>
-                  <Accordion.Icon as={RiGroupLine} />
-                  Startups
-                  <Accordion.Arrow />
-                </Accordion.Trigger>
-                <Accordion.Content className='px-[30px]'>
-                  Let's kick-off even futher your business with a Brand Book, Product Design
-                  and an awesome landing page.
-                </Accordion.Content>
-              </Accordion.Item>
+            <Accordion.Item value='b'>
+              <Accordion.Trigger>
+                <Accordion.Icon as={RiGroupLine} />
+                Startups
+                <Accordion.Arrow />
+              </Accordion.Trigger>
+              <Accordion.Content className='px-[30px]'>
+                Let's kick-off even futher your business with a Brand Book,
+                Product Design and an awesome landing page.
+              </Accordion.Content>
+            </Accordion.Item>
 
-              <Accordion.Item value='c'>
-                <Accordion.Trigger>
-                  <Accordion.Icon as={RiBuilding4Line} />
-                  Companies
-                  <Accordion.Arrow />
-                </Accordion.Trigger>
-                <Accordion.Content className='px-[30px]'>
-                  If you feel a little bit oudated or with #FOMO, we should have talked yesterday. 
-                  We really need to update your deisgn
-                </Accordion.Content>
-              </Accordion.Item>
-            </Accordion.Root>
+            <Accordion.Item value='c'>
+              <Accordion.Trigger>
+                <Accordion.Icon as={RiBuilding4Line} />
+                Companies
+                <Accordion.Arrow />
+              </Accordion.Trigger>
+              <Accordion.Content className='px-[30px]'>
+                If you feel a little bit oudated or with #FOMO, we should have
+                talked yesterday. We really need to update your deisgn
+              </Accordion.Content>
+            </Accordion.Item>
+          </Accordion.Root>
         </div>
         <div className='flex h-fit flex-col items-start justify-start self-stretch'>
-          <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border border-stroke-soft-200 px-8 py-32'>
+          <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border border-stroke-soft-200 px-4 py-32 lg:px-8'>
             <div className='self-stretch'>
               <span className='text-title-h3 text-text-strong-950'>
                 Who's behind Mainnet?{' '}
@@ -313,7 +313,12 @@ export default function Home() {
               </span>
             </div>
           </div>
-          <div className='inline-flex items-start justify-start gap-4 self-stretch border border-stroke-soft-200 p-8'>
+          <div className='flex flex-col lg:inline-flex items-center justify-start gap-4 self-stretch border border-stroke-soft-200 p-4 lg:p-8'>
+          <img
+              className='flex lg:sticky lg:top-[150px] w-[70%] lg:h-[154px] lg:w-[154px] rounded-full object-cover'
+              src='images/marcaum.jpg'
+            />
+            
             <div className='shrink grow basis-0'>
               <span className='text-paragraph-md text-text-strong-950'>
                 Hey there, I'm Marcus (also known as Marcaum), a 22-year-old
@@ -353,27 +358,21 @@ export default function Home() {
                 and make a positive impact, let’s make it happen.
               </span>
             </div>
-            <img
-              className='sticky top-[150px] h-[154px] w-[154px] rounded-full object-cover'
-              src='images/marcaum.jpg'
-            />
+            
           </div>
         </div>
 
         {/* FAQ */}
 
         <div className='flex h-fit flex-col items-start justify-start self-stretch'>
-          <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border border-stroke-soft-200 px-8 py-32'>
+          <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border border-stroke-soft-200 px-4 lg:px-8 py-32'>
             <div className='self-stretch'>
               <span className='text-title-h3 text-text-strong-950'>
                 Questions?
               </span>
               <span className='text-title-h3 text-text-soft-400'>
                 {' '}
-                Please, d
-              </span>
-              <span className='text-title-h3 text-text-soft-400'>
-                on't leave any doubts
+                Please, don't leave any doubts
               </span>
             </div>
           </div>
@@ -420,7 +419,7 @@ export default function Home() {
           </div>
         </div>
         <div className='flex h-fit flex-col items-start justify-start self-stretch'>
-          <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border border-stroke-soft-200 px-8 py-32'>
+          <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border border-stroke-soft-200 px-4 lg: px-8 py-32'>
             <div className='self-stretch'>
               <span className='text-title-h3 text-text-strong-950'>
                 Refer and earn.
@@ -431,7 +430,7 @@ export default function Home() {
               </span>
             </div>
           </div>
-          <div className='inline-flex items-center justify-start gap-4 self-stretch border border-stroke-soft-200 p-8'>
+          <div className='flex flex-col lg:inline-flex items-start justify-start gap-4 self-stretch border border-stroke-soft-200 p-4 lg:p-8'>
             <div className='text-paragraph-md text-text-sub-600'>
               Too busy to work? Send some clients on our way and receive $250
               for each project closed doing absolutely nothing, free money!
@@ -440,7 +439,7 @@ export default function Home() {
             <RainbowButton>Refer Client</RainbowButton>
           </div>
         </div>
-        <footer className='inline-flex items-center justify-between self-stretch border border-stroke-soft-200 px-8 py-2.5'>
+        <footer className='inline-flex items-center justify-between self-stretch border border-stroke-soft-200 px-4 lg:px-8 py-2'>
           <div>
             <span className='text-paragraph-sm text-text-strong-950'>
               Mainnet Design © 2025.{' '}
@@ -449,7 +448,7 @@ export default function Home() {
               All Rights Reserved{' '}
             </span>
           </div>
-          <div>
+          <div className='text-right'>
             <span className='text-paragraph-sm text-text-strong-950'>22°</span>
             <span className='text-paragraph-sm text-text-soft-400'>
               48’49.65”{' '}
