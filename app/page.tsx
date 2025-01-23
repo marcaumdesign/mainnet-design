@@ -84,11 +84,11 @@ export default function Home() {
 
       {/* <div className="z-50 w-full flex shadow-[0px_16px_32px_-12px_rgba(14,18,27,0.10)]"><PortfolioCard work={'landing-page'} title={'Studio™ 222'} link={'https://s222.framer.ai/'} imageUrl={'images/portoflio/studio222/website.png'}/><PortfolioCard variant={'mobile'} title={'Travla'} link={'https://travla.ai'} imageUrl={'images/portoflio/travla/mobile-app.png'}/></div> */}
 
-      <div className='flex h-fit w-full max-w-[600px] flex-col items-start justify-start bg-bg-white-0'>
+      <div className='flex h-fit w-full max-w-[600px] flex-col items-start justify-start bg-bg-white-0 border-[0px] border-r border-l'>
         {/* What? */}
 
         <div className='flex h-fit flex-col items-start justify-start self-stretch'>
-          <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border border-stroke-soft-200 px-4 py-32 lg:px-8'>
+          <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border-stroke-soft-200 px-4 py-32 lg:px-8'>
             <div className='self-stretch'>
               <span className='text-title-h3 text-text-strong-950'>What? </span>
               <span className='text-title-h3 text-text-soft-400'>
@@ -99,7 +99,7 @@ export default function Home() {
           </div>
 
           <div className='flex flex-col self-stretch lg:grid lg:grid-cols-2'>
-            <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-4 lg:p-8'>
+            <div className='inline-flex items-start justify-start gap-10 self-stretch border-[0px] border-t border-r border-stroke-soft-200 p-4 lg:p-8'>
               <div className='flex h-fit w-full items-center justify-start gap-4'>
                 <RiTv2Line className='text-text-sub-600' />
                 <div className='text-paragraph-lg text-text-strong-950'>
@@ -107,7 +107,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-4 lg:p-8'>
+            <div className='inline-flex items-start justify-start gap-10 self-stretch border-[0px] border-t border-r border-stroke-soft-200 p-4 lg:p-8'>
               <div className='flex h-fit w-full items-center justify-start gap-4'>
                 <RiPhoneFindLine className='text-text-sub-600' />
                 <div className='text-paragraph-lg text-text-strong-950'>
@@ -115,7 +115,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-4 lg:p-8'>
+            <div className='inline-flex items-start justify-start gap-10 self-stretch border-[0px] border-t border-r border-stroke-soft-200 p-4 lg:p-8'>
               <div className='flex h-fit w-full items-center justify-start gap-4'>
                 <RiRocket2Line className='text-text-sub-600' />
                 <div className='text-paragraph-lg text-text-strong-950'>
@@ -123,7 +123,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-4 lg:p-8'>
+            <div className='inline-flex items-start justify-start gap-10 self-stretch border-[0px] border-t  border-stroke-soft-200 p-4 lg:p-8'>
               <div className='flex h-fit w-full items-center justify-start gap-4'>
                 <RiGlobalLine className='text-text-sub-600' />
                 <div className='text-paragraph-lg text-text-strong-950'>
@@ -131,7 +131,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-4 lg:p-8'>
+            <div className='inline-flex items-start justify-start gap-10 self-stretch border-[0px] border-t border-r  border-stroke-soft-200 p-4 lg:p-8'>
               <div className='flex h-fit w-full items-center justify-start gap-4'>
                 <RiCompassDiscoverLine className='text-text-sub-600' />
                 <div className='text-paragraph-lg text-text-strong-950'>
@@ -140,7 +140,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-4 lg:p-8'>
+            <div className='inline-flex items-start justify-start gap-10 self-stretch border-[0px] border-t border-stroke-soft-200 p-4 lg:p-8'>
               <div className='flex h-fit w-full items-center justify-start gap-4'>
                 <RiBook2Line className='text-text-sub-600' />
                 <div className='text-paragraph-lg text-text-strong-950'>
@@ -148,7 +148,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-4 lg:p-8'>
+            <div className='inline-flex items-start justify-start gap-10 self-stretch border-[0px] border-t border-r border-stroke-soft-200 p-4 lg:p-8'>
               <div className='flex h-fit w-full items-center justify-start gap-4'>
                 <RiInstagramLine className='text-text-sub-600' />
                 <div className='text-paragraph-lg text-text-strong-950'>
@@ -157,7 +157,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-4 lg:p-8'>
+            <div className='inline-flex items-start justify-start gap-10 self-stretch border-[0px] border-t border-stroke-soft-200 p-4 lg:p-8'>
               <div className='flex h-fit w-full items-center justify-start gap-4'>
                 <RiMovie2Line className='text-text-sub-600' />
                 <div className='text-paragraph-lg text-text-strong-950'>
@@ -165,7 +165,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-4 lg:p-8'>
+            <div className='inline-flex items-start justify-start gap-10 self-stretch border-[0px] border-t border-r border-stroke-soft-200 p-4 lg:p-8'>
               <div className='flex h-fit w-full items-center justify-start gap-4'>
                 <RiStore2Line className='text-text-sub-600' />
                 <div className='text-paragraph-lg text-text-strong-950'>
@@ -173,7 +173,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className='inline-flex items-start justify-start gap-10 self-stretch border border-stroke-soft-200 p-4 lg:p-8'>
+            <div className='inline-flex items-start justify-start gap-10 self-stretch border-[0px] border-t border-stroke-soft-200 p-4 lg:p-8'>
               <div className='flex h-fit w-full items-center justify-start gap-4'>
                 <RiDashboard2Line className='text-text-sub-600' />
                 <div className='text-paragraph-lg text-text-strong-950'>
@@ -187,7 +187,7 @@ export default function Home() {
         {/* How? */}
 
         <div className='flex h-fit flex-col items-start justify-start self-stretch'>
-          <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border border-stroke-soft-200 px-4 py-32 lg:px-8'>
+          <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border-[0px] border-t border-stroke-soft-200 px-4 py-32 lg:px-8'>
             <div className='self-stretch'>
               <span className='text-title-h3 text-text-strong-950'>How? </span>
               <span className='text-title-h3 text-text-soft-400'>
@@ -255,7 +255,7 @@ export default function Home() {
         {/* Who */}
 
         <div className='flex h-fit flex-col items-start justify-start self-stretch'>
-          <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border border-stroke-soft-200 px-4 py-32 lg:px-8'>
+          <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border-[0px] border-t border-stroke-soft-200 px-4 py-32 lg:px-8'>
             <div className='self-stretch'>
               <span className='text-title-h3 text-text-strong-950'>Who? </span>
               <span className='text-title-h3 text-text-soft-400'>
@@ -303,7 +303,7 @@ export default function Home() {
           </Accordion.Root>
         </div>
         <div className='flex h-fit flex-col items-start justify-start self-stretch'>
-          <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border border-stroke-soft-200 px-4 py-32 lg:px-8'>
+          <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border-[0px] border-t border-stroke-soft-200 px-4 py-32 lg:px-8'>
             <div className='self-stretch'>
               <span className='text-title-h3 text-text-strong-950'>
                 Who's behind Mainnet?{' '}
@@ -313,59 +313,59 @@ export default function Home() {
               </span>
             </div>
           </div>
-          <div className='flex flex-col lg:inline-flex items-center justify-start gap-4 self-stretch border border-stroke-soft-200 p-4 lg:p-8'>
-          <img
-              className='flex lg:sticky lg:top-[150px] w-[70%] lg:h-[154px] lg:w-[154px] rounded-full object-cover'
+            <div className='flex flex-col lg:flex-row items-center lg:items-start justify-start gap-4 self-stretch border-[0px] border-t border-stroke-soft-200 p-4 lg:p-8'>
+            <img
+              className='lg:sticky top-[150px] h-[154px] w-[154px] rounded-full object-cover'
               src='images/marcaum.jpg'
             />
             
             <div className='shrink grow basis-0'>
               <span className='text-paragraph-md text-text-strong-950'>
-                Hey there, I'm Marcus (also known as Marcaum), a 22-year-old
-                carioca designer who is passionate about the color green and
-                creating regenerative solutions.
-                <br />
-                <br />
-                With over 8 years of experience, I’ve worked with innovative
-                companies like V
+              Hey there, I'm Marcus (also known as Marcaum), a 22-year-old
+              carioca designer who is passionate about the color green and
+              creating regenerative solutions.
+              <br />
+              <br />
+              With over 8 years of experience, I’ve worked with innovative
+              companies like V
               </span>
               <span className='text-paragraph-md text-text-strong-950'>
-                elvet, Lemon Capital (BTG), Eternal Games, GreenPill
+              elvet, Lemon Capital (BTG), Eternal Games, GreenPill
               </span>
               <span className='text-paragraph-md text-text-strong-950'>
-                , and others, crafting solutions that make a meaningful impact
-                on businesses and their users.
-                <br />
-                <br />
-                In 2023, I had the privilege of working at{' '}
+              , and others, crafting solutions that make a meaningful impact
+              on businesses and their users.
+              <br />
+              <br />
+              In 2023, I had the privilege of working at{' '}
               </span>
               <span className='text-paragraph-md text-text-strong-950'>
-                Framer as a Product Specialist
+              Framer as a Product Specialist
               </span>
               <span className='text-paragraph-md text-text-strong-950'>
-                , an experience that deepened my expertise and strengthened my
-                role as an Expert and Partner in the design industry.
-                <br />
-                <br />
-                Now, with Mainnet Design, I’m channeling all of this experience
-                into helping businesses thrive while{' '}
+              , an experience that deepened my expertise and strengthened my
+              role as an Expert and Partner in the design industry.
+              <br />
+              <br />
+              Now, with Mainnet Design, I’m channeling all of this experience
+              into helping businesses thrive while{' '}
               </span>
               <span className='text-paragraph-md text-text-strong-950'>
-                focusing on sustainability and innovation
+              focusing on sustainability and innovation
               </span>
               <span className='text-paragraph-md text-text-strong-950'>
-                . If you're looking for a partner to bring your ideas to life
-                and make a positive impact, let’s make it happen.
+              . If you're looking for a partner to bring your ideas to life
+              and make a positive impact, let’s make it happen.
               </span>
             </div>
             
-          </div>
+            </div>
         </div>
 
         {/* FAQ */}
 
         <div className='flex h-fit flex-col items-start justify-start self-stretch'>
-          <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border border-stroke-soft-200 px-4 lg:px-8 py-32'>
+          <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border-[0px] border-t border-stroke-soft-200 px-4 lg:px-8 py-32'>
             <div className='self-stretch'>
               <span className='text-title-h3 text-text-strong-950'>
                 Questions?
@@ -419,7 +419,7 @@ export default function Home() {
           </div>
         </div>
         <div className='flex h-fit flex-col items-start justify-start self-stretch'>
-          <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border border-stroke-soft-200 px-4 lg: px-8 py-32'>
+          <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border-[0px] border-t border-stroke-soft-200 px-4 lg: px-8 py-32'>
             <div className='self-stretch'>
               <span className='text-title-h3 text-text-strong-950'>
                 Refer and earn.
@@ -430,7 +430,7 @@ export default function Home() {
               </span>
             </div>
           </div>
-          <div className='flex flex-col lg:inline-flex items-start justify-start gap-4 self-stretch border border-stroke-soft-200 p-4 lg:p-8'>
+          <div className='flex flex-col lg:inline-flex items-start justify-start gap-4 self-stretch border-[0px] border-t border-stroke-soft-200 p-4 lg:p-8'>
             <div className='text-paragraph-md text-text-sub-600'>
               Too busy to work? Send some clients on our way and receive $250
               for each project closed doing absolutely nothing, free money! 
@@ -439,7 +439,7 @@ export default function Home() {
             <RainbowButton>Refer Client</RainbowButton>
           </div>
         </div>
-        <footer className='inline-flex items-center justify-between self-stretch border border-stroke-soft-200 px-4 lg:px-8 py-2 '>
+        <footer className='inline-flex items-center justify-between self-stretch border-[0px] border-t border-stroke-soft-200 px-4 lg:px-8 py-2 '>
           <div>
             <span className='text-paragraph-sm text-text-strong-950'>
               Mainnet Design © {new Date().getFullYear()}.{' '}
