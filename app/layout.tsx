@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import Clarity from '@microsoft/clarity';
+import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react"
 import { Inter as FontSans } from 'next/font/google';
 import localFont from 'next/font/local';
 import './globals.css';
@@ -41,7 +43,7 @@ export default function RootLayout({
           <TooltipProvider>
             <div className='flex min-h-screen flex-col'>
               
-              <main className='flex flex-1 flex-col'>{children}</main>
+              <main className='flex flex-1 flex-col'>{children}<SpeedInsights/><Analytics/></main>
             </div>
           </TooltipProvider>
         </ThemeProvider>
