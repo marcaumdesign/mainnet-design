@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import Marquee from "@/components/ui/marquee";
 import {
   IconVariants,
-  PortfolioCardProps,
+  PortfolioProps,
   portfolio,
 } from "@/data/portfolio"
 import PortfolioCard from "./portfolio-card";
@@ -14,11 +14,11 @@ const secondRow = portfolio.slice(portfolio.length / 2);
 
 export function PortfolioTicker() {
   return (
-    <div className="z-50 bg-bg-white-0 relative flex h-auto w-full flex-col items-center justify-center overflow-hidden bg-background md:shadow-xl">
+    <div className="z-50 bg-bg-white-0 relative flex h-fit lg:h-fit w-full flex-col items-center justify-center overflow-hidden bg-background md:shadow-xl">
       <Marquee pauseOnHover className="[--duration:20s]">
         {firstRow.map((portfolio) => (
           <PortfolioCard key={portfolio.name} {...portfolio}/>
-          // <ReviewCard key={review.username} {...review} />
+          
         ))}
       </Marquee>
       <Marquee reverse pauseOnHover className="[--duration:20s]">
