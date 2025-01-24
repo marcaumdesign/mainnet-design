@@ -373,7 +373,7 @@ export default function Home() {
               </span>
               <span className='text-title-h3 text-text-soft-400'>
                 {' '}
-                Please, don't leave any doubts
+                We have answers
               </span>
             </div>
           </div>
