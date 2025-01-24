@@ -10,6 +10,11 @@ import { cn } from '@/utils/cn';
 import { Provider as TooltipProvider } from '@/components/ui/tooltip';
 import { NotificationProvider } from '@/components/ui/notification-provider';
 import Header from '@/components/header';
+import Script from "next/script";
+
+const projectId = "pyygop0f82"
+
+Clarity.init(projectId);
 
 const inter = FontSans({
   subsets: ['latin'],
@@ -38,6 +43,8 @@ export default function RootLayout({
       suppressHydrationWarning
       className={cn(inter.variable, geistMono.variable, 'antialiased', "hide-scroll")}
     >
+
+
       <body className='bg-bg-white-0  lg:bg-bg-weak-50 text-text-strong-950 overflow-auto '>
         <ThemeProvider attribute='class'>
           <TooltipProvider>
@@ -48,6 +55,19 @@ export default function RootLayout({
           </TooltipProvider>
         </ThemeProvider>
         <NotificationProvider />
+
+        <Script id="clarity" strategy="afterInteractive">
+          {`
+            (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "pyygop0f82");
+          `}
+        </Script>
+
+        
+
       </body>
     </html>
   );
