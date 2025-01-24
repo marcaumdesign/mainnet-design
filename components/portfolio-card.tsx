@@ -15,7 +15,7 @@ import {
 } from '@remixicon/react';
 import {
   IconVariants,
-  PortfolioCardProps
+  PortfolioProps
 } from "@/data/portfolio" 
 
 function toSlug(input: string): string {
@@ -29,30 +29,27 @@ function toSlug(input: string): string {
     .replace(/-+/g, "-"); // Remove hífens repetidos
 }
 
-// Exemplo de uso
-const slug = toSlug("Exemplo Nome");
-console.log(slug); // Saída: exemplo-nome
+const capitalizer = (variants: IconVariants) => {
+  return variants
+    .split('-')
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+
+};
 
 const icons: Record<IconVariants, RemixiconComponentType> = {
   "mobile-app": RiSmartphoneFill,
   'landing-page': RiPagesFill,
   'web-app': RiAppsFill,
   'website': RiGlobalFill,
-  'branding': RiBook2Line,
   'templates': RiTempHotFill,
-  'social-media': RiGlobalFill, 
-  'e-commerce': RiAppsFill, 
-  'dashboard': RiPagesFill, 
+  'branding': RiBook2Line,
+  'social-media': RiBook2Line,
+  'e-commerce': RiBook2Line,
+  'dashboard': RiBook2Line,
 };
 
-const capitalizer = (variants: IconVariants) => {
-  return variants
-    .split('-')
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ');
-};
-
-const PortfolioCard: React.FC<PortfolioCardProps> = ({
+const PortfolioCard: React.FC<PortfolioProps> = ({
   work,
   name,
   link,
@@ -60,31 +57,22 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({
 }) => {
   const variant = Array.isArray(work) && work.length > 1 ? work[0] : work[0];
   const isProject = type === 'project';
-  const imageWidth = 864;
   const imageUrl = `/images/portfolio/${toSlug(name)}/${variant}.png`;
 
   return (
-    <div className='bg-bg-white-0'>
+    <div className='bg-bg-white-0 flex flex-col w-full max-w-xs lg:max-w-none'>
       <img
-        className='object-fit lg:h-[540px] h-fill'
+        className='w-full h-auto object-cover'
         src={imageUrl}
         alt={name}
       />
-      <div className='flex items-center justify-between border-[0px] border-t border-b border-stroke-soft-200 px-4 py-4'>
+      <div className='flex items-center justify-between border border-stroke-soft-200 px-4 py-4'>
         <div className='text-label-md text-text-strong-950'>{name}</div>
         <div className='flex items-center gap-2'>
-
-        
-            <Tag.Root variant='stroke'>
-              <Tag.Icon as={icons[variant]} />
-              {capitalizer(variant)}
-            </Tag.Root>
-          
-          <Link href={link} passHref target='_blank'>
-            <Button.Root size='xxsmall' variant='neutral' mode='filled'>
-              {isProject ? 'Open Template' : 'Open Project'}
-            </Button.Root>
-          </Link>
+          <Tag.Root variant='stroke'>
+            <Tag.Icon as={icons[variant]} />
+            {capitalizer(variant)}
+          </Tag.Root>
         </div>
       </div>
     </div>

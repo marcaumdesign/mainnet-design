@@ -1,4 +1,4 @@
-export type IconVariants =
+export type Works =
   | 'mobile-app'
   | 'landing-page'
   | 'web-app'
@@ -9,18 +9,29 @@ export type IconVariants =
   | 'e-commerce'
   | 'dashboard';
 
-export interface PortfolioCardProps {
+export const works: Works[] = 
+  ['mobile-app'
+  ,'landing-page'
+  ,'web-app'
+  ,'website'
+  ,'templates'
+  ,'branding'
+  ,'social-media'
+  ,'e-commerce'
+  ,'dashboard'];
+
+export interface PortfolioProps {
   name: string;
   publishedAt: string;
   link: string;
   description: string;
-  work: IconVariants[];
+  work: Works[];
   type: string;
   framework: string[];
   craftedIn: string;
 }
 
-export const portfolio: PortfolioCardProps[] = 
+export const portfolio: PortfolioProps[] = 
 [
   {
     "name": "Bee Company",
@@ -223,3 +234,4 @@ export const portfolio: PortfolioCardProps[] =
     "craftedIn": "Rio de Janeiro, Brasil"
   }
 ]
+
