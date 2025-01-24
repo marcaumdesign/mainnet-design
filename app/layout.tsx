@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Clarity from '@microsoft/clarity';
 import { Inter as FontSans } from 'next/font/google';
 import localFont from 'next/font/local';
 import './globals.css';
