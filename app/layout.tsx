@@ -56,6 +56,21 @@ export default function RootLayout({
         </ThemeProvider>
         <NotificationProvider />
 
+         {/* Google Tag Manager */}
+         <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=G-T4FF6715QC`}
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-T4FF6715QC');
+          `}
+        </Script>
+        {/* End Google Tag Manager */}
+
         <Script id="clarity" strategy="afterInteractive">
           {`
             (function(c,l,a,r,i,t,y){
@@ -66,6 +81,7 @@ export default function RootLayout({
           `}
         </Script>
 
+        
         
 
       </body>
