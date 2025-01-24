@@ -14,7 +14,7 @@ import {
   RemixiconComponentType,
 } from '@remixicon/react';
 import {
-  IconVariants,
+  Works,
   PortfolioProps
 } from "@/data/portfolio" 
 
@@ -29,7 +29,7 @@ function toSlug(input: string): string {
     .replace(/-+/g, "-"); // Remove hífens repetidos
 }
 
-const capitalizer = (variants: IconVariants) => {
+const capitalizer = (variants: Works) => {
   return variants
     .split('-')
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
@@ -37,7 +37,7 @@ const capitalizer = (variants: IconVariants) => {
 
 };
 
-const icons: Record<IconVariants, RemixiconComponentType> = {
+const icons: Record<Works, RemixiconComponentType> = {
   "mobile-app": RiSmartphoneFill,
   'landing-page': RiPagesFill,
   'web-app': RiAppsFill,
