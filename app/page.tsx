@@ -75,7 +75,7 @@ export default function Home() {
           </HyperText>
 
           <div className='text-title-h0 text-text-strong-950'>
-            Works designed to last.
+          Timeless Design Built for Lasting Impact.
           </div>
         </div>
       </div>
