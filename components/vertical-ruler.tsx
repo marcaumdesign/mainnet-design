@@ -51,7 +51,7 @@ export default function VerticalRuler() {
                 className={`text-subheading-2xs w-8 text-right pr-1 ${
                   isCurrent ? 'text-text-strong-950' : 
                   isPrevious || isNext ? 'text-text-sub-600' : 
-                  'text-text-disabled-300'
+                  'transition-all text-text-disabled-300'
                 }`}
               >
                 {i * 50}
