@@ -78,7 +78,7 @@ export default function Home() {
             {currentTime}
           </HyperText>
 
-          <div className='text-title-h0 text-text-strong-950'>
+          <div className='text-title-h1 md:text-title-h0 text-text-strong-950'>
           Timeless Design Built for Lasting Impact.
           </div>
         </div>

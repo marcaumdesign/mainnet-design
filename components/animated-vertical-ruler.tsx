@@ -49,7 +49,7 @@ export default function AnimatedVerticalRuler({ variant }: AnimatedVerticalRuler
 
   return (
     <div
-      className={`fixed top-0 max-h-[100vh] w-12 pointer-events-none select-none z-30 ${rulerClass} overflow-hidden ${
+      className={`hidden md:block fixed top-0 max-h-[100vh] w-12 pointer-events-none select-none z-30 ${rulerClass} overflow-hidden ${
       variant === "left" ? "pr-[5px] border-r border-stroke-soft-200" : "pl-[5px] border-l border-stroke-soft-200"
       }`}
     >
