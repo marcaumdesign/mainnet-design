@@ -9,6 +9,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import AnimatedVerticalRuler from './animated-vertical-ruler';
 
 const SegmentedLoader: React.FC = () => {
+  const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
   const [currentSegment, setCurrentSegment] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
   const totalSegments = 6;
@@ -52,11 +53,11 @@ const SegmentedLoader: React.FC = () => {
           transition={{ duration: 0.5, ease: 'easeInOut' }}
         >
              <AnimatedVerticalRuler variant="left" />
-             <AnimatedVerticalRuler variant="right" />
-          <div className='items-center gap-2 w-1/2'>
+      <AnimatedVerticalRuler variant="right" />
+          <div className='items-center gap-2 w-[100%] md:w-1/2'>
             <span className='mr-2 text-gray-500'>
               <DotLottieReact
-                src='./lotties/logo-animation.lottie'
+                src={isDarkMode ? './lotties/logo-darkmode.lottie' : './lotties/logo-lightmode.lottie'}
                 loop
                 autoplay
               />
