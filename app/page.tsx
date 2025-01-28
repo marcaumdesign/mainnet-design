@@ -65,7 +65,7 @@ export default function Home() {
     <div className='flex w-full flex-col items-center'>
  
       <Loader/>
-      
+      aaa
       <Header />
       <div className='relative flex h-fit w-full max-w-[600px] flex-col items-center justify-center gap-32 border-l border-r border-stroke-soft-200 bg-bg-white-0 p-4 py-8 lg:p-8'>
         <div className='absolute left-[-50px] flex w-full items-start'>
