@@ -9,10 +9,20 @@ import { motion, AnimatePresence } from 'framer-motion';
 import AnimatedVerticalRuler from './animated-vertical-ruler';
 
 const SegmentedLoader: React.FC = () => {
-  const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const [isDarkMode, setDarkMode] = useState(false)
   const [currentSegment, setCurrentSegment] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
   const totalSegments = 6;
+
+  useEffect(() => {
+    if(typeof window === 'undefined') {
+      return
+    }
+
+    const mode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    setDarkMode(mode)
+  }, [])
 
   useEffect(() => {
     // Avançar para o próximo segmento a cada 500ms
