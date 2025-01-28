@@ -25,18 +25,18 @@ import {
   RiGlobalLine,
 } from '@remixicon/react';
 
+import Lottie from 'lottie-react';
 import React, { useEffect, useRef, useState } from 'react';
 import Header from '@/components/header';
 import { RainbowButton } from '@/components/ui/rainbow-button';
 import HyperText from '@/components/ui/hyper-text';
 import { Particles } from '@/components/ui/particles';
-
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import VerticalRuler from '@/components/vertical-ruler';
 import { PortfolioTicker } from '@/components/portoflio-ticker';
-import PortfolioCard from '@/components/portfolio-card';
-import { StripedBackground } from '@/components/striped-background';
-import FlickeringGrid from '@/components/ui/flickering-grid';
-import Footer from '@/components/footer';
+import Loader from '@/components/loader';
+import AnimatedVerticalRuler from '@/components/animated-vertical-ruler';
+
 
 export default function Home() {
   const parentRef = useRef(null);
@@ -63,10 +63,14 @@ export default function Home() {
 
   return (
     <div className='flex w-full flex-col items-center'>
+ 
+      <Loader/>
+      
       <Header />
       <div className='relative flex h-fit w-full max-w-[600px] flex-col items-center justify-center gap-32 border-l border-r border-stroke-soft-200 bg-bg-white-0 p-4 py-8 lg:p-8'>
         <div className='absolute left-[-50px] flex w-full items-start'>
           <VerticalRuler />
+          
         </div>
 
         <div className='flex h-[500px] flex-col items-start justify-end gap-2.5 self-stretch'>
@@ -87,6 +91,8 @@ export default function Home() {
 
       <div className='flex h-fit w-full max-w-[600px] flex-col items-start justify-start bg-bg-white-0 border-[0px] border-r border-l border-stroke-soft-200'>
         {/* What? */}
+
+
 
         <div className='flex h-fit flex-col items-start justify-start self-stretch'>
           <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border-stroke-soft-200 px-4 py-32 lg:px-8'>

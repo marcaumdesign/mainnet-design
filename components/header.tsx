@@ -19,6 +19,7 @@ export default function Header() {
           className='flex items-center text-title-h6 text-text-strong-950'
         >
           <Logo className='size-16 object-contain' />
+            
           
         </Link>
     
