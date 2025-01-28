@@ -7,21 +7,25 @@ import type React from 'react';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import AnimatedVerticalRuler from './animated-vertical-ruler';
+import { log } from 'console';
 
 const SegmentedLoader: React.FC = () => {
-  const [isDarkMode, setDarkMode] = useState(false)
+  const [isDarkMode, setDarkMode] = useState<null | boolean>(null)
   const [currentSegment, setCurrentSegment] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
   const totalSegments = 6;
 
   useEffect(() => {
+    
     if(typeof window === 'undefined') {
       return
     }
 
+
     const mode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
     setDarkMode(mode)
+    
   }, [])
 
   useEffect(() => {
@@ -51,6 +55,9 @@ const SegmentedLoader: React.FC = () => {
     //   window.removeEventListener("touchmove", preventDefault)
     // }
   }, []);
+  
+
+  if (isDarkMode === null) return null
 
   return (
     <AnimatePresence>
@@ -67,10 +74,20 @@ const SegmentedLoader: React.FC = () => {
           <div className='items-center gap-2 w-[100%] md:w-1/2'>
             <span className='mr-2 text-gray-500'>
               <DotLottieReact
-                src={isDarkMode ? './lotties/logo-darkmode.lottie' : './lotties/logo-lightmode.lottie'}
+                src={isDarkMode ? '/lotties/logo-darkmode.lottie' : '/lotties/logo-lightmode.lottie'}
                 loop
                 autoplay
               />
+              {/* <DotLottieReact
+                src='/lotties/logo-darkmode.lottie'
+                loop
+                autoplay
+              />
+              <DotLottieReact
+                src='/lotties/logo-lightmode.lottie'
+                loop
+                autoplay
+              /> */}
             </span>
             
           </div>
