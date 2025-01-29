@@ -18,7 +18,7 @@ export default function Header({ variant = 'compact' }) {
 
   return (
     <>
-      <header className={`z-10 bg-bg-white-0 border border-stroke-soft-200 lg:px-8 lg:py-4 px-3 py-3 fixed w-full flex h-fit ${maxWidthClass} items-center justify-between shadow-[0px_16px_32px_-12px_rgba(14,18,27,0.10)]`}>
+      <header className={`z-10 bg-bg-white-0 border-b border-stroke-soft-200 lg:px-8 lg:py-4 px-3 py-3 fixed w-full flex h-fit ${maxWidthClass} items-center justify-between shadow-[0px_16px_32px_-12px_rgba(14,18,27,0.10)]`}>
         <Link
           href='/'
           className='flex items-center text-title-h6 text-text-strong-950'
