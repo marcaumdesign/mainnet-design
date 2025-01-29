@@ -12,25 +12,28 @@ const PortfolioPage = () => {
   const item = portfolio.find((item) => item.slug === slug);
 
       // Formate o texto do trabalho
-  const formattedWorkText = item?.work
-    ?.map((work, index) => {
-      const formattedWork = work.replace(/-/g, ' ').replace(/(^\w|\s\w)/g, (m) => m.toUpperCase());
-      if (index === item.work.length - 1 && item.work.length > 1) {
-        return ` & ${formattedWork}`;
-      }
-      return index === item.work.length - 2 ? `${formattedWork}` : `${formattedWork}, `;
-    })
-    .join('')
-    .replace(', &', ' &');
+const formatText = (textArray: string[]) => {
+    return textArray
+        ?.map((text, index) => {
+            const formattedText = text.replace(/-/g, ' ').replace(/(^\w|\s\w)/g, (m) => m.toUpperCase());
+            if (index === textArray.length - 1 && textArray.length > 1) {
+                return ` & ${formattedText}`;
+            }
+            return index === textArray.length - 2 ? `${formattedText}` : `${formattedText}, `;
+        })
+        .join('')
+        .replace(', &', ' &');
+};
 
-  if (!item) {
+
+if (!item) {
     return <div>Item não encontrado</div>;
-  }
+}
 
   return (
     <div className='flex w-full flex-col items-center'>
       <Header variant='full' />
-      <div className='inline-flex h-fit flex-col items-start justify-start  border-stroke-soft-200 bg-bg-white-0 border-l border-r'>
+      <div className='w-full max-w-[1200px] inline-flex h-fit flex-col items-start justify-start  border-stroke-soft-200 bg-bg-white-0 border-l border-r'>
         <div className='flex h-fit flex-col items-start justify-center gap-4 self-stretch border-t  border-stroke-soft-200 p-8 pt-[122px]'>
           <div className='inline-flex items-center justify-center gap-1'>
             <div
@@ -53,23 +56,23 @@ const PortfolioPage = () => {
           </div>
           <div className='text-title-h0 text-text-strong-950'>{item.name}</div>
         </div>
-        <div className='inline-flex items-center justify-start gap-8 self-stretch border-t border-stroke-soft-200 p-8'>
+        <div className=' inline-flex items-center justify-start gap-8 self-stretch border-t border-stroke-soft-200 p-8'>
           <div className='inline-flex shrink grow basis-0 flex-col items-start justify-start gap-2'>
             <div className='self-stretch text-subheading-sm uppercase text-text-sub-600'>
               works
             </div>
             <div className='self-stretch text-title-h4 text-text-strong-950'>
-              {formattedWorkText}
+              {formatText(item.work)}
             </div>
           </div>
         </div>
-        <div className='inline-flex max-w-[1200px] items-start justify-start gap-8 self-stretch border-t  border-stroke-soft-200 p-8'>
+        <div className='inline-flex  items-start justify-start gap-8 self-stretch border-t  border-stroke-soft-200 p-8'>
           <div className='inline-flex flex-col items-start justify-start gap-2'>
             <div className='self-stretch text-subheading-sm uppercase text-text-sub-600'>
               YEAR
             </div>
             <div className='self-stretch text-paragraph-md text-text-strong-950'>
-              2024
+              {item.publishedAt}
             </div>
           </div>
           <div className='inline-flex flex-col items-start justify-start gap-2'>
@@ -77,7 +80,7 @@ const PortfolioPage = () => {
               sOFTWARES
             </div>
             <div className='self-stretch text-paragraph-md text-text-strong-950'>
-              Figma & Framer
+              {formatText(item.framework)}
             </div>
           </div>
           <div className='inline-flex flex-col items-start justify-start gap-2'>
@@ -85,10 +88,10 @@ const PortfolioPage = () => {
               CRAFTED IN
             </div>
             <div className='self-stretch text-paragraph-md text-text-strong-950'>
-              Rio de Janeiro, Brasil
+              {item.craftedIn}
             </div>
           </div>
-          <div className='inline-flex w-[263px] flex-col items-start justify-start gap-2'>
+          {/* <div className='inline-flex w-[263px] flex-col items-start justify-start gap-2'>
             <div className='self-stretch text-subheading-sm uppercase text-text-sub-600'>
               collaborators
             </div>
@@ -100,7 +103,7 @@ const PortfolioPage = () => {
                 Clara Goldenstein [Copywriter]
               </div>
             </div>
-          </div>
+          </div> */}
           <div className='inline-flex shrink grow basis-0 flex-col items-start justify-start gap-2'>
             <div className='self-stretch text-subheading-sm uppercase text-text-sub-600'>
               Description
