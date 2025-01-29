@@ -1,8 +1,9 @@
-"use client";
+'use client';
 
 import { useRouter, useParams } from 'next/navigation';
 import { PortfolioProps, portfolio } from '@/data/portfolio';
 import Header from '@/components/header';
+import { RiArrowLeftFill, RiArrowLeftSLine } from '@remixicon/react';
 
 const PortfolioPage = () => {
   const router = useRouter();
@@ -10,20 +11,106 @@ const PortfolioPage = () => {
 
   const item = portfolio.find((item) => item.slug === slug);
 
+      // Formate o texto do trabalho
+  const formattedWorkText = item?.work
+    ?.map((work, index) => {
+      const formattedWork = work.replace(/-/g, ' ').replace(/(^\w|\s\w)/g, (m) => m.toUpperCase());
+      if (index === item.work.length - 1 && item.work.length > 1) {
+        return ` & ${formattedWork}`;
+      }
+      return index === item.work.length - 2 ? `${formattedWork}` : `${formattedWork}, `;
+    })
+    .join('')
+    .replace(', &', ' &');
+
   if (!item) {
     return <div>Item não encontrado</div>;
   }
 
   return (
     <div className='flex w-full flex-col items-center'>
-      <Header />
-      <div className='relative flex h-fit w-full max-w-[600px] flex-col items-center justify-center gap-32 border-l border-r border-stroke-soft-200 bg-bg-white-0 p-4 py-8 lg:p-8'>
-        <h1 className='text-title-h1 text-text-strong-950'>{item.name}</h1>
-        <p className='text-text-sub-600'>{item.description}</p>
-        <a href={item.link} target='_blank' rel='noopener noreferrer'>
-          {item.link}
-        </a>
-        {/* Adicione mais detalhes do item do portfólio conforme necessário */}
+      <Header variant='full' />
+      <div className='inline-flex h-fit flex-col items-start justify-start  border-stroke-soft-200 bg-bg-white-0 border-l border-r'>
+        <div className='flex h-fit flex-col items-start justify-center gap-4 self-stretch border-t  border-stroke-soft-200 p-8 pt-[122px]'>
+          <div className='inline-flex items-center justify-center gap-1'>
+            <div
+              className='cursor-pointer text-subheading-md uppercase text-text-soft-400 hover:text-text-strong-950'
+              onClick={() => router.push('/')}
+            >
+              Home
+            </div>
+            <RiArrowLeftSLine />
+            <div
+              className='text-subheading-md uppercase text-text-soft-400 hover:text-text-strong-950'
+              onClick={() => router.push('/portoflio')}
+            >
+              Portoflio
+            </div>
+            <RiArrowLeftSLine />
+            <div className='text-subheading-md uppercase text-text-strong-950'>
+              {item.slug}
+            </div>
+          </div>
+          <div className='text-title-h0 text-text-strong-950'>{item.name}</div>
+        </div>
+        <div className='inline-flex items-center justify-start gap-8 self-stretch border-t border-stroke-soft-200 p-8'>
+          <div className='inline-flex shrink grow basis-0 flex-col items-start justify-start gap-2'>
+            <div className='self-stretch text-subheading-sm uppercase text-text-sub-600'>
+              works
+            </div>
+            <div className='self-stretch text-title-h4 text-text-strong-950'>
+              {formattedWorkText}
+            </div>
+          </div>
+        </div>
+        <div className='inline-flex max-w-[1200px] items-start justify-start gap-8 self-stretch border-t  border-stroke-soft-200 p-8'>
+          <div className='inline-flex flex-col items-start justify-start gap-2'>
+            <div className='self-stretch text-subheading-sm uppercase text-text-sub-600'>
+              YEAR
+            </div>
+            <div className='self-stretch text-paragraph-md text-text-strong-950'>
+              2024
+            </div>
+          </div>
+          <div className='inline-flex flex-col items-start justify-start gap-2'>
+            <div className='self-stretch text-subheading-sm uppercase text-text-sub-600'>
+              sOFTWARES
+            </div>
+            <div className='self-stretch text-paragraph-md text-text-strong-950'>
+              Figma & Framer
+            </div>
+          </div>
+          <div className='inline-flex flex-col items-start justify-start gap-2'>
+            <div className='self-stretch text-subheading-sm uppercase text-text-sub-600'>
+              CRAFTED IN
+            </div>
+            <div className='self-stretch text-paragraph-md text-text-strong-950'>
+              Rio de Janeiro, Brasil
+            </div>
+          </div>
+          <div className='inline-flex w-[263px] flex-col items-start justify-start gap-2'>
+            <div className='self-stretch text-subheading-sm uppercase text-text-sub-600'>
+              collaborators
+            </div>
+            <div className='flex h-fit flex-col items-start justify-start gap-1 self-stretch'>
+              <div className='self-stretch text-paragraph-md text-text-strong-950'>
+                Marcus Dutra [Design Director]
+              </div>
+              <div className='self-stretch text-paragraph-md text-text-strong-950'>
+                Clara Goldenstein [Copywriter]
+              </div>
+            </div>
+          </div>
+          <div className='inline-flex shrink grow basis-0 flex-col items-start justify-start gap-2'>
+            <div className='self-stretch text-subheading-sm uppercase text-text-sub-600'>
+              Description
+            </div>
+            <div className='self-stretch text-paragraph-md text-text-strong-950'>
+              A regenerative streetwear brand that sells techwear made with
+              sustainable materials.
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
