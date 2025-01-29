@@ -69,7 +69,7 @@ if (!item) {
         <div className='inline-flex  items-start justify-start gap-8 self-stretch border-t  border-stroke-soft-200 p-8'>
           <div className='inline-flex flex-col items-start justify-start gap-2'>
             <div className='self-stretch text-subheading-sm uppercase text-text-sub-600'>
-              YEAR
+              Year
             </div>
             <div className='self-stretch text-paragraph-md text-text-strong-950'>
               {item.publishedAt}
@@ -77,7 +77,7 @@ if (!item) {
           </div>
           <div className='inline-flex flex-col items-start justify-start gap-2'>
             <div className='self-stretch text-subheading-sm uppercase text-text-sub-600'>
-              sOFTWARES
+              Softwares
             </div>
             <div className='self-stretch text-paragraph-md text-text-strong-950'>
               {formatText(item.framework)}
@@ -85,7 +85,7 @@ if (!item) {
           </div>
           <div className='inline-flex flex-col items-start justify-start gap-2'>
             <div className='self-stretch text-subheading-sm uppercase text-text-sub-600'>
-              CRAFTED IN
+              Crafted In
             </div>
             <div className='self-stretch text-paragraph-md text-text-strong-950'>
               {item.craftedIn}
