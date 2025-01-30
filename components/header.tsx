@@ -14,7 +14,7 @@ interface HeaderProps {
 }
 
 export default function Header({ variant = 'compact' }) {
-  const maxWidthClass = variant === 'full' ? 'max-w-[1200px]' : 'max-w-[600px]';
+  const maxWidthClass = variant === 'full' ? 'max-w-[1100px] border-l border-r' : 'max-w-[600px]';
 
   return (
     <>
