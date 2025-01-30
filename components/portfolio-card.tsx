@@ -54,28 +54,34 @@ const PortfolioCard: React.FC<PortfolioProps> = ({
   name,
   link,
   type,
+  slug
 }) => {
   const variant = Array.isArray(work) && work.length > 1 ? work[0] : work[0];
   const isProject = type === 'project';
-  const imageUrl = `/images/portfolio/${toSlug(name)}/${variant}.png`;
+  const imageUrl = `/images/portfolio/${slug}/${variant}.png`;
 
   return (
+    <Link
+        href={`/portfolio/${slug}`}
+        className='flex items-center text-title-h6 text-text-strong-950'
+      >
     <div className='bg-bg-white-0 flex flex-col w-full max-w-xs lg:max-w-none'>
       <img
-        className='w-full h-auto object-cover'
-        src={imageUrl}
-        alt={name}
+      className='w-full h-auto object-cover'
+      src={imageUrl}
+      alt={name}
       />
       <div className='flex items-center justify-between border border-stroke-soft-200 px-4 py-4'>
-        <div className='text-label-md text-text-strong-950'>{name}</div>
-        <div className='flex items-center gap-2'>
-          <Tag.Root variant='stroke'>
-            <Tag.Icon as={icons[variant]} />
-            {capitalizer(variant)}
-          </Tag.Root>
-        </div>
+      <div className='text-label-md text-text-strong-950'>{name}</div>
+      <div className='flex items-center gap-2'>
+        <Tag.Root variant='stroke'>
+        <Tag.Icon as={icons[variant]} />
+        {capitalizer(variant)}
+        </Tag.Root>
+      </div>
       </div>
     </div>
+    </Link>
   );
 };
 
