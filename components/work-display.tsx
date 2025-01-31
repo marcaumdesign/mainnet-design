@@ -31,8 +31,7 @@ const WorkDisplay: React.FC<WorkDisplayProps> = ({ slug }) => {
           </div>
         </div>
             <Image
-             
-              src={`/images/portfolio/${slug}/${work} `}
+              src={`/images/portfolio/${slug}/${work}.png`}
               alt={`${work} image`}
               layout='responsive'
               width={100}
