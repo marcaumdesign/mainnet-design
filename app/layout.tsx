@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Clarity from '@microsoft/clarity';
-import { SpeedInsights } from "@vercel/speed-insights/next"
-import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from '@vercel/analytics/react';
 import { Inter as FontSans } from 'next/font/google';
 import localFont from 'next/font/local';
 import './globals.css';
@@ -10,12 +10,11 @@ import { cn } from '@/utils/cn';
 import { Provider as TooltipProvider } from '@/components/ui/tooltip';
 import { NotificationProvider } from '@/components/ui/notification-provider';
 import Header from '@/components/header';
-import Script from "next/script";
+import Script from 'next/script';
 import InitialLoader from '@/components/initial-loader';
+import Head from 'next/head';
 
-const projectId = "pyygop0f82"
-
-Clarity.init(projectId);
+const projectId = 'pyygop0f82';
 
 const inter = FontSans({
   subsets: ['latin'],
@@ -38,6 +37,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  Clarity.init(projectId);
+
   return (
     <html
       lang='en'
@@ -49,21 +50,7 @@ export default function RootLayout({
         'hide-scroll',
       )}
     >
-      <body className='overflow-auto bg-bg-white-0 text-text-strong-950 lg:bg-bg-weak-50'>
-        <InitialLoader />
-        <ThemeProvider attribute='class'>
-          <TooltipProvider>
-            <div className='flex min-h-screen flex-col'>
-              <main className='flex flex-1 flex-col'>
-                {children}
-                <SpeedInsights />
-                <Analytics />
-              </main>
-            </div>
-          </TooltipProvider>
-        </ThemeProvider>
-        <NotificationProvider />
-
+      <Head>
         {/* Google Tag Manager */}
         <Script
           strategy='afterInteractive'
@@ -82,12 +69,30 @@ export default function RootLayout({
         <Script id='clarity' strategy='afterInteractive'>
           {`
             (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "pyygop0f82");
+              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "pyygop0f82");
           `}
         </Script>
+      </Head>
+
+      <body className='overflow-auto bg-bg-white-0 text-text-strong-950 lg:bg-bg-weak-50'>
+        <InitialLoader />
+        <ThemeProvider attribute='class'>
+          <TooltipProvider>
+            <div className='flex min-h-screen flex-col'>
+              <main className='flex flex-1 flex-col'>
+                {children}
+                <SpeedInsights />
+                <Analytics />
+              </main>
+            </div>
+          </TooltipProvider>
+        </ThemeProvider>
+        <NotificationProvider />
+
+        {/* Google Tag Manager */}
       </body>
     </html>
   );

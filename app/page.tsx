@@ -36,6 +36,7 @@ import VerticalRuler from '@/components/vertical-ruler';
 import { PortfolioTicker } from '@/components/portoflio-ticker';
 import Loader from '@/components/loader';
 import AnimatedVerticalRuler from '@/components/animated-vertical-ruler';
+import Footer from '@/components/footer';
 
 export default function Home() {
   const parentRef = useRef(null);
@@ -454,29 +455,7 @@ export default function Home() {
           </div>
         </div>
 
-        <footer className='inline-flex items-center justify-between self-stretch border-[0px] border-t border-stroke-soft-200 px-4 py-2 lg:px-8'>
-          <div>
-            <span className='text-paragraph-sm text-text-strong-950'>
-              Mainnet Design © {new Date().getFullYear()}.{' '}
-            </span>
-            <span className='text-paragraph-sm text-text-soft-400'>
-              All Rights Reserved{' '}
-            </span>
-          </div>
-          <div className='text-right'>
-            <span className='text-paragraph-sm text-text-strong-950'>22°</span>
-            <span className='text-paragraph-sm text-text-soft-400'>
-              48’49.65”{' '}
-            </span>
-            <span className='text-paragraph-sm text-text-strong-950'>
-              S 43°
-            </span>
-            <span className='text-paragraph-sm text-text-soft-400'>
-              02’22.61”
-            </span>
-            <span className='text-paragraph-sm text-text-strong-950'> W</span>
-          </div>
-        </footer>
+        <Footer/>
       </div>
     </div>
   );
