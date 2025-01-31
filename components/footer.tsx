@@ -6,22 +6,46 @@ import {
   RiLinkedinFill,
   RiTwitterXFill,
 } from '@remixicon/react';
-
+import PortfolioMap from './portfolio-map';
 
 const Footer = () => {
   return (
-    <footer className='w-fill inline-flex h-fit items-start justify-between border-t border-stroke-soft-200 p-8'>
-      <div className='w-fill inline-flex flex-col items-start justify-start gap-3'>
-        <Logo />
-        <div className='text-paragraph-sm text-text-sub-600'>
-          ”The Lord God took the man and put him in the Garden of Eden to work
-          it and take care of it.”
+    <footer className='w-full max-w-[1100px] h-fit flex-col items-start gap-6 border border-stroke-soft-200'>
+      <div className='flex align-top justify-between p-8 gap-4'>
+        <div className='w-fill max-w-[300px] inline-flex flex-col items-start justify-start gap-3'>
+          <Logo />
+          <div className='text-paragraph-sm text-text-sub-600'>
+            ”The Lord God took the man and put him in the Garden of Eden to work
+            it and take care of it.”
+          </div>
+          <div className='flex gap-2'>
+            <RiInstagramFill /> <RiTwitterXFill /> <RiLinkedinFill />
+          </div>
         </div>
-        <div className='flex gap-2'>
-          <RiInstagramFill /> <RiTwitterXFill /> <RiLinkedinFill />
+        <PortfolioMap />
+      </div>
+
+      <div className='flex w-full justify-between border border-stroke-soft-200 p-4'>
+        <div>
+          <span className='text-paragraph-sm text-text-strong-950'>
+            Mainnet Design © {new Date().getFullYear()}.{' '}
+          </span>
+          <span className='text-paragraph-sm text-text-soft-400'>
+            All Rights Reserved{' '}
+          </span>
+        </div>
+        <div className='text-right'>
+          <span className='text-paragraph-sm text-text-strong-950'>22°</span>
+          <span className='text-paragraph-sm text-text-soft-400'>
+            48’49.65”{' '}
+          </span>
+          <span className='text-paragraph-sm text-text-strong-950'>S 43°</span>
+          <span className='text-paragraph-sm text-text-soft-400'>
+            02’22.61”
+          </span>
+          <span className='text-paragraph-sm text-text-strong-950'> W</span>
         </div>
       </div>
-      
     </footer>
   );
 };
