@@ -62,7 +62,7 @@ export default function RootLayout({
         </Script>
         {/* End Google Tag Manager */}
 
-        {/* <Script id="clarity" strategy="afterInteractive">
+        <Script id="clarity" strategy="afterInteractive">
           {`
             (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -70,7 +70,7 @@ export default function RootLayout({
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "pyygop0f82");
           `}
-        </Script> */}</Head>
+        </Script></Head>
 
       <body className='bg-bg-white-0  lg:bg-bg-weak-50 text-text-strong-950 overflow-auto '>
         <ThemeProvider attribute='class'>
