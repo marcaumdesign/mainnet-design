@@ -74,7 +74,7 @@ export default function Home() {
       <Header slug={''} />
       <div className='relative flex h-fit w-full max-w-[600px] flex-col items-center justify-center gap-32 border-l border-r border-stroke-soft-200 bg-bg-white-0 p-4 py-8 lg:p-8'>
         <div className='absolute left-[-50px] flex w-full items-start'>
-          <VerticalRuler />
+          <VerticalRuler className='fixed top-0' />
         </div>
 
         <div className='flex h-[500px] flex-col items-start justify-end gap-2.5 self-stretch'>

@@ -8,11 +8,14 @@ import {
   RiArrowLeftSLine,
   RiArrowRightUpFill,
   RiArrowRightUpLine,
+  RiEye2Line,
 } from '@remixicon/react';
 import WorkDisplay from '@/components/work-display';
 import { formatText } from '@/utils/format-text';
 import { RainbowButton } from '@/components/ui/rainbow-button';
 import * as Button from '@/components/ui/button';
+import Footer from '@/components/footer';
+import VerticalRuler from '@/components/vertical-ruler';
 
 const PortfolioPage = () => {
   const router = useRouter();
@@ -26,9 +29,11 @@ const PortfolioPage = () => {
   }
 
   return (
-    <div className='flex w-full flex-col items-center'>
+    <div className='flex w-full flex-col items-center relative'>
+      
       <Header size='full' slug={slug} portfolio={portfolio} />
-      <div className='inline-flex h-fit w-full max-w-[1100px] flex-col items-start justify-start border-l border-r border-stroke-soft-200 bg-bg-white-0'>
+      <div className='relative inline-flex h-fit w-full max-w-[1100px] flex-col items-start justify-start border-l border-r border-stroke-soft-200 bg-bg-white-0'>
+      <VerticalRuler className='absolute left-[-55px]'/>
         <div className='flex h-fit flex-col items-start justify-center gap-4 self-stretch border-t border-stroke-soft-200 p-8 pt-[122px]'>
           <div className='inline-flex items-center justify-center gap-1'>
             <div
@@ -60,17 +65,11 @@ const PortfolioPage = () => {
               <div className='self-stretch text-title-h4 text-text-strong-950'>
                 {formatText(item.work)}
               </div>
-              {item.type == "project" ? (<div className="flex gap-2"><RainbowButton
+              <RainbowButton
                 onClick={() => window.open(`${item.link}`, '_blank')}
               >
-                Open Project <RiArrowRightUpLine />
+                {item.type ==="template" ? "Download Template" : "Open Project"} <RiArrowRightUpLine />
               </RainbowButton>
-              </div>) : (<div className="flex gap-2"><RainbowButton
-                onClick={() => window.open(`${item.link}`, '_blank')}
-              >
-                Download Template <RiArrowRightUpLine />
-              </RainbowButton>
-              <Button.Root variant='neutral' mode='stroke' className='text-label-md' >Live Preview</Button.Root></div>) }
             </div>
           </div>
         </div>
@@ -128,6 +127,7 @@ const PortfolioPage = () => {
         />
         {item.work.length < 1 || <WorkDisplay slug={item.slug} />}
       </div>
+      <Footer/>
     </div>
   );
 };
