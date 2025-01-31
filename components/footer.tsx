@@ -9,11 +9,11 @@ import {
 import PortfolioMap from './portfolio-map';
 import { StripedBackground } from './striped-background';
 
-const Footer = () => {
+const Footer = (props: { className?: string }) => {
   return (
-    <footer className='bg-bg-white-0 w-full max-w-[1100px] h-fit flex-col items-start gap-6 border-r border-l  border-stroke-soft-200'>
-      <StripedBackground className='h-[100px] border-b'/>
-      <div className='flex align-top justify-between p-8 gap-4'>
+    <footer className='bg-bg-white-0 w-full max-w-[1100px] h-fit flex-col items-start gap-6 border-r border-t border-l border-stroke-soft-200'>
+      
+      <div className={`flex align-top justify-between p-8 gap-8 ${props.className || ''}`}>
         <div className='w-fill max-w-[300px] inline-flex flex-col items-start justify-start gap-3'>
           <Logo />
           <div className='text-paragraph-sm text-text-sub-600'>
