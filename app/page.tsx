@@ -69,7 +69,7 @@ export default function Home() {
   }
   return (
     <div className='flex w-full flex-col items-center'>
-      <Loader />
+      {/* <Loader /> */}
 
       <Header slug={''} />
       <div className='relative flex h-fit w-full max-w-[600px] flex-col items-center justify-center gap-32 border-l border-r border-stroke-soft-200 bg-bg-white-0 p-4 py-8 lg:p-8'>

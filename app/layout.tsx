@@ -11,6 +11,7 @@ import { Provider as TooltipProvider } from '@/components/ui/tooltip';
 import { NotificationProvider } from '@/components/ui/notification-provider';
 import Header from '@/components/header';
 import Script from "next/script";
+import InitialLoader from '@/components/initial-loader';
 
 const projectId = "pyygop0f82"
 
@@ -41,27 +42,34 @@ export default function RootLayout({
     <html
       lang='en'
       suppressHydrationWarning
-      className={cn(inter.variable, geistMono.variable, 'antialiased', "hide-scroll")}
+      className={cn(
+        inter.variable,
+        geistMono.variable,
+        'antialiased',
+        'hide-scroll',
+      )}
     >
-
-
-      <body className='bg-bg-white-0  lg:bg-bg-weak-50 text-text-strong-950 overflow-auto '>
+      <body className='overflow-auto bg-bg-white-0 text-text-strong-950 lg:bg-bg-weak-50'>
+        <InitialLoader />
         <ThemeProvider attribute='class'>
           <TooltipProvider>
             <div className='flex min-h-screen flex-col'>
-              
-              <main className='flex flex-1 flex-col'>{children}<SpeedInsights/><Analytics/></main>
+              <main className='flex flex-1 flex-col'>
+                {children}
+                <SpeedInsights />
+                <Analytics />
+              </main>
             </div>
           </TooltipProvider>
         </ThemeProvider>
         <NotificationProvider />
 
-         {/* Google Tag Manager */}
-         <Script
-          strategy="afterInteractive"
+        {/* Google Tag Manager */}
+        <Script
+          strategy='afterInteractive'
           src={`https://www.googletagmanager.com/gtag/js?id=G-T4FF6715QC`}
         />
-        <Script id="gtag-init" strategy="afterInteractive">
+        <Script id='gtag-init' strategy='afterInteractive'>
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -71,7 +79,7 @@ export default function RootLayout({
         </Script>
         {/* End Google Tag Manager */}
 
-        <Script id="clarity" strategy="afterInteractive">
+        <Script id='clarity' strategy='afterInteractive'>
           {`
             (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -80,10 +88,6 @@ export default function RootLayout({
     })(window, document, "clarity", "script", "pyygop0f82");
           `}
         </Script>
-
-        
-        
-
       </body>
     </html>
   );
