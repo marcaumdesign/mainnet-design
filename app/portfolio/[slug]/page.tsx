@@ -16,6 +16,8 @@ import { RainbowButton } from '@/components/ui/rainbow-button';
 import * as Button from '@/components/ui/button';
 import Footer from '@/components/footer';
 import VerticalRuler from '@/components/vertical-ruler';
+import { StripedBackground } from '@/components/striped-background';
+import { PortfolioTicker } from '@/components/portoflio-ticker';
 
 const PortfolioPage = () => {
   const router = useRouter();
@@ -29,11 +31,10 @@ const PortfolioPage = () => {
   }
 
   return (
-    <div className='flex w-full flex-col items-center relative'>
-      
+    <div className='relative flex w-full flex-col items-center'>
       <Header size='full' slug={slug} portfolio={portfolio} />
       <div className='relative inline-flex h-fit w-full max-w-[1100px] flex-col items-start justify-start border-l border-r border-stroke-soft-200 bg-bg-white-0'>
-      <VerticalRuler className='absolute left-[-55px]'/>
+        <VerticalRuler className='absolute left-[-55px]' />
         <div className='flex h-fit flex-col items-start justify-center gap-4 self-stretch border-t border-stroke-soft-200 p-8 pt-[122px]'>
           <div className='inline-flex items-center justify-center gap-1'>
             <div
@@ -61,14 +62,17 @@ const PortfolioPage = () => {
             <div className='self-stretch text-subheading-sm uppercase text-text-sub-600'>
               {item.work.length === 1 ? 'Work' : 'Works'}
             </div>
-            <div className='flex w-full gap-2 justify-between'>
+            <div className='flex w-full justify-between gap-2'>
               <div className='self-stretch text-title-h4 text-text-strong-950'>
                 {formatText(item.work)}
               </div>
               <RainbowButton
                 onClick={() => window.open(`${item.link}`, '_blank')}
               >
-                {item.type ==="template" ? "Download Template" : "Open Project"} <RiArrowRightUpLine />
+                {item.type === 'template'
+                  ? 'Download Template'
+                  : 'Open Project'}{' '}
+                <RiArrowRightUpLine />
               </RainbowButton>
             </div>
           </div>
@@ -126,8 +130,21 @@ const PortfolioPage = () => {
           alt={item.name}
         />
         {item.work.length < 1 || <WorkDisplay slug={item.slug} />}
+        <div className='h-[150px] w-full border-t border-stroke-soft-200'>
+          <StripedBackground />
+        </div>
+        <div className='w-full flex flex-col items-start justify-start gap-2 p-8 border-t border-stroke-soft-200'>
+          <div className='self-stretch text-subheading-sm uppercase text-text-sub-600'>
+            Works
+          </div>
+          <div className='w-full text-title-h4 text-text-strong-950'>
+            More Projects
+          </div>
+        </div>
+        <PortfolioTicker hideSecondMarquee/>
       </div>
-      <Footer/>
+
+      <Footer />
     </div>
   );
 };

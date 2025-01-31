@@ -10,7 +10,7 @@ interface StripedBackgroundProps {
     className = "",
     stripeColor = "rgb(243 244 246)", // Tailwind gray-100
     backgroundColor = "white",
-    stripeWidth = 20,
+    stripeWidth = 3,
     stripeAngle = 45,
   }: StripedBackgroundProps) {
     // Calculate the stripe size to ensure proper repeating
