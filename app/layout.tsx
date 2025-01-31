@@ -11,10 +11,11 @@ import { Provider as TooltipProvider } from '@/components/ui/tooltip';
 import { NotificationProvider } from '@/components/ui/notification-provider';
 import Header from '@/components/header';
 import Script from "next/script";
+import Head from 'next/head';
 
 const projectId = "pyygop0f82"
 
-Clarity.init(projectId);
+
 
 const inter = FontSans({
   subsets: ['latin'],
@@ -32,32 +33,22 @@ export const metadata: Metadata = {
   description: 'Design made to last.',
 };
 
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  Clarity.init(projectId);
+
   return (
     <html
       lang='en'
       suppressHydrationWarning
       className={cn(inter.variable, geistMono.variable, 'antialiased', "hide-scroll")}
     >
-
-
-      <body className='bg-bg-white-0  lg:bg-bg-weak-50 text-text-strong-950 overflow-auto '>
-        <ThemeProvider attribute='class'>
-          <TooltipProvider>
-            <div className='flex min-h-screen flex-col'>
-              
-              <main className='flex flex-1 flex-col'>{children}<SpeedInsights/><Analytics/></main>
-            </div>
-          </TooltipProvider>
-        </ThemeProvider>
-        <NotificationProvider />
-
-         {/* Google Tag Manager */}
-         <Script
+<Head><Script
           strategy="afterInteractive"
           src={`https://www.googletagmanager.com/gtag/js?id=G-T4FF6715QC`}
         />
@@ -71,7 +62,7 @@ export default function RootLayout({
         </Script>
         {/* End Google Tag Manager */}
 
-        <Script id="clarity" strategy="afterInteractive">
+        {/* <Script id="clarity" strategy="afterInteractive">
           {`
             (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -79,7 +70,22 @@ export default function RootLayout({
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "pyygop0f82");
           `}
-        </Script>
+        </Script> */}</Head>
+
+      <body className='bg-bg-white-0  lg:bg-bg-weak-50 text-text-strong-950 overflow-auto '>
+        <ThemeProvider attribute='class'>
+          <TooltipProvider>
+            <div className='flex min-h-screen flex-col'>
+              
+              <main className='flex flex-1 flex-col'>{children}<SpeedInsights/><Analytics/></main>
+            </div>
+          </TooltipProvider>
+        </ThemeProvider>
+        <NotificationProvider />
+
+         {/* Google Tag Manager */}
+         
+         
 
         
         
