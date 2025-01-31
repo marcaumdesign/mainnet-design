@@ -7,7 +7,6 @@ import {
 } from "@/data/portfolio"
 import PortfolioCard from "./portfolio-card";
 
-console.log(portfolio)
 const firstRow = portfolio.slice(0, portfolio.length / 2);
 const secondRow = portfolio.slice(portfolio.length / 2);
 
