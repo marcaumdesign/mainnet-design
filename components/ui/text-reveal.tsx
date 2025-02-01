@@ -8,12 +8,16 @@ interface TextRevealByLetterProps {
   text: string;
   prefix?: string; // Add a prefix prop
   className?: string;
+  velocity?: number;
+  offset?: [string, string];
 }
 
 export const TextRevealByLetter: FC<TextRevealByLetterProps> = ({
   text,
   prefix = '', // Default prefix is empty
   className,
+  velocity = 1,
+  offset = ['start end', 'end start'],
 }) => {
   const targetRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
@@ -25,15 +29,21 @@ export const TextRevealByLetter: FC<TextRevealByLetterProps> = ({
   const trimmedText = text.trimStart();
   const letters = trimmedText.split(''); // Split text into letters
 
+  if (prefix) {
+    letters.unshift('\u00A0');
+  }
+
   return (
     <div ref={targetRef} className={cn('relative z-0', className)}>
       <p className='flex flex-wrap text-title-h3 text-text-soft-400'>
         {/* Render the prefix (already revealed) */}
-        {prefix && <span className='opacity-100'>{prefix}</span>}
+        {prefix && (
+          <span className='text-black opacity-100 dark:text-white'>{`${prefix}`}</span>
+        )}
         {/* Render the letters with scroll-based reveal */}
         {letters.map((letter, i) => {
-          const start = i / letters.length;
-          const end = start + 1 / letters.length;
+          const start = (i / letters.length) * (1 / velocity);
+          const end = ((i + 1) / letters.length) * (1 / velocity);
           return (
             <Letter key={i} progress={scrollYProgress} range={[start, end]}>
               {letter === ' ' ? '\u00A0' : letter}{' '}
@@ -57,7 +67,7 @@ const Letter: FC<LetterProps> = ({ children, progress, range }) => {
   return (
     <span className='relative'>
       <span className='absolute opacity-30'>{children}</span>
-      <motion.span style={{ opacity }} className='dark:text-white'>
+      <motion.span style={{ opacity }} className='text-black dark:text-white'>
         {children}
       </motion.span>
     </span>
