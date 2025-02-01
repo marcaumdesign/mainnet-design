@@ -1,73 +1,67 @@
-"use client";
+'use client';
 
-import { FC, ReactNode, useRef } from "react";
-import { motion, MotionValue, useScroll, useTransform } from "motion/react";
+import { FC, ReactNode, useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { cn } from '@/lib/utils';
 
-import { cn } from "@/lib/utils";
-
-interface TextRevealByWordProps {
+interface TextRevealByLetterProps {
   text: string;
+  prefix?: string; // Add a prefix prop
   className?: string;
 }
 
-export const TextRevealByWord: FC<TextRevealByWordProps> = ({
+export const TextRevealByLetter: FC<TextRevealByLetterProps> = ({
   text,
+  prefix = '', // Default prefix is empty
   className,
 }) => {
   const targetRef = useRef<HTMLDivElement | null>(null);
-
   const { scrollYProgress } = useScroll({
     target: targetRef,
+    offset: ['start end', 'end start'], // Adjust the offset to control when the animation starts and ends
   });
-  const words = text.split("");
+
+  // Trim leading spaces from the text
+  const trimmedText = text.trimStart();
+  const letters = trimmedText.split(''); // Split text into letters
 
   return (
-    <div ref={targetRef} className={cn("relative z-0 h-[200vh]", className)}>
-      <div
-        className={
-          "sticky top-0 mx-0 flex h-[50%] max-w-4xl items-center bg-transparent px-[1rem] py-[5rem]"
-        }
-      >
-        <p
-          ref={targetRef}
-          className={
-            "flex flex-wrap p-1 text-2xl font-bold text-black/20 dark:text-white/20 md:p-1 md:text-3xl lg:p-1 lg:text-4xl xl:text-5xl"
-          }
-        >
-          {words.map((word, i) => {
-            const start = i / words.length;
-            const end = start + 1 / words.length;
-            return (
-              <Word key={i} progress={scrollYProgress} range={[start, end]}>
-                {word}
-              </Word>
-            );
-          })}
-        </p>
-      </div>
+    <div ref={targetRef} className={cn('relative z-0', className)}>
+      <p className='flex flex-wrap text-title-h3 text-text-soft-400'>
+        {/* Render the prefix (already revealed) */}
+        {prefix && <span className='opacity-100'>{prefix}</span>}
+        {/* Render the letters with scroll-based reveal */}
+        {letters.map((letter, i) => {
+          const start = i / letters.length;
+          const end = start + 1 / letters.length;
+          return (
+            <Letter key={i} progress={scrollYProgress} range={[start, end]}>
+              {letter === ' ' ? '\u00A0' : letter}{' '}
+              {/* Replace spaces with non-breaking spaces */}
+            </Letter>
+          );
+        })}
+      </p>
     </div>
   );
 };
 
-interface WordProps {
+interface LetterProps {
   children: ReactNode;
-  progress: MotionValue<number>;
+  progress: any; // MotionValue<number> is not directly accessible in the type definition
   range: [number, number];
 }
 
-const Word: FC<WordProps> = ({ children, progress, range }) => {
-  const opacity = useTransform(progress, range, [0, 1]);
+const Letter: FC<LetterProps> = ({ children, progress, range }) => {
+  const opacity = useTransform(progress, range, [0, 1]); // Map scroll progress to opacity
   return (
-    <span className="xl:lg-3 relative mx-0.5 ">
-      <span className={"absolute opacity-30"}>{children}</span>
-      <motion.span
-        style={{ opacity: opacity }}
-        className={"text-black dark:text-white"}
-      >
+    <span className='relative'>
+      <span className='absolute opacity-30'>{children}</span>
+      <motion.span style={{ opacity }} className='dark:text-white'>
         {children}
       </motion.span>
     </span>
   );
 };
 
-export default TextRevealByWord;
+export default TextRevealByLetter;

@@ -37,6 +37,7 @@ import { PortfolioTicker } from '@/components/portoflio-ticker';
 import Loader from '@/components/loader';
 import AnimatedVerticalRuler from '@/components/animated-vertical-ruler';
 import Footer from '@/components/footer';
+import TextReveal from '@/components/ui/text-reveal';
 
 export default function Home() {
   const parentRef = useRef(null);
@@ -101,10 +102,11 @@ export default function Home() {
           <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border-stroke-soft-200 px-4 py-32 lg:px-8'>
             <div className='self-stretch'>
               <span className='text-title-h3 text-text-strong-950'>What? </span>
-              <span className='text-title-h3 text-text-soft-400'>
-                We are an studio in love with building thing, these are what we
-                can do together
-              </span>
+              <TextReveal
+                prefix={'What?'}
+                text=' We are an studio in love with building thing, these are what we
+                can do together'
+              />
             </div>
           </div>
 
@@ -455,7 +457,7 @@ export default function Home() {
           </div>
         </div>
 
-        <Footer className='flex-col'/>
+        <Footer className='flex-col' />
       </div>
     </div>
   );
