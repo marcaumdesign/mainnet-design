@@ -62,6 +62,7 @@ export default function Home() {
       );
     }, 1000);
 
+
     // Limpa o intervalo ao desmontar o componente
     return () => clearInterval(interval);
   }, [isClient]);
@@ -101,11 +102,12 @@ export default function Home() {
         <div className='flex h-fit flex-col items-start justify-start self-stretch'>
           <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border-stroke-soft-200 px-4 py-32 lg:px-8'>
             <div className='self-stretch'>
-              <span className='text-title-h3 text-text-strong-950'>What? </span>
+              {/* <span className='text-title-h3 text-text-strong-950'>What? </span> */}
               <TextReveal
                 prefix={'What?'}
                 text=' We are an studio in love with building thing, these are what we
                 can do together'
+                velocity={2}
               />
             </div>
           </div>
@@ -201,11 +203,18 @@ export default function Home() {
         <div className='flex h-fit flex-col items-start justify-start self-stretch'>
           <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border-[0px] border-t border-stroke-soft-200 px-4 py-32 lg:px-8'>
             <div className='self-stretch'>
-              <span className='text-title-h3 text-text-strong-950'>How? </span>
+              {/* <span className='text-title-h3 text-text-strong-950'>How? </span>
               <span className='text-title-h3 text-text-soft-400'>
                 Mainnet simplifies the design process and breaks down into 4
                 steps to develop even faster
-              </span>
+              </span> */}
+              <TextReveal
+                prefix={'How?'}
+                text=' Mainnet simplifies the design process and breaks down into 4
+                steps to develop even faster'
+                velocity={2.5}
+                offset={['start 0.5', 'end start']}
+              />
             </div>
           </div>
 
@@ -269,10 +278,14 @@ export default function Home() {
         <div className='flex h-fit flex-col items-start justify-start self-stretch'>
           <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border-[0px] border-t border-stroke-soft-200 px-4 py-32 lg:px-8'>
             <div className='self-stretch'>
-              <span className='text-title-h3 text-text-strong-950'>Who? </span>
+              {/* <span className='text-title-h3 text-text-strong-950'>Who? </span>
               <span className='text-title-h3 text-text-soft-400'>
                 Who believe on a better world by design.
-              </span>
+              </span> */}
+              <TextReveal
+                prefix={'Who?'}
+                text=' Who believe on a better world by design.'
+              />
             </div>
           </div>
 
