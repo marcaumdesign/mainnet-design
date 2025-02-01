@@ -62,7 +62,7 @@ const PortfolioPage = () => {
             <div className='self-stretch text-subheading-sm uppercase text-text-sub-600'>
               {item.work.length === 1 ? 'Work' : 'Works'}
             </div>
-            <div className='flex w-full justify-between gap-2'>
+            <div className='flex-col flex w-full md:justify-between gap-4'>
               <div className='self-stretch text-title-h4 text-text-strong-950'>
                 {formatText(item.work)}
               </div>
