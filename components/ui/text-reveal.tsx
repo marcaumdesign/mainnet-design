@@ -1,6 +1,6 @@
 'use client';
 
-import { FC, ReactNode, useRef } from 'react';
+import { FC, ReactNode, useRef, Fragment } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { cn } from '@/lib/utils';
 
@@ -69,10 +69,14 @@ export const TextRevealByWord = ({
         {words.map((word, i) => {
           const start = (i / words.length) * (1 / velocity);
           const end = ((i + 1) / words.length) * (1 / velocity);
+          
           return (
-            <Letter key={i} progress={scrollYProgress} range={[start, end]}>
-              {word}&nbsp;
-            </Letter>
+            <Fragment key={i}>
+              <Letter progress={scrollYProgress} range={[start, end]}>
+                {word}
+              </Letter>
+              &nbsp;
+            </Fragment>
           );
         })}
       </p>

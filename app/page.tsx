@@ -332,12 +332,18 @@ export default function Home() {
         <div className='flex h-fit flex-col items-start justify-start self-stretch'>
           <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border-[0px] border-t border-stroke-soft-200 px-4 py-32 lg:px-8'>
             <div className='self-stretch'>
-              <span className='text-title-h3 text-text-strong-950'>
+              {/* <span className='text-title-h3 text-text-strong-950'>
                 Who's behind Mainnet?{' '}
               </span>
               <span className='text-title-h3 text-text-soft-400'>
                 What makes us different from others agencies and studios
-              </span>
+              </span> */}
+              <TextRevealByWord
+                prefix={`Who's behind Mainnet?`}
+                text='What makes us different from others agencies and studios'
+                velocity={2.5}
+                offset={['175px end', 'end start']}
+              />
             </div>
           </div>
           <div className='flex flex-col items-center justify-start gap-4 self-stretch border-[0px] border-t border-stroke-soft-200 p-4 lg:flex-row lg:items-start lg:p-8'>
@@ -393,13 +399,19 @@ export default function Home() {
         <div className='flex h-fit flex-col items-start justify-start self-stretch'>
           <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border-[0px] border-t border-stroke-soft-200 px-4 py-32 lg:px-8'>
             <div className='self-stretch'>
-              <span className='text-title-h3 text-text-strong-950'>
+              {/* <span className='text-title-h3 text-text-strong-950'>
                 Questions?
               </span>
               <span className='text-title-h3 text-text-soft-400'>
                 {' '}
                 We have answers
-              </span>
+              </span> */}
+              <TextRevealByWord
+                prefix={`Questions?`}
+                text='We have answers'
+                velocity={2.5}
+                offset={['75px end', 'end start']}
+              />
             </div>
           </div>
 
@@ -447,13 +459,19 @@ export default function Home() {
         <div className='flex h-fit flex-col items-start justify-start self-stretch'>
           <div className='lg: flex h-fit flex-col items-start justify-start gap-2 self-stretch border-[0px] border-t border-stroke-soft-200 px-4 px-8 py-32'>
             <div className='self-stretch'>
-              <span className='text-title-h3 text-text-strong-950'>
+              {/* <span className='text-title-h3 text-text-strong-950'>
                 Refer and earn.
               </span>
               <span className='text-title-h3 text-text-soft-400'>
                 {' '}
                 Send us clients and get free money!
-              </span>
+              </span> */}
+              <TextRevealByWord
+                prefix={`Refer and earn.`}
+                text='Send us clients and get free money!'
+                velocity={2.5}
+                offset={['75px end', 'end start']}
+              />
             </div>
           </div>
           <div className='flex flex-col items-start justify-start gap-4 self-stretch border-[0px] border-t border-stroke-soft-200 p-4 lg:inline-flex lg:p-8'>
