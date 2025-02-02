@@ -39,6 +39,7 @@ export default function Header({ size, portfolio = [], slug }: HeaderProps) {
             onClick={() =>
               window.open('https://calendly.com/marcaum/design', '_blank')
             }
+            className='w-fit px-4 md:px-8'
           >
             Get Started
           </RainbowButton>
