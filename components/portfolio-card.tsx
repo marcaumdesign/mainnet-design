@@ -65,7 +65,7 @@ const PortfolioCard: React.FC<PortfolioProps> = ({
         href={`/portfolio/${slug}`}
         className='flex items-center text-title-h6 text-text-strong-950 border border-stroke-soft-200 hover:border-stroke-sub-300'
       >
-    <div className='bg-bg-white-0 flex flex-col w-full max-w-xs lg:max-w-none'>
+    <div className='bg-bg-white-0 flex flex-col w-full '>
       <img
       className='w-full h-auto object-cover'
       src={imageUrl}
