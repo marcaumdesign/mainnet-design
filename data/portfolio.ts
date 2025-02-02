@@ -79,8 +79,8 @@ export const portfolio: PortfolioProps[] =
     "craftedIn": "Rio de Janeiro, Brasil"
   },
   {
-    "name": "Eternal Games",
-    "slug": "eternal-games",
+    "name": "Eternal Creations",
+    "slug": "eternal-creations",
     "publishedAt": "09/2024",
     "link": "https://eternalcreations.games/",
     "description": "",
