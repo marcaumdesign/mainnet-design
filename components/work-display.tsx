@@ -20,7 +20,7 @@ const WorkDisplay: React.FC<WorkDisplayProps> = ({ slug }) => {
       <div className='w-full'>
         {item.work.map((work, index) => (
           <div key={index} className='w-full'>
-            <div className='w-full inline-flex items-center justify-start gap-8 self-stretch border-t border-stroke-soft-200 p-8'>
+            <div className='w-full inline-flex items-center justify-start gap-8 self-stretch border-t border-stroke-soft-200 p-4 md:p-8'>
           <div className='inline-flex shrink grow basis-0 flex-col items-start justify-start gap-2'>
             <div className='self-stretch text-subheading-sm uppercase text-text-sub-600'>
               Work

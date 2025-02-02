@@ -22,7 +22,7 @@ const Page = () => {
       <Header size='full' />
       <div className='relative inline-flex h-fit w-full max-w-[1100px] flex-col items-start justify-start border-l border-r border-stroke-soft-200 bg-bg-white-0'>
         <VerticalRuler className='absolute left-[-55px]' />
-        <div className='flex h-fit flex-col items-start justify-center gap-4 self-stretch border-t border-stroke-soft-200 p-8 pt-[122px]'>
+        <div className='flex h-fit flex-col items-start justify-center gap-4 self-stretch border-t border-stroke-soft-200 p-4 md:p-8 pt-[122px]'>
         <div className='inline-flex items-center justify-center gap-1'>
             <div
               className='cursor-pointer text-subheading-sm uppercase text-text-soft-400 hover:text-text-strong-950'
@@ -32,12 +32,12 @@ const Page = () => {
             </div>
             <RiArrowLeftSLine />
             <div
-              className='text-subheading-sm uppercase text-text-soft-400 hover:text-text-strong-950'
+              className='text-subheading-sm uppercase text-text-strong-950 hover:text-text-strong-950'
               onClick={() => router.push('/portoflio')}
             >
               Portoflio
             </div>
-            <RiArrowLeftSLine />
+            
           </div>
           <div className="flex align-top"><div className='text-title-h0 text-text-strong-950'>Works</div><div className="text-title-h5">[{items.length}]</div></div>
         </div>
