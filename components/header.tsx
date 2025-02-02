@@ -25,7 +25,7 @@ export default function Header({ size, portfolio = [], slug }: HeaderProps) {
   return (
     <>
       <header
-        className={`fixed z-10 flex h-fit w-full border-b border-l border-r border-stroke-soft-200 bg-bg-white-0 px-3 py-3 lg:px-8 lg:py-4 ${maxWidthClass} items-center justify-between shadow-[0px_16px_32px_-12px_rgba(14,18,27,0.10)]`}
+        className={`fixed z-10 flex h-fit w-full border-b md:border-l md:border-r border-stroke-soft-200 bg-bg-white-0 px-3 py-3 lg:px-8 lg:py-4 ${maxWidthClass} items-center justify-between shadow-[0px_16px_32px_-12px_rgba(14,18,27,0.10)]`}
       >
         <Link
           href='/'
