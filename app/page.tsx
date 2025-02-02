@@ -37,6 +37,7 @@ import { PortfolioTicker } from '@/components/portoflio-ticker';
 import Loader from '@/components/loader';
 import AnimatedVerticalRuler from '@/components/animated-vertical-ruler';
 import Footer from '@/components/footer';
+import { TextRevealByWord } from '@/components/ui/text-reveal';
 
 export default function Home() {
   const parentRef = useRef(null);
@@ -100,11 +101,14 @@ export default function Home() {
         <div className='flex h-fit flex-col items-start justify-start self-stretch'>
           <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border-stroke-soft-200 px-4 py-32 lg:px-8'>
             <div className='self-stretch'>
-              <span className='text-title-h3 text-text-strong-950'>What? </span>
-              <span className='text-title-h3 text-text-soft-400'>
-                We are an studio in love with building thing, these are what we
-                can do together
-              </span>
+              {/* <span className='text-title-h3 text-text-strong-950'>What? </span> */}
+              <TextRevealByWord
+                prefix={'What?'}
+                text=' We are an studio in love with building thing, these are what we
+                can do together'
+                velocity={2.5}
+                offset={['75px end', 'end start']}
+              />
             </div>
           </div>
 
@@ -199,11 +203,18 @@ export default function Home() {
         <div className='flex h-fit flex-col items-start justify-start self-stretch'>
           <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border-[0px] border-t border-stroke-soft-200 px-4 py-32 lg:px-8'>
             <div className='self-stretch'>
-              <span className='text-title-h3 text-text-strong-950'>How? </span>
+              {/* <span className='text-title-h3 text-text-strong-950'>How? </span>
               <span className='text-title-h3 text-text-soft-400'>
                 Mainnet simplifies the design process and breaks down into 4
                 steps to develop even faster
-              </span>
+              </span> */}
+              <TextRevealByWord
+                prefix={'How?'}
+                text='Mainnet simplifies the design process and breaks down into 4
+                steps to develop even faster'
+                velocity={2.5}
+                offset={['75px end', 'end start']}
+              />
             </div>
           </div>
 
@@ -267,10 +278,16 @@ export default function Home() {
         <div className='flex h-fit flex-col items-start justify-start self-stretch'>
           <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border-[0px] border-t border-stroke-soft-200 px-4 py-32 lg:px-8'>
             <div className='self-stretch'>
-              <span className='text-title-h3 text-text-strong-950'>Who? </span>
+              {/* <span className='text-title-h3 text-text-strong-950'>Who? </span>
               <span className='text-title-h3 text-text-soft-400'>
                 Who believe on a better world by design.
-              </span>
+              </span> */}
+              <TextRevealByWord
+                prefix={'Who?'}
+                text='Who believe on a better world by design.'
+                velocity={2.5}
+                offset={['75px end', 'end start']}
+              />
             </div>
           </div>
 
@@ -455,7 +472,7 @@ export default function Home() {
           </div>
         </div>
 
-        <Footer className='flex-col'/>
+        <Footer className='flex-col' />
       </div>
     </div>
   );

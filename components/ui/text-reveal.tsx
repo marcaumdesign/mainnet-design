@@ -1,72 +1,82 @@
-"use client";
+'use client';
 
-import { FC, ReactNode, useRef } from "react";
-import { motion, MotionValue, useScroll, useTransform } from "motion/react";
+import { FC, ReactNode, useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { cn } from '@/lib/utils';
 
-import { cn } from "@/lib/utils";
-
-interface TextRevealByWordProps {
-  text: string;
-  className?: string;
-}
-
-export const TextRevealByWord: FC<TextRevealByWordProps> = ({
-  text,
-  className,
-}) => {
-  const targetRef = useRef<HTMLDivElement | null>(null);
-
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-  });
-  const words = text.split("");
-
-  return (
-    <div ref={targetRef} className={cn("relative z-0 h-[200vh]", className)}>
-      <div
-        className={
-          "sticky top-0 mx-0 flex h-[50%] max-w-4xl items-center bg-transparent px-[1rem] py-[5rem]"
-        }
-      >
-        <p
-          ref={targetRef}
-          className={
-            "flex flex-wrap p-1 text-2xl font-bold text-black/20 dark:text-white/20 md:p-1 md:text-3xl lg:p-1 lg:text-4xl xl:text-5xl"
-          }
-        >
-          {words.map((word, i) => {
-            const start = i / words.length;
-            const end = start + 1 / words.length;
-            return (
-              <Word key={i} progress={scrollYProgress} range={[start, end]}>
-                {word}
-              </Word>
-            );
-          })}
-        </p>
-      </div>
-    </div>
-  );
-};
-
-interface WordProps {
+interface LetterProps {
   children: ReactNode;
-  progress: MotionValue<number>;
+  progress: any; // MotionValue<number> is not directly accessible in the type definition
   range: [number, number];
 }
 
-const Word: FC<WordProps> = ({ children, progress, range }) => {
-  const opacity = useTransform(progress, range, [0, 1]);
+const Letter: FC<LetterProps> = ({ children, progress, range }) => {
+  const opacity = useTransform(progress, range, [0, 1]); // Map scroll progress to opacity
   return (
-    <span className="xl:lg-3 relative mx-0.5 ">
-      <span className={"absolute opacity-30"}>{children}</span>
-      <motion.span
-        style={{ opacity: opacity }}
-        className={"text-black dark:text-white"}
-      >
+    <span className='relative'>
+      <span className='absolute opacity-30'>{children}</span>
+      <motion.span style={{ opacity }} className='text-black dark:text-white'>
         {children}
       </motion.span>
     </span>
+  );
+};
+
+type SupportedEdgeUnit = 'px' | 'vw' | 'vh' | '%';
+type EdgeUnit = `${number}${SupportedEdgeUnit}`;
+type NamedEdges = 'start' | 'end' | 'center';
+type EdgeString = NamedEdges | EdgeUnit | `${number}`;
+type Edge = EdgeString | number;
+type ProgressIntersection = [number, number];
+type Intersection = `${Edge} ${Edge}`;
+type ScrollOffset = Array<Edge | Intersection | ProgressIntersection>;
+
+interface TextRevealByWordProps {
+  text: string;
+  prefix?: string; // Add a prefix prop
+  className?: string;
+  velocity?: number;
+  offset?: ScrollOffset;
+}
+
+export const TextRevealByWord = ({
+  text,
+  prefix = '', // Default prefix is empty
+  className,
+  velocity = 1,
+  offset = ['start end', 'end start'],
+}: TextRevealByWordProps) => {
+  const targetRef = useRef<HTMLDivElement | null>(null);
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset,
+  });
+
+  // Split text into words
+  const trimmedText = text.trimStart();
+  const words = trimmedText.split(/\s+/);
+
+  if(prefix) {
+    prefix = prefix + '\u00A0';
+  }
+
+  return (
+    <div ref={targetRef} className={cn('relative z-0', className)}>
+      <p className='flex flex-wrap text-title-h3 text-text-soft-400'>
+        {prefix && (
+          <span className='text-black opacity-100 dark:text-white'>{`${prefix}`}</span>
+        )}
+        {words.map((word, i) => {
+          const start = (i / words.length) * (1 / velocity);
+          const end = ((i + 1) / words.length) * (1 / velocity);
+          return (
+            <Letter key={i} progress={scrollYProgress} range={[start, end]}>
+              {word}&nbsp;
+            </Letter>
+          );
+        })}
+      </p>
+    </div>
   );
 };
 
