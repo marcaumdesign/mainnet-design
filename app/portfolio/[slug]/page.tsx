@@ -78,7 +78,7 @@ const PortfolioPage = () => {
             </div>
           </div>
         </div>
-        <div className='inline-flex items-start justify-start gap-8 self-stretch border-t border-stroke-soft-200 p-4 md:p-8'>
+        <div className='flex flex-wrap items-start justify-start gap-8  border-t border-stroke-soft-200 p-4 md:p-8'>
           <div className='inline-flex flex-col items-start justify-start gap-2'>
             <div className='self-stretch text-subheading-sm uppercase text-text-sub-600'>
               Year
