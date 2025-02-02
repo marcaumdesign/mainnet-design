@@ -63,19 +63,19 @@ const PortfolioCard: React.FC<PortfolioProps> = ({
   return (
     <Link
         href={`/portfolio/${slug}`}
-        className='flex items-center text-title-h6 text-text-strong-950'
+        className='flex items-center text-title-h6 text-text-strong-950 border border-stroke-soft-200 hover:border-stroke-sub-300'
       >
-    <div className='bg-bg-white-0 flex flex-col w-full max-w-xs lg:max-w-none'>
+    <div className='bg-bg-white-0 flex flex-col w-full '>
       <img
       className='w-full h-auto object-cover'
       src={imageUrl}
       alt={name}
       />
-      <div className='flex items-center justify-between border border-stroke-soft-200 px-4 py-4'>
+      <div className='flex items-center justify-between px-4 py-4'>
       <div className='text-label-md text-text-strong-950'>{name}</div>
       <div className='flex items-center gap-2'>
         <Tag.Root variant='stroke'>
-        <Tag.Icon as={icons[variant]} />
+        <Tag.Icon as={icons[variant]}/>
         {capitalizer(variant)}
         </Tag.Root>
       </div>

@@ -35,7 +35,7 @@ const PortfolioPage = () => {
       <Header size='full' slug={slug} portfolio={portfolio} />
       <div className='relative inline-flex h-fit w-full max-w-[1100px] flex-col items-start justify-start border-l border-r border-stroke-soft-200 bg-bg-white-0'>
         <VerticalRuler className='absolute left-[-55px]' />
-        <div className='flex h-fit flex-col items-start justify-center gap-4 self-stretch border-t border-stroke-soft-200 p-8 pt-[122px]'>
+        <div className='flex h-fit flex-col items-start justify-center gap-4 self-stretch border-t border-stroke-soft-200 p-4 md:p-8 md:pt-[122px]'>
           <div className='inline-flex items-center justify-center gap-1'>
             <div
               className='cursor-pointer text-subheading-sm uppercase text-text-soft-400 hover:text-text-strong-950'
@@ -46,7 +46,7 @@ const PortfolioPage = () => {
             <RiArrowLeftSLine />
             <div
               className='text-subheading-sm uppercase text-text-soft-400 hover:text-text-strong-950'
-              onClick={() => router.push('/portoflio')}
+              onClick={() => router.push('/portfolio')}
             >
               Portoflio
             </div>
@@ -57,7 +57,7 @@ const PortfolioPage = () => {
           </div>
           <div className='text-title-h0 text-text-strong-950'>{item.name}</div>
         </div>
-        <div className='inline-flex items-center justify-start gap-8 self-stretch border-t border-stroke-soft-200 p-8'>
+        <div className='inline-flex items-center justify-start gap-8 self-stretch border-t border-stroke-soft-200 p-4 md:p-8'>
           <div className='inline-flex shrink grow basis-0 flex-col items-start justify-start gap-2'>
             <div className='self-stretch text-subheading-sm uppercase text-text-sub-600'>
               {item.work.length === 1 ? 'Work' : 'Works'}
@@ -78,7 +78,7 @@ const PortfolioPage = () => {
             </div>
           </div>
         </div>
-        <div className='inline-flex items-start justify-start gap-8 self-stretch border-t border-stroke-soft-200 p-8'>
+        <div className='w-full flex flex-wrap items-start justify-start gap-8  border-t border-stroke-soft-200 p-4 md:p-8'>
           <div className='inline-flex flex-col items-start justify-start gap-2'>
             <div className='self-stretch text-subheading-sm uppercase text-text-sub-600'>
               Year
@@ -134,7 +134,7 @@ const PortfolioPage = () => {
         <div className='h-[150px] w-full border-t border-stroke-soft-200'>
           <StripedBackground />
         </div>
-        <div className='w-full flex flex-col items-start justify-start gap-2 p-8 border-t border-stroke-soft-200'>
+        <div className='w-full flex flex-col items-start justify-start gap-2 p-4 md:p-8 border-t border-stroke-soft-200'>
           <div className='self-stretch text-subheading-sm uppercase text-text-sub-600'>
             Works
           </div>
