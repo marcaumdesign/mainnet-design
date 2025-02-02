@@ -4,58 +4,6 @@ import { FC, ReactNode, useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { cn } from '@/lib/utils';
 
-interface TextRevealByLetterProps {
-  text: string;
-  prefix?: string; // Add a prefix prop
-  className?: string;
-  velocity?: number;
-  offset?: [string, string];
-}
-
-export const TextRevealByLetter: FC<TextRevealByLetterProps> = ({
-  text,
-  prefix = '', // Default prefix is empty
-  className,
-  velocity = 1,
-  offset = ['start end', 'end start'],
-}) => {
-  const targetRef = useRef<HTMLDivElement | null>(null);
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-    offset: ['start end', 'end start'], // Adjust the offset to control when the animation starts and ends
-  });
-
-  // Trim leading spaces from the text
-  const trimmedText = text.trimStart();
-  const letters = trimmedText.split(''); // Split text into letters
-
-  if (prefix) {
-    letters.unshift('\u00A0');
-  }
-
-  return (
-    <div ref={targetRef} className={cn('relative z-0', className)}>
-      <p className='flex flex-wrap text-title-h3 text-text-soft-400'>
-        {/* Render the prefix (already revealed) */}
-        {prefix && (
-          <span className='text-black opacity-100 dark:text-white'>{`${prefix}`}</span>
-        )}
-        {/* Render the letters with scroll-based reveal */}
-        {letters.map((letter, i) => {
-          const start = (i / letters.length) * (1 / velocity);
-          const end = ((i + 1) / letters.length) * (1 / velocity);
-          return (
-            <Letter key={i} progress={scrollYProgress} range={[start, end]}>
-              {letter === ' ' ? '\u00A0' : letter}{' '}
-              {/* Replace spaces with non-breaking spaces */}
-            </Letter>
-          );
-        })}
-      </p>
-    </div>
-  );
-};
-
 interface LetterProps {
   children: ReactNode;
   progress: any; // MotionValue<number> is not directly accessible in the type definition
@@ -74,4 +22,62 @@ const Letter: FC<LetterProps> = ({ children, progress, range }) => {
   );
 };
 
-export default TextRevealByLetter;
+type SupportedEdgeUnit = 'px' | 'vw' | 'vh' | '%';
+type EdgeUnit = `${number}${SupportedEdgeUnit}`;
+type NamedEdges = 'start' | 'end' | 'center';
+type EdgeString = NamedEdges | EdgeUnit | `${number}`;
+type Edge = EdgeString | number;
+type ProgressIntersection = [number, number];
+type Intersection = `${Edge} ${Edge}`;
+type ScrollOffset = Array<Edge | Intersection | ProgressIntersection>;
+
+interface TextRevealByWordProps {
+  text: string;
+  prefix?: string; // Add a prefix prop
+  className?: string;
+  velocity?: number;
+  offset?: ScrollOffset;
+}
+
+export const TextRevealByWord = ({
+  text,
+  prefix = '', // Default prefix is empty
+  className,
+  velocity = 1,
+  offset = ['start end', 'end start'],
+}: TextRevealByWordProps) => {
+  const targetRef = useRef<HTMLDivElement | null>(null);
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset,
+  });
+
+  // Split text into words
+  const trimmedText = text.trimStart();
+  const words = trimmedText.split(/\s+/);
+
+  if(prefix) {
+    prefix = prefix + '\u00A0';
+  }
+
+  return (
+    <div ref={targetRef} className={cn('relative z-0', className)}>
+      <p className='flex flex-wrap text-title-h3 text-text-soft-400'>
+        {prefix && (
+          <span className='text-black opacity-100 dark:text-white'>{`${prefix}`}</span>
+        )}
+        {words.map((word, i) => {
+          const start = (i / words.length) * (1 / velocity);
+          const end = ((i + 1) / words.length) * (1 / velocity);
+          return (
+            <Letter key={i} progress={scrollYProgress} range={[start, end]}>
+              {word}&nbsp;
+            </Letter>
+          );
+        })}
+      </p>
+    </div>
+  );
+};
+
+export default TextRevealByWord;
