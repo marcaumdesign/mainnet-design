@@ -5,27 +5,34 @@ import { useEffect, useRef, useState } from 'react';
 export default function VerticalRuler(props: { className?: string }) {
   const [height, setHeight] = useState(0);
   const [mouseY, setMouseY] = useState(0);
-  const constainerRef = useRef<HTMLDivElement | null>(null);
-
+  const [lastClientY, setLastClientY] = useState(0);
+  const containerRef = useRef<HTMLDivElement | null>(null);
   const [scrollY, setScrollY] = useState(0);
 
-  useEffect(() => {
-    if (!constainerRef.current) return;
-
-    constainerRef.current.style.transform = `translateY(${-parseInt(scrollY.toString())*0.25}px)`;
-  }, [scrollY]);
+  const handleMouseMove = (event: MouseEvent) => {
+    if (containerRef.current) {
+      setLastClientY(event.clientY);
+      setMouseY(event.clientY + window.scrollY);
+    }
+  };
 
   const handleScroll = () => {
-    setScrollY(window.scrollY)
+    if (containerRef.current) {
+      const newScrollY = window.scrollY;
+      setMouseY(lastClientY + newScrollY);
+      setScrollY(newScrollY);
+    }
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    if (!containerRef.current) return;
+    containerRef.current.style.transform = `translateY(${-scrollY}px)`;
+  }, [scrollY]);
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [scrollY]);
 
   useEffect(() => {
     const updateHeight = () => {
@@ -37,32 +44,37 @@ export default function VerticalRuler(props: { className?: string }) {
       );
     };
 
-    const handleMouseMove = (event: MouseEvent) => {
-      setMouseY(event.clientY);
-    };
-
     updateHeight();
     window.addEventListener('resize', updateHeight);
     window.addEventListener('load', updateHeight);
     window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
       window.removeEventListener('resize', updateHeight);
       window.removeEventListener('load', updateHeight);
       window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
   return (
     <div
-      ref={constainerRef}
+      ref={containerRef}
       className={`pointer-events-none z-30 max-h-[100vh] w-12 select-none transition-transform ease-linear ${props.className || ''}`}
     >
       <div className='relative w-full' style={{ height: `${height}px` }}>
         {[...Array(Math.ceil(height / 50))].map((_, i) => {
-          const isCurrent = mouseY >= i * 50 && mouseY < (i + 1) * 50;
-          const isPrevious = mouseY >= (i - 1) * 50 && mouseY < i * 50;
-          const isNext = mouseY >= (i + 1) * 50 && mouseY < (i + 2) * 50;
+          // const isCurrent = mouseY >= i * 50 && mouseY < (i + 1) * 50;
+          // const isPrevious = mouseY >= (i - 1) * 50 && mouseY < i * 50;
+          // const isNext = mouseY >= (i + 1) * 50 && mouseY < (i + 2) * 50;
+          const adjustedMouseY = mouseY;
+          const isCurrent =
+            adjustedMouseY >= i * 50 && adjustedMouseY < (i + 1) * 50;
+          const isPrevious =
+            adjustedMouseY >= (i - 1) * 50 && adjustedMouseY < i * 50;
+          const isNext =
+            adjustedMouseY >= (i + 1) * 50 && adjustedMouseY < (i + 2) * 50;
 
           return (
             <div
