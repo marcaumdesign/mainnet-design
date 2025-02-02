@@ -17,6 +17,7 @@ export default function VerticalRuler(props: { className?: string }) {
   };
 
   const handleScroll = () => {
+    updateHeight()
     if (containerRef.current) {
       const newScrollY = window.scrollY;
       setMouseY(lastClientY + newScrollY);
@@ -27,22 +28,22 @@ export default function VerticalRuler(props: { className?: string }) {
   useEffect(() => {
     if (!containerRef.current) return;
     containerRef.current.style.transform = `translateY(${-scrollY}px)`;
-  }, [scrollY]);
-
-  useEffect(() => {
+    
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [scrollY]);
 
+   const updateHeight = () => {
+     setHeight(
+       Math.max(
+         document.documentElement.scrollHeight,
+         document.body.scrollHeight,
+       ),
+     );
+   };
+
   useEffect(() => {
-    const updateHeight = () => {
-      setHeight(
-        Math.max(
-          document.documentElement.scrollHeight,
-          document.body.scrollHeight,
-        ),
-      );
-    };
+   
 
     updateHeight();
     window.addEventListener('resize', updateHeight);
