@@ -34,7 +34,9 @@ const PortfolioPage = () => {
     <div className='relative flex w-full flex-col items-center'>
       <Header size='full' slug={slug} portfolio={portfolio} />
       <div className='relative inline-flex h-fit w-full max-w-[1100px] flex-col items-start justify-start border-l border-r border-stroke-soft-200 bg-bg-white-0'>
-        <VerticalRuler className='absolute left-[-55px]' />
+        <div className='absolute left-[-50px] flex w-full items-start'>
+          <VerticalRuler className='fixed top-0' />
+        </div>
         <div className='flex h-fit flex-col items-start justify-center gap-4 self-stretch border-t border-stroke-soft-200 p-4 md:p-8 md:pt-[122px]'>
           <div className='inline-flex items-center justify-center gap-1'>
             <div
@@ -62,7 +64,7 @@ const PortfolioPage = () => {
             <div className='self-stretch text-subheading-sm uppercase text-text-sub-600'>
               {item.work.length === 1 ? 'Work' : 'Works'}
             </div>
-            <div className='flex-col flex w-full gap-4'>
+            <div className='flex w-full flex-col gap-4'>
               <div className='self-stretch text-title-h4 text-text-strong-950'>
                 {formatText(item.work)}
               </div>
@@ -78,7 +80,7 @@ const PortfolioPage = () => {
             </div>
           </div>
         </div>
-        <div className='w-full flex flex-wrap items-start justify-start gap-8  border-t border-stroke-soft-200 p-4 md:p-8'>
+        <div className='flex w-full flex-wrap items-start justify-start gap-8 border-t border-stroke-soft-200 p-4 md:p-8'>
           <div className='inline-flex flex-col items-start justify-start gap-2'>
             <div className='self-stretch text-subheading-sm uppercase text-text-sub-600'>
               Year
@@ -134,7 +136,7 @@ const PortfolioPage = () => {
         <div className='h-[150px] w-full border-t border-stroke-soft-200'>
           <StripedBackground />
         </div>
-        <div className='w-full flex flex-col items-start justify-start gap-2 p-4 md:p-8 border-t border-stroke-soft-200'>
+        <div className='flex w-full flex-col items-start justify-start gap-2 border-t border-stroke-soft-200 p-4 md:p-8'>
           <div className='self-stretch text-subheading-sm uppercase text-text-sub-600'>
             Works
           </div>
@@ -142,7 +144,7 @@ const PortfolioPage = () => {
             More Projects
           </div>
         </div>
-        <PortfolioTicker hideSecondMarquee/>
+        <PortfolioTicker hideSecondMarquee />
       </div>
 
       <Footer />
