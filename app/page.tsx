@@ -2,55 +2,47 @@
 
 import * as Accordion from '@/components/ui/accordion2';
 import {
+  RiBankCard2Line,
   RiBook2Line,
   RiBuilding4Line,
   RiCompassDiscoverLine,
-  RiCursorLine,
+  RiDashboard2Line,
   RiGift2Line,
+  RiGlobalLine,
   RiGroupLine,
   RiHammerLine,
   RiInstagramLine,
+  RiMoneyDollarBoxLine,
+  RiMovie2Line,
   RiPhoneFindLine,
+  RiPlayLine,
   RiRocket2Line,
   RiRulerLine,
   RiSearch2Line,
+  RiSearchEyeLine,
+  RiShareLine,
+  RiStore2Line,
+  RiTrophyLine,
   RiTv2Line,
   RiUserLine,
-  RiAccountCircleLine,
-  RiMapPinTimeLine,
-  RiQuestionLine,
-  RiMovie2Line,
-  RiDashboard2Line,
-  RiStore2Line,
-  RiGlobalLine,
-  RiPlayLine,
-  RiFlag2Line,
-  RiSearchEyeLine,
-  RiShare2Line,
-  RiShareLine,
-  RiBankCard2Line,
-  RiMoneyDollarBoxLine,
-  RiTrophyLine,
 } from '@remixicon/react';
 
-import Lottie from 'lottie-react';
-import React, { useEffect, useRef, useState } from 'react';
-import Header from '@/components/header';
-import { RainbowButton } from '@/components/ui/rainbow-button';
-import HyperText from '@/components/ui/hyper-text';
-import { Particles } from '@/components/ui/particles';
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
-import VerticalRuler from '@/components/vertical-ruler';
-import { PortfolioTicker } from '@/components/portoflio-ticker';
-import Loader from '@/components/loader';
-import AnimatedVerticalRuler from '@/components/animated-vertical-ruler';
 import Footer from '@/components/footer';
+import Header from '@/components/header';
+import { PortfolioTicker } from '@/components/portoflio-ticker';
+import HyperText from '@/components/ui/hyper-text';
+import { RainbowButton } from '@/components/ui/rainbow-button';
 import { TextRevealByWord } from '@/components/ui/text-reveal';
+import VerticalRuler from '@/components/vertical-ruler';
+import { useLocoScroll } from '@/hooks/use-loco-scroll';
+import { useEffect, useRef, useState } from 'react';
 
 export default function Home() {
   const parentRef = useRef(null);
 
   const [isClient, setIsClient] = useState(false);
+
+  const [isLoaded, setIsLoaded] = useState(false);
 
   const [currentTime, setCurrentTime] = useState(
     new Date().toLocaleTimeString(undefined, { timeZoneName: 'short' }),
@@ -74,15 +66,26 @@ export default function Home() {
     return () => clearInterval(interval);
   }, [isClient]);
 
+  useEffect(() => {
+    setIsLoaded(true); // Ativa o Locomotive Scroll após a montagem
+  }, []);
+
+  useLocoScroll(isLoaded);
+
   if (!isClient) {
     return null; // Ou um placeholder enquanto o componente não é montado no cliente
   }
+
   return (
-    <div className='flex w-full flex-col items-center'>
+    <div className='flex w-full flex-col items-center' data-scroll-container>
       {/* <Loader /> */}
 
       <Header slug={''} />
-      <div className='relative flex h-fit w-full max-w-[600px] flex-col items-center justify-center gap-32 border-l border-r border-stroke-soft-200 bg-bg-white-0 p-4 py-8 lg:p-8'>
+      <div
+        data-scroll
+        data-scroll-speed='2'
+        className='relative flex h-fit w-full max-w-[600px] flex-col items-center justify-center gap-32 border-l border-r border-stroke-soft-200 bg-bg-white-0 p-4 py-8 lg:p-8'
+      >
         <div className='absolute left-[-50px] flex w-full items-start'>
           <VerticalRuler className='fixed top-0' />
         </div>
@@ -103,7 +106,11 @@ export default function Home() {
 
       {/* <div className="z-50 w-full flex shadow-[0px_16px_32px_-12px_rgba(14,18,27,0.10)]"><PortfolioCard work={'landing-page'} title={'Studio™ 222'} link={'https://s222.framer.ai/'} imageUrl={'images/portoflio/studio222/website.png'}/><PortfolioCard variant={'mobile'} title={'Travla'} link={'https://travla.ai'} imageUrl={'images/portoflio/travla/mobile-app.png'}/></div> */}
 
-      <div className='flex h-fit w-full max-w-[600px] flex-col items-start justify-start border-[0px] border-l border-r border-stroke-soft-200 bg-bg-white-0'>
+      <div
+        data-scroll
+        data-scroll-speed='4'
+        className='flex h-fit w-full max-w-[600px] flex-col items-start justify-start border-[0px] border-l border-r border-stroke-soft-200 bg-bg-white-0'
+      >
         {/* What? */}
 
         <div className='flex h-fit flex-col items-start justify-start self-stretch'>
@@ -432,7 +439,8 @@ export default function Home() {
                   <Accordion.Arrow />
                 </Accordion.Trigger>
                 <Accordion.Content className='px-[30px]'>
-                  For design, prices starts at $1999 fixed rate. And for development, prices starts at $30/h.
+                  For design, prices starts at $1999 fixed rate. And for
+                  development, prices starts at $30/h.
                 </Accordion.Content>
               </Accordion.Item>
 
@@ -443,7 +451,15 @@ export default function Home() {
                   <Accordion.Arrow />
                 </Accordion.Trigger>
                 <Accordion.Content className='px-[30px]'>
-                  We proccess our payments through <a className='underline hover:text-stroke-strong-950' href='https://contra.com'>Contra</a> platform, where they accept Credit Cards, ACH (Automated Clearing House) and SEPA (Single Euro Payments Area).
+                  We proccess our payments through{' '}
+                  <a
+                    className='underline hover:text-stroke-strong-950'
+                    href='https://contra.com'
+                  >
+                    Contra
+                  </a>{' '}
+                  platform, where they accept Credit Cards, ACH (Automated
+                  Clearing House) and SEPA (Single Euro Payments Area).
                 </Accordion.Content>
               </Accordion.Item>
 
@@ -454,7 +470,9 @@ export default function Home() {
                   <Accordion.Arrow />
                 </Accordion.Trigger>
                 <Accordion.Content className='px-[30px]'>
-                No, we don't. We only work 1:1 with clients, the closer to C Level, the more smooth will be the project experience and the better the end result.
+                  No, we don't. We only work 1:1 with clients, the closer to C
+                  Level, the more smooth will be the project experience and the
+                  better the end result.
                 </Accordion.Content>
               </Accordion.Item>
               <Accordion.Item value='d'>
@@ -464,28 +482,38 @@ export default function Home() {
                   <Accordion.Arrow />
                 </Accordion.Trigger>
                 <Accordion.Content className='px-[30px]'>
-                  Yes, it's included with every web project (App, Website, Landing Page).
+                  Yes, it's included with every web project (App, Website,
+                  Landing Page).
                 </Accordion.Content>
               </Accordion.Item>
               <Accordion.Item value='e'>
-              <Accordion.Trigger>
+                <Accordion.Trigger>
                   <Accordion.Icon as={RiTrophyLine} />
                   What sets Mainnet Design apart from other design agencies?
                   <Accordion.Arrow />
                 </Accordion.Trigger>
                 <Accordion.Content className='px-[30px]'>
-                  Beyond visuals, we design your software and brand to create positive impact not just for your company, but for the society and enviroment.
+                  Beyond visuals, we design your software and brand to create
+                  positive impact not just for your company, but for the society
+                  and enviroment.
                 </Accordion.Content>
-                
               </Accordion.Item>
               <Accordion.Item value='f'>
-              <Accordion.Trigger>
+                <Accordion.Trigger>
                   <Accordion.Icon as={RiPlayLine} />
                   How do I get started?
                   <Accordion.Arrow />
                 </Accordion.Trigger>
                 <Accordion.Content className='px-[30px]'>
-                  Would love to know more about your business idea, <a className='underline hover:text-stroke-strong-950' href='https://calendly.com/marcaum/design'>click here</a> to book a quick call or send me email at: marcus@mainnet.design
+                  Would love to know more about your business idea,{' '}
+                  <a
+                    className='underline hover:text-stroke-strong-950'
+                    href='https://calendly.com/marcaum/design'
+                  >
+                    click here
+                  </a>{' '}
+                  to book a quick call or send me email at:
+                  marcus@mainnet.design
                 </Accordion.Content>
               </Accordion.Item>
             </Accordion.Root>
