@@ -23,6 +23,14 @@ import {
   RiDashboard2Line,
   RiStore2Line,
   RiGlobalLine,
+  RiPlayLine,
+  RiFlag2Line,
+  RiSearchEyeLine,
+  RiShare2Line,
+  RiShareLine,
+  RiBankCard2Line,
+  RiMoneyDollarBoxLine,
+  RiTrophyLine,
 } from '@remixicon/react';
 
 import Lottie from 'lottie-react';
@@ -419,38 +427,65 @@ export default function Home() {
             <Accordion.Root type='single' collapsible className='w-full'>
               <Accordion.Item value='a'>
                 <Accordion.Trigger>
-                  <Accordion.Icon as={RiAccountCircleLine} />
-                  How do I update my account information?
+                  <Accordion.Icon as={RiMoneyDollarBoxLine} />
+                  What is your pricing structure?
                   <Accordion.Arrow />
                 </Accordion.Trigger>
                 <Accordion.Content className='px-[30px]'>
-                  Insert the accordion description here. It would look better as
-                  two lines of text.
+                  For design, prices starts at $1999 fixed rate. And for development, prices starts at $30/h.
                 </Accordion.Content>
               </Accordion.Item>
 
               <Accordion.Item value='b'>
                 <Accordion.Trigger>
-                  <Accordion.Icon as={RiQuestionLine} />
+                  <Accordion.Icon as={RiBankCard2Line} />
                   What payment methods are accepted?
                   <Accordion.Arrow />
                 </Accordion.Trigger>
                 <Accordion.Content className='px-[30px]'>
-                  Major credit and debit cards like Visa, MasterCard, and
-                  American Express, as well as digital payment options like
-                  PayPal and Apple Pay.
+                  We proccess our payments through <a className='underline hover:text-stroke-strong-950' href='https://contra.com'>Contra</a> platform, where they accept Credit Cards, ACH (Automated Clearing House) and SEPA (Single Euro Payments Area).
                 </Accordion.Content>
               </Accordion.Item>
 
               <Accordion.Item value='c'>
                 <Accordion.Trigger>
-                  <Accordion.Icon as={RiMapPinTimeLine} />
-                  How can I track my order?
+                  <Accordion.Icon as={RiShareLine} />
+                  Do you outsource services?
                   <Accordion.Arrow />
                 </Accordion.Trigger>
                 <Accordion.Content className='px-[30px]'>
-                  Insert the accordion description here. It would look better as
-                  two lines of text.
+                No, we don't. We only work 1:1 with clients, the closer to C Level, the more smooth will be the project experience and the better the end result.
+                </Accordion.Content>
+              </Accordion.Item>
+              <Accordion.Item value='d'>
+                <Accordion.Trigger>
+                  <Accordion.Icon as={RiSearchEyeLine} />
+                  Do you offer SEO services too?
+                  <Accordion.Arrow />
+                </Accordion.Trigger>
+                <Accordion.Content className='px-[30px]'>
+                  Yes, it's included with every web project (App, Website, Landing Page).
+                </Accordion.Content>
+              </Accordion.Item>
+              <Accordion.Item value='e'>
+              <Accordion.Trigger>
+                  <Accordion.Icon as={RiTrophyLine} />
+                  What sets Mainnet Design apart from other design agencies?
+                  <Accordion.Arrow />
+                </Accordion.Trigger>
+                <Accordion.Content className='px-[30px]'>
+                  Beyond visuals, we design your software and brand to create positive impact not just for your company, but for the society and enviroment.
+                </Accordion.Content>
+                
+              </Accordion.Item>
+              <Accordion.Item value='f'>
+              <Accordion.Trigger>
+                  <Accordion.Icon as={RiPlayLine} />
+                  How do I get started?
+                  <Accordion.Arrow />
+                </Accordion.Trigger>
+                <Accordion.Content className='px-[30px]'>
+                  Would love to know more about your business idea, <a className='underline hover:text-stroke-strong-950' href='https://calendly.com/marcaum/design'>click here</a> to book a quick call or send me email at: marcus@mainnet.design
                 </Accordion.Content>
               </Accordion.Item>
             </Accordion.Root>
@@ -490,7 +525,7 @@ export default function Home() {
           </div>
         </div>
 
-        <Footer className='flex-col' />
+        <Footer className='md:flex-col' />
       </div>
     </div>
   );

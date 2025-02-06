@@ -1,5 +1,8 @@
+import { useEffect, useState } from "react"
+
 interface StripedBackgroundProps {
     className?: string
+    variant?: "light" | "dark"
     stripeColor?: string
     backgroundColor?: string
     stripeWidth?: number
@@ -8,13 +11,34 @@ interface StripedBackgroundProps {
   
   export function StripedBackground({
     className = "",
-    stripeColor = "rgb(243 244 246)", // Tailwind gray-100
-    backgroundColor = "white",
+    stripeColor, // Tailwind gray-100
+    backgroundColor,
     stripeWidth = 3,
     stripeAngle = 45,
+    variant = "light",
   }: StripedBackgroundProps) {
     // Calculate the stripe size to ensure proper repeating
+
+      const [isDarkMode, setDarkMode] = useState<null | boolean>(null)
+        
+      
+        useEffect(() => {
+          
+          if(typeof window === 'undefined') {
+            return
+          }
+      
+      
+          const mode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      
+          setDarkMode(mode)
+          
+        }, [])
+
     const size = stripeWidth * 2
+
+    { isDarkMode ? (stripeColor  = "#EBEBEB", backgroundColor  = "white") : (stripeColor = "#333", backgroundColor = "#181818")}
+    
   
     return (
       <div
