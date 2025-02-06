@@ -1,18 +1,17 @@
-import type { Metadata } from 'next';
+import InitialLoader from '@/components/initial-loader';
+import { NotificationProvider } from '@/components/ui/notification-provider';
+import { Provider as TooltipProvider } from '@/components/ui/tooltip';
+import { ThemeProvider } from '@/providers/ThemeProvider';
+import { cn } from '@/utils/cn';
 import Clarity from '@microsoft/clarity';
-import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import type { Metadata } from 'next';
 import { Inter as FontSans } from 'next/font/google';
 import localFont from 'next/font/local';
-import './globals.css';
-import { ThemeProvider } from 'next-themes';
-import { cn } from '@/utils/cn';
-import { Provider as TooltipProvider } from '@/components/ui/tooltip';
-import { NotificationProvider } from '@/components/ui/notification-provider';
-import Header from '@/components/header';
-import Script from 'next/script';
-import InitialLoader from '@/components/initial-loader';
 import Head from 'next/head';
+import Script from 'next/script';
+import './globals.css';
 
 const projectId = 'pyygop0f82';
 
@@ -79,7 +78,12 @@ export default function RootLayout({
 
       <body className='overflow-auto bg-bg-white-0 text-text-strong-950 lg:bg-bg-weak-50'>
         <InitialLoader />
-        <ThemeProvider attribute='class'>
+        <ThemeProvider
+          attribute='class'
+          defaultTheme='system'
+          enableSystem
+          disableTransitionOnChange
+        >
           <TooltipProvider>
             <div className='flex min-h-screen flex-col'>
               <main className='flex flex-1 flex-col'>
