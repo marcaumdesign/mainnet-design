@@ -13,16 +13,22 @@ const Footer = (props: { className?: string }) => {
   return (
     <footer className='bg-bg-white-0 w-full max-w-[1100px] h-fit flex-col items-start gap-6 border-r border-t border-l border-stroke-soft-200'>
       
-      <div className={`flex-col flex md:flex-row align-top justify-between p-8 gap-8 ${props.className || ''}`}>
-        <div className='w-fill max-w-[300px] inline-flex flex-col items-start justify-start gap-3'>
+      <div className={`flex-col flex md:flex-row align-top justify-between  ${props.className || ''}`}>
+        <div className='p-8 w-full inline-flex flex-col items-start justify-start gap-3 border-b border-stroke-soft-200'>
           <Logo />
-          <div className='text-paragraph-sm text-text-sub-600'>
-            ”The Lord God took the man and put him in the Garden of Eden to work
-            it and take care of it.”
+          <div className='max-w-[300px] text-paragraph-sm text-text-sub-600'>
+          "The Lord is my shepherd; I shall not want. He maketh me to lie down in green pastures: he leadeth me beside the still waters."
           </div>
-          <div className='flex gap-2'>
-            <RiInstagramFill /> <RiTwitterXFill /> <RiLinkedinFill />
+          <div className="flex w-full justify-between">
+          <div className='flex gap-2 text-paragraph-sm items-center'>
+            <a href="https://instagram.com/mainnet.design" target='_blank'><RiInstagramFill className='hover:text-text-sub-600'/></a> <a href="https://x.com/mainnetdesign" target='_blank'><RiTwitterXFill className='hover:text-text-sub-600'/></a> <a href="https://linkedin.com/company/mainnet-design" target='_blank'><RiLinkedinFill className='hover:text-text-sub-600'/></a>
+        
           </div>
+            <a href="malito:marcus@mainnet.design" className='text-paragraph-sm hover:text-text-sub-600'>marcus@mainnet.design</a></div>
+          
+          
+          
+
         </div>
         <PortfolioMap />
       </div>
