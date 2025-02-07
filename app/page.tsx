@@ -503,7 +503,7 @@ export default function Home() {
               </span> */}
               <TextRevealByWord
                 prefix={`Refer and earn.`}
-                text='Send us clients and get free money!'
+                text='Send us clients and get $250 for free!'
                 velocity={2.5}
                 offset={['75px end', 'end start']}
               />
