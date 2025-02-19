@@ -33,11 +33,16 @@ const PortfolioPage = () => {
   return (
     <div className='relative flex w-full flex-col items-center'>
       <Header size='full' slug={slug} portfolio={portfolio} />
-      <div className='relative inline-flex h-fit w-full max-w-[1100px] flex-col items-start justify-start border-l border-r border-stroke-soft-200 bg-bg-white-0'>
+      <div className='pt-[90px] relative inline-flex h-fit w-full max-w-[1100px] flex-col items-start justify-start border-l border-r border-stroke-soft-200 bg-bg-white-0'>
+      <img
+          className='h-auto w-full border-t border-stroke-soft-200 object-cover'
+          src={thumbnail}
+          alt={item.name}
+        />
         <div className='absolute left-[-50px] flex w-full items-start'>
           <VerticalRuler className='fixed top-0' />
         </div>
-        <div className='flex h-fit flex-col items-start justify-center gap-4 self-stretch border-t border-stroke-soft-200 p-4 md:p-8 md:pt-[122px]'>
+        <div className='flex h-fit flex-col items-start justify-center gap-4 self-stretch border-t border-stroke-soft-200 p-4 md:p-8 '>
           <div className='inline-flex items-center justify-center gap-1'>
             <div
               className='cursor-pointer text-subheading-sm uppercase text-text-soft-400 hover:text-text-strong-950'
@@ -127,11 +132,7 @@ const PortfolioPage = () => {
             </div>
           </div>
         </div>
-        <img
-          className='h-auto w-full border-t border-stroke-soft-200 object-cover'
-          src={thumbnail}
-          alt={item.name}
-        />
+        
         {item.work.length < 1 || <WorkDisplay slug={item.slug} />}
         <div className='h-[150px] w-full border-t border-stroke-soft-200'>
           <StripedBackground />
