@@ -13,7 +13,7 @@ import {
 import WorkDisplay from '@/components/work-display';
 import { formatText } from '@/utils/format-text';
 import { RainbowButton } from '@/components/ui/rainbow-button';
-import * as Button from '@/components/ui/button';
+import * as Button from '@/components/ui/button-shadcn';
 import Footer from '@/components/footer';
 import VerticalRuler from '@/components/vertical-ruler';
 import { StripedBackground } from '@/components/striped-background';

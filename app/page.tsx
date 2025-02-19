@@ -46,6 +46,7 @@ import Loader from '@/components/loader';
 import AnimatedVerticalRuler from '@/components/animated-vertical-ruler';
 import Footer from '@/components/footer';
 import { TextRevealByWord } from '@/components/ui/text-reveal';
+import TestimonialCarousel from '@/components/testemonial-cards';
 
 export default function Home() {
   const parentRef = useRef(null);
@@ -489,6 +490,24 @@ export default function Home() {
                 </Accordion.Content>
               </Accordion.Item>
             </Accordion.Root>
+          </div>
+        </div>
+        <div className='flex h-fit flex-col items-start justify-start self-stretch'>
+          <div className='lg: flex h-fit flex-col items-start justify-start gap-2 self-stretch border-[0px] border-t border-stroke-soft-200 px-4 px-8 py-32'>
+            <div className='self-stretch'>
+              
+              <TextRevealByWord
+                prefix={`Don't hear just from us.`}
+                text='Listen to what our clients have to say.'
+                velocity={2.5}
+                offset={['75px end', 'end start']}
+              />
+            </div>
+          </div>
+          <div className='flex flex-col items-start justify-start gap-4 self-stretch border-[0px] border-t border-stroke-soft-200 p-4 lg:inline-flex lg:p-8'>
+            <TestimonialCarousel/>
+
+            
           </div>
         </div>
         <div className='flex h-fit flex-col items-start justify-start self-stretch'>

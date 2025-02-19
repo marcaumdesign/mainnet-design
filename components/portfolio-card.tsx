@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import * as Tag from '@/components/ui/tag';
-import * as Button from '@/components/ui/button';
+import * as Button from '@/components/ui/button-shadcn';
 
 import {
   RiSmartphoneFill,

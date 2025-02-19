@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import * as FancyButton from '@/components/ui/fancy-button';
-import * as Button from './ui/button';
+import * as Button from './ui/button-shadcn';
 import { RainbowButton } from '@/components/ui/rainbow-button';
 import Logo from './logo';
 import { portfolio, PortfolioProps } from '@/data/portfolio';
