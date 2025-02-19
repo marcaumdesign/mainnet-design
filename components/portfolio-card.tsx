@@ -67,7 +67,7 @@ const PortfolioCard: React.FC<PortfolioProps> = ({
       >
     <div className='bg-bg-white-0 flex flex-col w-full max-w-xs lg:max-w-none'>
       <img
-      className='w-full h-auto object-cover'
+      className='w-[864px] h-auto object-cover'
       src={imageUrl}
       alt={name}
       />
