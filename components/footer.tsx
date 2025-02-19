@@ -14,7 +14,7 @@ const Footer = (props: { className?: string }) => {
     <footer className='bg-bg-white-0 w-full max-w-[1100px] h-fit flex-col items-start gap-6 border-r border-t border-l border-stroke-soft-200'>
       
       <div className={`flex-col flex md:flex-row align-top justify-between  ${props.className || ''}`}>
-        <div className='p-8 w-full inline-flex flex-col items-start justify-start gap-3 border-b border-stroke-soft-200'>
+        <div className='p-4 lg:p-8 w-full inline-flex flex-col items-start justify-start gap-3 border-b border-stroke-soft-200'>
           <Logo />
           <div className='max-w-[300px] text-paragraph-sm text-text-sub-600'>
           "The Lord is my shepherd; I shall not want. He maketh me to lie down in green pastures: he leadeth me beside the still waters."

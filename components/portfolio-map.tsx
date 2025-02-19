@@ -20,7 +20,7 @@ const PortfolioMap = () => {
   const sortedCategories = Object.entries(groupedPortfolio).sort((a, b) => b[1].length - a[1].length);
 
   return (
-    <div className="p-8 flex flex-wrap gap-6 w-full">
+    <div className="p-4 lg:p-8 flex flex-wrap gap-6 w-full">
       {sortedCategories.map(([category, projects]) => (
         <div key={category} className="flex flex-col">
           <h3 className="text-nowrap text-text-sub-600 text-subheading-sm uppercase">{category === "e-commerce" ? (category) : category.replace('-', ' ')}</h3>
