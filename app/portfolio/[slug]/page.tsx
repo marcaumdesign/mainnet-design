@@ -134,9 +134,9 @@ const PortfolioPage = () => {
         </div>
         
         {item.work.length < 1 || <WorkDisplay slug={item.slug} />}
-        <div className='h-[150px] w-full border-t border-stroke-soft-200'>
+        {/* <div className='h-[150px] w-full border-t border-stroke-soft-200'>
           <StripedBackground />
-        </div>
+        </div> */}
         <div className='flex w-full flex-col items-start justify-start gap-2 border-t border-stroke-soft-200 p-4 md:p-8'>
           <div className='self-stretch text-subheading-sm uppercase text-text-sub-600'>
             Works
