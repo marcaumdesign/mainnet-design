@@ -493,7 +493,7 @@ export default function Home() {
           </div>
         </div>
         <div className='flex h-fit flex-col items-start justify-start self-stretch'>
-          <div className='lg: flex h-fit flex-col items-start justify-start gap-2 self-stretch border-[0px] border-t border-stroke-soft-200 px-4 px-8 py-32'>
+          <div className='lg: flex h-fit flex-col items-start justify-start gap-2 self-stretch border-[0px] border-t border-stroke-soft-200  px-4 py-32 lg:px-8'>
             <div className='self-stretch'>
               
               <TextRevealByWord
@@ -511,7 +511,7 @@ export default function Home() {
           </div>
         </div>
         <div className='flex h-fit flex-col items-start justify-start self-stretch'>
-          <div className='lg: flex h-fit flex-col items-start justify-start gap-2 self-stretch border-[0px] border-t border-stroke-soft-200 px-4 px-8 py-32'>
+          <div className='lg: flex h-fit flex-col items-start justify-start gap-2 self-stretch border-[0px] border-t border-stroke-soft-200  px-4 py-32 lg:px-8'>
             <div className='self-stretch'>
               {/* <span className='text-title-h3 text-text-strong-950'>
                 Refer and earn.
