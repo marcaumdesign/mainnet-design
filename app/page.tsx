@@ -34,7 +34,7 @@ import HyperText from '@/components/ui/hyper-text';
 import { RainbowButton } from '@/components/ui/rainbow-button';
 import { TextRevealByWord } from '@/components/ui/text-reveal';
 import VerticalRuler from '@/components/vertical-ruler';
-import { useLocoScroll } from '@/hooks/use-loco-scroll';
+
 import { useEffect, useRef, useState } from 'react';
 
 export default function Home() {
@@ -70,7 +70,7 @@ export default function Home() {
     setIsLoaded(true); // Ativa o Locomotive Scroll após a montagem
   }, []);
 
-  useLocoScroll(isLoaded);
+
 
   if (!isClient) {
     return null; // Ou um placeholder enquanto o componente não é montado no cliente
