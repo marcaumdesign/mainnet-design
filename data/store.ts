@@ -21,9 +21,11 @@ export interface ProductProps {
   slug: string;
   link: string;
   description: string;
+  archetypes?: Archetypes[];
   category: ProductCategory;
   type: ProductTypes;
-  preview: string;
+  
+  imagesFolder: string;
   versions?: {
     id: number;
     name: string;
@@ -52,12 +54,13 @@ export type Archetypes =
 export const store: ProductProps[] = [
   {
     name: "Studio 222",
-    slug: "studio-222",
+    slug: "studio222",
     link: "https://marcaum.lemonsqueezy.com/buy/8a097a7c-74fa-448f-9beb-5ab5c044e48b",
     description: "Studio 222 is a high-tech appereal company selling clothes and utilities that will regenerate your style and energy through solar energy and beauty.",
     category: "website",
     type: "e-commerce",
-    preview: "/assets/previews/studio-222.png",
+
+    imagesFolder: "/images/store/studio222",
     versions: [
       {
         id: 1,
@@ -91,9 +94,10 @@ export const store: ProductProps[] = [
     slug: "flora",
     link: "https://marcaum.lemonsqueezy.com/buy/a14676d4-9e7a-4ac1-9573-4a9234362295",
     description: "Launch a SaaS website that makes users feeling just by the simple power of nature and a clean design. With this 5 pages you have the essential to launch any software company that want to contribute and make the world a better place.",
-    category: "website-templates",
-    type: "website",
-    preview: "/assets/previews/flora.png",
+    category: "website",
+    type: "institutional",
+
+    imagesFolder: "/images/store/flora",
     versions: [
       {
         id: 1,
