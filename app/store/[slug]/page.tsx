@@ -3,7 +3,7 @@
 import { useRouter, useParams } from 'next/navigation';
 import { ProductProps, store } from '@/data/store';
 import Header from '@/components/header';
-import { RiArrowLeftSLine, RiGift2Line, RiHammerLine, RiRulerLine, RiSearch2Line } from '@remixicon/react';
+import { RiArrowGoBackLine, RiArrowLeftSLine, RiGift2Line, RiHammerLine, RiQuestionLine, RiRulerLine, RiSearch2Line, RiShieldCheckLine, RiShieldLine, RiTruckLine } from '@remixicon/react';
 import Footer from '@/components/footer';
 import VerticalRuler from '@/components/vertical-ruler';
 import { ProductTypeIcon } from '@/components/product-type-icon';
@@ -170,57 +170,51 @@ const ProductPage = () => {
                 </div>
               </div>
               <Accordion.Root type='single' collapsible className='w-full'>
-            <Accordion.Item value='a'>
+              <Accordion.Item value='d'>
               <Accordion.Trigger>
-                <Accordion.Icon as={RiSearch2Line} />
-                Research
+                <Accordion.Icon as={RiTruckLine} />
+                Shipping
                 <Accordion.Arrow />
               </Accordion.Trigger>
               <Accordion.Content className='px-[30px]'>
-                We are going to search together with all the best references and
-                analyze them to check what's going on in this specific world we
-                are diving into.
+                The product will be <span className='text-text-strong-950'>delivered via email</span> after purchase.
+              </Accordion.Content>
+            </Accordion.Item>
+            
+            <Accordion.Item value='a'>
+              <Accordion.Trigger>
+                <Accordion.Icon as={RiQuestionLine} />
+                Help
+                <Accordion.Arrow />
+              </Accordion.Trigger>
+              <Accordion.Content className='px-[30px]'>
+                For any questions, please contact me at <a href='mailto:marcus@mainnet.design' className='text-text-strong-950'> marcus@mainnet.design</a> or  <a href="https://wa.me/14075092169" target='_blank' className='text-text-strong-950'>+1 (407) 509-2169</a>  on WhatsApp.
               </Accordion.Content>
             </Accordion.Item>
 
             <Accordion.Item value='b'>
               <Accordion.Trigger>
-                <Accordion.Icon as={RiRulerLine} />
-                Definition
+                <Accordion.Icon as={RiShieldCheckLine} />
+                License
                 <Accordion.Arrow />
               </Accordion.Trigger>
               <Accordion.Content className='px-[30px]'>
-                After that, we are going to analyze which properties of our
-                references are better for your business growth. Then create a
-                mixed draft of all those properties to define our prefered way
-                to build.{' '}
+                You can use the product for <span className='text-text-strong-950'>personal and commercial projects</span>, but you cannot resell the product at any way. For more information, please check our <a href="https://mainnet.design/terms" target='_blank' className='text-text-strong-950'>terms of service</a>.
               </Accordion.Content>
             </Accordion.Item>
 
             <Accordion.Item value='c'>
               <Accordion.Trigger>
-                <Accordion.Icon as={RiHammerLine} />
-                Building
+                <Accordion.Icon as={RiArrowGoBackLine} />
+                Refunds
                 <Accordion.Arrow />
               </Accordion.Trigger>
               <Accordion.Content className='px-[30px]'>
-                After we decided together which is the best way to build you
-                dreams, we are going build it! This part is more introspective
-                with our studio.
+                Due to the digital nature of the product, <span className='text-text-strong-950'>refunds are not available.</span>
               </Accordion.Content>
             </Accordion.Item>
-            <Accordion.Item value='d'>
-              <Accordion.Trigger>
-                <Accordion.Icon as={RiGift2Line} />
-                Delivery
-                <Accordion.Arrow />
-              </Accordion.Trigger>
-              <Accordion.Content className='px-[30px]'>
-                After your feedbacks, we are going to reiterate and polish the
-                whole project to leave your and your client experience seamless.
-                After that we launch your project online!
-              </Accordion.Content>
-            </Accordion.Item>
+
+           
           </Accordion.Root>
             </div>
           </div>
