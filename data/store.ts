@@ -82,9 +82,9 @@ export const store: ProductProps[] = [
       },
       {
         id: 4,
-        name: "Brand Book + Framer + Figma",
+        name: "Full Bundle",
         price: 79.00,
-        description: "The most powerful tool for launch your business today"
+        description: "Clean the path with Figma + Framer Website and the Brand Book"
       }
     ],
     software: ["Figma", "Framer"]
