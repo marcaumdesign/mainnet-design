@@ -15,6 +15,7 @@ import { RainbowButton } from '@/components/ui/rainbow-button';
 import { version } from 'os';
 import { useState } from 'react';
 import * as Accordion from '@/components/ui/accordion2';
+import { SoftwareTag } from '@/components/ui/software-tag';
 
 const ProductPage = () => {
   const router = useRouter();
@@ -94,83 +95,8 @@ const ProductPage = () => {
                   </div>
                 </div>
                 <div className='inline-flex items-start justify-start self-stretch'>
-                  <div className='flex h-fit shrink grow basis-0 items-center justify-start gap-2 border border-stroke-soft-200 px-8 py-[15px]'>
-                    <div data-svg-wrapper className='relative'>
-                      <svg
-                        width='32'
-                        height='32'
-                        viewBox='0 0 32 32'
-                        fill='none'
-                        xmlns='http://www.w3.org/2000/svg'
-                      >
-                        <path
-                          fill-rule='evenodd'
-                          clip-rule='evenodd'
-                          d='M16 16C16 13.7909 17.7909 12 20 12C22.2091 12 24 13.7909 24 16C24 18.2091 22.2091 20 20 20C17.7909 20 16 18.2091 16 16Z'
-                          fill='#1ABCFE'
-                        />
-                        <path
-                          fill-rule='evenodd'
-                          clip-rule='evenodd'
-                          d='M8 24C8 21.7909 9.79086 20 12 20H16V24C16 26.2091 14.2091 28 12 28C9.79086 28 8 26.2091 8 24Z'
-                          fill='#0ACF83'
-                        />
-                        <path
-                          fill-rule='evenodd'
-                          clip-rule='evenodd'
-                          d='M16 4V12H20C22.2091 12 24 10.2091 24 8C24 5.79086 22.2091 4 20 4H16Z'
-                          fill='#FF7262'
-                        />
-                        <path
-                          fill-rule='evenodd'
-                          clip-rule='evenodd'
-                          d='M8 8C8 10.2091 9.79086 12 12 12H16V4H12C9.79086 4 8 5.79086 8 8Z'
-                          fill='#F24E1E'
-                        />
-                        <path
-                          fill-rule='evenodd'
-                          clip-rule='evenodd'
-                          d='M8 16C8 18.2091 9.79086 20 12 20H16V12H12C9.79086 12 8 13.7909 8 16Z'
-                          fill='#A259FF'
-                        />
-                      </svg>
-                    </div>
-                    <div className='text-paragraph-sm text-text-strong-950'>
-                      Figma
-                    </div>
-                  </div>
-                  <div className='flex h-fit shrink grow basis-0 items-center justify-start gap-2 border border-stroke-soft-200 px-8 py-[15px]'>
-                    <div data-svg-wrapper className='relative'>
-                      <svg
-                        width='32'
-                        height='32'
-                        viewBox='0 0 32 32'
-                        fill='none'
-                        xmlns='http://www.w3.org/2000/svg'
-                      >
-                        <path
-                          fill-rule='evenodd'
-                          clip-rule='evenodd'
-                          d='M16 30C23.732 30 30 23.732 30 16C30 8.26801 23.732 2 16 2C8.26801 2 2 8.26801 2 16C2 23.732 8.26801 30 16 30Z'
-                          fill='white'
-                        />
-                        <path
-                          fill-rule='evenodd'
-                          clip-rule='evenodd'
-                          d='M9 20.3335H16V27.0002L9 20.3335Z'
-                          fill='black'
-                        />
-                        <path
-                          d='M16 13.6665H9V20.3332H23L16 13.6665Z'
-                          fill='black'
-                        />
-                        <path d='M9 7L16 13.6667H23V7H9Z' fill='black' />
-                      </svg>
-                    </div>
-                    <div className='text-paragraph-sm text-text-strong-950'>
-                      Framer
-                    </div>
-                  </div>
+                  <SoftwareTag variant="figma" className="shrink grow basis-0" />
+                  <SoftwareTag variant="framer" className="shrink grow basis-0" />
                 </div>
               </div>
             </div>
