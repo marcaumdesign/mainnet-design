@@ -16,7 +16,7 @@ const LabelRoot = React.forwardRef<
     <LabelPrimitives.Root
       ref={forwardedRef}
       className={cnExt(
-        'group cursor-pointer text-label-md text-text-strong-950',
+        'group cursor-pointer text-paragraph-md text-text-strong-950',
         'flex items-center gap-px',
         // disabled
         'aria-disabled:text-text-disabled-300',

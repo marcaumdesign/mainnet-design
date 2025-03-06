@@ -136,7 +136,7 @@ const ProductPage = () => {
                         <div className='flex flex-col'>
                           <div className='flex items-center justify-between'>
                             <Label.Root>{version.name}</Label.Root>
-                            <span className='text-label-sm text-text-strong-950'>
+                            <span className='text-paragraph-md text-text-strong-950'>
                               ${version.price}
                             </span>
                           </div>
