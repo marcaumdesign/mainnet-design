@@ -333,7 +333,7 @@ const ProductPage = () => {
             More Products
           </div>
         </div>
-        <StoreTicker hideSecondMarquee />
+        <StoreTicker hideSecondMarquee category={product.category} />
       </div>
 
       <Footer />

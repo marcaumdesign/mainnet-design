@@ -47,7 +47,7 @@ export const texts = {
     '1.5rem',
     {
       lineHeight: '2rem',
-      letterSpacing: '0em',
+      letterSpacing: '-0.05em',
       fontWeight: '500',
     },
   ],

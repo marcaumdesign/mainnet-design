@@ -1,17 +1,12 @@
 'use client';
 
-import { useRouter, useParams } from 'next/navigation';
-import { PortfolioProps, portfolio } from '@/data/portfolio';
+import { store } from '@/data/store';
 import Header from '@/components/header';
-import { RiArrowLeftSLine } from '@remixicon/react';
 import Footer from '@/components/footer';
+import StoreCard from '@/components/store/store-card';
 import VerticalRuler from '@/components/vertical-ruler';
-import PortfolioCard from '@/components/portfolio/portfolio-card';
 
-const Page = () => {
-  const items: PortfolioProps[] = portfolio;
-  const router = useRouter();
-
+export default function StorePage() {
   return (
     <div className='relative flex w-full flex-col items-center'>
       <Header size='full' />
@@ -19,38 +14,20 @@ const Page = () => {
         <div className='absolute left-[-50px] flex w-full items-start'>
           <VerticalRuler className='fixed top-0' />
         </div>
-        <div className='flex h-fit flex-col items-start justify-center gap-4 self-stretch border-t border-stroke-soft-200 p-4 pt-[122px] md:p-8 md:pt-[122px]'>
-          <div className='inline-flex items-center justify-center gap-1'>
-            <div
-              className='cursor-pointer text-subheading-sm uppercase text-text-soft-400 hover:text-text-strong-950'
-              onClick={() => router.push('/')}
-            >
-              Home
-            </div>
-            <RiArrowLeftSLine />
-            <div
-              className='text-subheading-sm uppercase text-text-strong-950 hover:text-text-strong-950'
-              onClick={() => router.push('/store')}
-            >
-              Store
-            </div>
-          </div>
-          <div className='flex align-top'>
-            <div className='text-title-h0 text-text-strong-950'>Store</div>
-            <div className='text-title-h5'>[{items.length}]</div>
+
+        <div className='flex h-fit flex-col items-start justify-center gap-4 self-stretch border-t border-stroke-soft-200 p-4 md:p-8 md:pt-[122px]'>
+          <div className='text-title-h0 text-text-strong-950'>
+            Store
           </div>
         </div>
 
-        <div className='w-full flex-col border-t border-stroke-soft-200 md:grid md:grid-cols-2'>
-          {items.map((item) => (
-            <PortfolioCard key={item.name} {...item} />
+        <div className='grid grid-cols-1 md:grid-cols-2'>
+          {store.map((item) => (
+            <StoreCard key={item.name} {...item} />
           ))}
         </div>
       </div>
-
       <Footer />
     </div>
   );
-};
-
-export default Page;
+}
