@@ -37,6 +37,7 @@ import { CategoryTag } from '@/components/ui/category-tag';
 import * as Button from '@/components/ui/button';
 import { Banner } from '@/components/ui/banner';
 import { cookies } from 'next/headers';
+import { StoreTicker } from '@/components/store/store-ticker';
 
 const ProductPage = () => {
   const router = useRouter();
@@ -321,7 +322,18 @@ const ProductPage = () => {
               </Accordion.Root>
             </div>
           </div>
+          
         </div>
+
+        <div className='flex w-full flex-col items-start justify-start gap-2 border-t border-stroke-soft-200 p-4 md:p-8'>
+          <div className='self-stretch text-subheading-sm uppercase text-text-sub-600'>
+            Store
+          </div>
+          <div className='w-full text-title-h4 text-text-strong-950'>
+            More Products
+          </div>
+        </div>
+        <StoreTicker hideSecondMarquee />
       </div>
 
       <Footer />

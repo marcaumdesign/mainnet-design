@@ -20,6 +20,17 @@ export const ProductImages = ({ imagesFolder }: ProductImagesProps) => {
       const uniqueImages = new Set<string>();
       const extensions = ['png', 'jpg', 'webp'];
       
+      // Primeiro tenta carregar o thumbnail
+      try {
+        const response = await fetch(`${path}/thumbnail.png`, { method: 'HEAD' });
+        if (response.ok) {
+          uniqueImages.add(`${path}/thumbnail.png`);
+        }
+      } catch (e) {
+        // Ignora erros
+      }
+      
+      // Depois carrega as imagens numeradas
       for (let i = 1; i <= 10; i++) {
         const paddedNumber = String(i).padStart(2, '0');
         

@@ -6,7 +6,7 @@ import {
   RiLinkedinFill,
   RiTwitterXFill,
 } from '@remixicon/react';
-import PortfolioMap from './portfolio-map';
+import PortfolioMap from './portfolio/portfolio-map';
 import { StripedBackground } from './striped-background';
 
 const Footer = (props: { className?: string }) => {

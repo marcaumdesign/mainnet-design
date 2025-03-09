@@ -6,7 +6,7 @@ import Header from '@/components/header';
 import { RiArrowLeftSLine } from '@remixicon/react';
 import Footer from '@/components/footer';
 import VerticalRuler from '@/components/vertical-ruler';
-import PortfolioCard from '@/components/portfolio-card';
+import PortfolioCard from '@/components/portfolio/portfolio-card';
 
 const Page = () => {
   const items: PortfolioProps[] = portfolio;

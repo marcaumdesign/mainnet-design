@@ -29,7 +29,7 @@ import {
 
 import Footer from '@/components/footer';
 import Header from '@/components/header';
-import { PortfolioTicker } from '@/components/portoflio-ticker';
+import { PortfolioTicker } from '@/components/portfolio/portoflio-ticker';
 import HyperText from '@/components/ui/hyper-text';
 import { RainbowButton } from '@/components/ui/rainbow-button';
 import { TextRevealByWord } from '@/components/ui/text-reveal';
@@ -374,7 +374,7 @@ export default function Home() {
                 creating regenerative solutions.
                 <br />
                 <br />
-                With over 8 years of experience, I’ve worked with innovative
+                With over 8 years of experience, I've worked with innovative
                 companies like V
               </span>
               <span className='text-paragraph-md text-text-strong-950'>
@@ -395,7 +395,7 @@ export default function Home() {
                 role as an Expert and Partner in the design industry.
                 <br />
                 <br />
-                Now, with Mainnet Design, I’m channeling all of this experience
+                Now, with Mainnet Design, I'm channeling all of this experience
                 into helping businesses thrive while{' '}
               </span>
               <span className='text-paragraph-md text-text-strong-950'>
@@ -403,7 +403,7 @@ export default function Home() {
               </span>
               <span className='text-paragraph-md text-text-strong-950'>
                 . If you're looking for a partner to bring your ideas to life
-                and make a positive impact, let’s make it happen.
+                and make a positive impact, let's make it happen.
               </span>
             </div>
           </div>
