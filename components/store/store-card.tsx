@@ -25,7 +25,7 @@ export default function StoreCard(props: ProductProps) {
   return (
     <Link
       href={`/store/${props.slug}`}
-      className="relative flex h-fit w-[400px] flex-col overflow-hidden border border-stroke-soft-200 bg-bg-white-0"
+      className="relative flex h-fit  flex-col overflow-hidden border border-stroke-soft-200 bg-bg-white-0"
     >
       <div className="relative h-[300px] w-full overflow-hidden">
         <Image
