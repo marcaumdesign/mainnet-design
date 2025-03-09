@@ -196,7 +196,7 @@ const ProductPage = () => {
                     <RainbowButton
                       onClick={() =>
                         window.open(
-                          'https://calendly.com/marcaum/design',
+                          selectedVersion?.paymentLink,
                           '_blank',
                         )
                       }

@@ -31,6 +31,7 @@ export interface ProductProps {
     name: string;
     price: number;
     description: string;
+    paymentLink: string;
   }[];
   software: string[];
 }
@@ -66,25 +67,29 @@ export const store: ProductProps[] = [
         id: 1,
         name: "Figma",
         price: 22.00,
-        description: "Get start with a Figma file of the website"
+        description: "Get start with a Figma file of the website",
+        paymentLink: "https://buy.stripe.com/8wMcPV5JY3QGgFy6or"
       },
       {
         id: 2,
         name: "Framer",
         price: 47.00,
-        description: "Launch your website online faster than never with Framer"
+        description: "Launch your website online faster than never with Framer",
+        paymentLink: "https://buy.stripe.com/6oEdTZ3BQ3QG2OI3cg"
       },
       {
         id: 3,
         name: "Brand Book",
         price: 47.00,
-        description: "Organize your brand better with this rich guidelines"
+        description: "Organize your brand better with this rich guidelines",
+        paymentLink: "https://buy.stripe.com/8wM8zFa0edrgdtm9AF"
       },
       {
         id: 4,
         name: "Full Bundle",
         price: 79.00,
-        description: "Clean the path with Figma + Framer Website and the Brand Book"
+        description: "Clean the path with Figma + Framer Website and the Brand Book",
+        paymentLink: "https://buy.stripe.com/7sI5nt4FU3QG892bIO"
       }
     ],
     software: ["Figma", "Framer"]
@@ -103,19 +108,22 @@ export const store: ProductProps[] = [
         id: 1,
         name: "Website Template",
         price: 77.00,
-        description: "Get the website template on Framer with 5 pages"
+        description: "Get the website template on Framer with 5 pages",
+        paymentLink: "https://marcaum.lemonsqueezy.com/checkout/buy/a14676d4-9e7a-4ac1-9573-4a9234362295"
       },
       {
         id: 2,
         name: "Website Template + Figma File",
         price: 115.00,
-        description: "Get your website on Framer + Figma"
+        description: "Get your website on Framer + Figma",
+        paymentLink: "https://marcaum.lemonsqueezy.com/checkout/buy/a14676d4-9e7a-4ac1-9573-4a9234362295"
       },
       {
         id: 3,
         name: "Landing Page Template",
         price: 30.00,
-        description: "Only the homepage and 404"
+        description: "Only the homepage and 404",
+        paymentLink: "https://marcaum.lemonsqueezy.com/checkout/buy/a14676d4-9e7a-4ac1-9573-4a9234362295"
       }
     ],
     software: ["Framer", "Figma"]
