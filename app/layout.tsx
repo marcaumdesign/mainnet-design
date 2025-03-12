@@ -12,7 +12,7 @@ import localFont from 'next/font/local';
 import Head from 'next/head';
 import Script from 'next/script';
 import './globals.css';
-
+import LenisProvider from '@/providers/LenisProvider';
 const projectId = 'pyygop0f82';
 
 const inter = FontSans({
@@ -77,25 +77,26 @@ export default function RootLayout({
       </Head>
 
       <body className='overflow-auto bg-bg-white-0 text-text-strong-950 lg:bg-bg-weak-50'>
-        <InitialLoader />
-        <ThemeProvider
-          attribute='class'
-          defaultTheme='system'
-          enableSystem
-          disableTransitionOnChange
-        >
-          <TooltipProvider>
-            <div className='flex min-h-screen flex-col'>
-              <main className='flex flex-1 flex-col'>
-                {children}
-                <SpeedInsights />
-                <Analytics />
-              </main>
-            </div>
-          </TooltipProvider>
-        </ThemeProvider>
-        <NotificationProvider />
-
+        <LenisProvider>
+          <InitialLoader />
+          <ThemeProvider
+            attribute='class'
+            defaultTheme='system'
+            enableSystem
+            disableTransitionOnChange
+          >
+            <TooltipProvider>
+              <div className='flex min-h-screen flex-col'>
+                <main className='flex flex-1 flex-col'>
+                  {children}
+                  <SpeedInsights />
+                  <Analytics />
+                </main>
+              </div>
+            </TooltipProvider>
+          </ThemeProvider>
+          <NotificationProvider />
+        </LenisProvider>
         {/* Google Tag Manager */}
       </body>
     </html>
