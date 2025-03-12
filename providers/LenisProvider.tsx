@@ -36,7 +36,7 @@ export default function LenisProvider({ children }: { children: ReactNode }) {
         lerp: 0.04,
         smoothWheel: true,
         // syncTouch: true,
-        wheelMultiplier: 1.2,
+        wheelMultiplier: 1.5,
         // touchInertiaMultiplier: 1.7,
         // syncTouchLerp: 0.1,
         autoRaf: false, // Crucial: disable Lenis' internal RAF
