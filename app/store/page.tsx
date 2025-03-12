@@ -1,15 +1,16 @@
 'use client';
 
 import { useRouter, useParams } from 'next/navigation';
-import { PortfolioProps, portfolio } from '@/data/portfolio';
+
 import Header from '@/components/header';
 import { RiArrowLeftSLine } from '@remixicon/react';
 import Footer from '@/components/footer';
 import VerticalRuler from '@/components/vertical-ruler';
-import PortfolioCard from '@/components/portfolio/portfolio-card';
+import StoreCard from '@/components/store/store-card';
+import { store, ProductProps } from '@/data/store';
 
 const Page = () => {
-  const items: PortfolioProps[] = portfolio;
+  const items: ProductProps[] = store;
   const router = useRouter();
 
   return (
@@ -30,20 +31,20 @@ const Page = () => {
             <RiArrowLeftSLine />
             <div
               className='text-subheading-sm uppercase text-text-strong-950 hover:text-text-strong-950'
-              onClick={() => router.push('/portoflio')}
+              onClick={() => router.push('/store')}
             >
-              Portoflio
+              Store
             </div>
           </div>
           <div className='flex align-top'>
-            <div className='text-title-h0 text-text-strong-950'>Works</div>
+            <div className='text-title-h0 text-text-strong-950'>Store</div>
             <div className='text-title-h5'>[{items.length}]</div>
           </div>
         </div>
 
         <div className='w-full flex-col border-t border-stroke-soft-200 md:grid md:grid-cols-2'>
           {items.map((item) => (
-            <PortfolioCard key={item.name} {...item} />
+            <StoreCard key={item.name} {...item} />
           ))}
         </div>
       </div>

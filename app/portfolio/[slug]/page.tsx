@@ -17,7 +17,7 @@ import * as Button from '@/components/ui/button';
 import Footer from '@/components/footer';
 import VerticalRuler from '@/components/vertical-ruler';
 import { StripedBackground } from '@/components/striped-background';
-import { PortfolioTicker } from '@/components/portoflio-ticker';
+import { PortfolioTicker } from '@/components/portfolio/portoflio-ticker';
 
 const PortfolioPage = () => {
   const router = useRouter();
