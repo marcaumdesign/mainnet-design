@@ -59,14 +59,14 @@ export const ProductImages = ({ imagesFolder }: ProductImagesProps) => {
   
   // Renderiza a lista de imagens únicas
   return (
-    <div className="flex flex-col w-full">
+    <div className='md:sticky md:top-[96px] flex w-full flex-col'>
       {imageList.map((imageSrc) => (
-        <div key={imageSrc} className="relative w-full aspect-video">
+        <div key={imageSrc} className='relative aspect-video w-full'>
           <Image
             src={imageSrc}
-            alt="Imagem do produto"
+            alt='Imagem do produto'
             fill
-            className="object-cover"
+            className='object-cover'
           />
         </div>
       ))}

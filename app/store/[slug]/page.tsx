@@ -71,7 +71,7 @@ const ProductPage = () => {
         </div>
 
         {/* Hero Section */}
-        <div className='flex h-fit flex-col items-start justify-center gap-4 self-stretch border-t border-stroke-soft-200 p-4 md:p-8 md:pt-[122px]'>
+        <div className='flex h-fit flex-col items-start justify-center gap-4 self-stretch border-t border-stroke-soft-200 p-4 pb-6 md:px-8 md:pb-8 pt-[122px]'>
           <div className='inline-flex items-center justify-center gap-1'>
             <div
               className='cursor-pointer text-subheading-sm uppercase text-text-soft-400 hover:text-text-strong-950'
@@ -97,13 +97,13 @@ const ProductPage = () => {
         </div>
 
         {/* Main Content */}
-        <div className='flex items-start justify-center self-stretch border-t border-stroke-soft-200'>
+        <div className='flex flex-col items-center justify-start self-stretch border-t border-stroke-soft-200 md:flex-row md:items-start md:justify-start'>
           {/* Images */}
-          <div className='flex w-full items-start justify-center gap-4 self-stretch'>
+          <div className='flex w-full relative items-start justify-center gap-4 self-stretch'>
             <ProductImages imagesFolder={product.imagesFolder} />
           </div>
           {/* Product Details */}
-          <div className='inline-flex h-fit w-[600px] min-w-[300px] flex-col items-start justify-start border-l border-stroke-soft-200'>
+          <div className='inline-flex h-fit md:w-[600px] w-full min-w-[300px] flex-col items-start justify-start border-l border-stroke-soft-200'>
             <div className='flex h-fit flex-col items-start justify-start self-stretch'>
               <div className='inline-flex items-center justify-start self-stretch'>
                 <div className='inline-flex shrink grow basis-0 flex-col items-start justify-center gap-8 border border-stroke-soft-200 px-8 py-2'>
@@ -112,7 +112,7 @@ const ProductPage = () => {
                   </div>
                 </div>
               </div>
-              <div className='gap-10˜self-stretch inline-flex items-start justify-start border-t border-stroke-soft-200 p-8'>
+              <div className='gap-10 self-stretch inline-flex items-start justify-start border-t border-stroke-soft-200 p-8'>
                 <div className='shrink grow basis-0'>
                   <span className='text-paragraph-sm text-text-strong-950'>
                     {product.description}
@@ -169,7 +169,7 @@ const ProductPage = () => {
                 </div>
               </div>
               <div className='flex h-fit flex-col items-start justify-start self-stretch'>
-                <div className='flex flex-col'>
+                <div className='flex w-full md:w-fit flex-col'>
                   <Radio.Group
                     defaultValue={product.versions?.[0]?.name}
                     onValueChange={(value) => {
