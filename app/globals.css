@@ -410,5 +410,30 @@
 /* Para navegadores Firefox */
 .hide-scroll {
   scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+
+/* Lenis smooth scroll lib custom css */
+
+/* Prevent default scroll behavior */
+html.lenis {
+  height: auto;
+}
+
+.lenis [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+/* Framer Motion scroll-linked animations fix */
+html.lenis body {
+  height: auto;
+  overflow: visible;
+}
+
+/* Optional: Smooth scroll target behavior */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
