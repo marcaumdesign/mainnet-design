@@ -32,11 +32,11 @@ export const SoftwareTag = React.forwardRef<HTMLDivElement, SoftwareTagProps>(
     const config = softwareConfig[variant];
 
     return (
-      <div 
+      <div
         ref={ref}
         className={cn(
-          'flex h-fit items-center justify-start gap-2 border border-stroke-soft-200 px-8 py-[15px]',
-          className
+          'flex h-fit items-center justify-start gap-2 border border-stroke-soft-200 px-8 py-[15px] md:border-l-0',
+          className,
         )}
         {...props}
       >

@@ -40,7 +40,7 @@ export const CategoryTag = React.forwardRef<HTMLDivElement, CategoryTagProps>(
       <div 
         ref={ref}
         className={cn(
-          'flex h-fit items-center justify-start gap-2 border border-stroke-soft-200 px-8 py-[15px]',
+          'flex h-fit items-center justify-start gap-2 border border-stroke-soft-200 px-8 py-[15px] md:border-l-0',
           className
         )}
         {...props}
