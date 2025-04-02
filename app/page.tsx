@@ -25,6 +25,7 @@ import {
   RiTrophyLine,
   RiTv2Line,
   RiUserLine,
+  RiVerifiedBadgeFill,
 } from '@remixicon/react';
 
 import Footer from '@/components/footer';
@@ -35,6 +36,7 @@ import { RainbowButton } from '@/components/ui/rainbow-button';
 import { TextRevealByWord } from '@/components/ui/text-reveal';
 import TestimonialCarousel from '@/components/testemonial-cards';
 import VerticalRuler from '@/components/vertical-ruler';
+import { TeamMember } from '@/components/ui/team-member';
 
 import { useEffect, useRef, useState } from 'react';
 
@@ -126,7 +128,7 @@ export default function Home() {
             <div className='inline-flex items-start justify-start gap-10 self-stretch border-[0px] border-r border-t border-stroke-soft-200 p-4 lg:p-8'>
               <div className='flex h-fit w-full items-center justify-start gap-4'>
                 <RiTv2Line className='text-text-sub-600' />
-                <div className='text-paragraph-lg text-text-strong-950'>
+                <div className='text-paragraph-smgraph-lg text-text-strong-950'>
                   Web Apps
                 </div>
               </div>
@@ -134,7 +136,7 @@ export default function Home() {
             <div className='inline-flex items-start justify-start gap-10 self-stretch border-[0px] border-r border-t border-stroke-soft-200 p-4 lg:p-8'>
               <div className='flex h-fit w-full items-center justify-start gap-4'>
                 <RiPhoneFindLine className='text-text-sub-600' />
-                <div className='text-paragraph-lg text-text-strong-950'>
+                <div className='text-paragraph-smgraph-lg text-text-strong-950'>
                   Mobile Apps
                 </div>
               </div>
@@ -142,7 +144,7 @@ export default function Home() {
             <div className='inline-flex items-start justify-start gap-10 self-stretch border-[0px] border-r border-t border-stroke-soft-200 p-4 lg:p-8'>
               <div className='flex h-fit w-full items-center justify-start gap-4'>
                 <RiRocket2Line className='text-text-sub-600' />
-                <div className='text-paragraph-lg text-text-strong-950'>
+                <div className='text-paragraph-smgraph-lg text-text-strong-950'>
                   Landing Pages
                 </div>
               </div>
@@ -150,7 +152,7 @@ export default function Home() {
             <div className='inline-flex items-start justify-start gap-10 self-stretch border-[0px] border-t border-stroke-soft-200 p-4 lg:p-8'>
               <div className='flex h-fit w-full items-center justify-start gap-4'>
                 <RiGlobalLine className='text-text-sub-600' />
-                <div className='text-paragraph-lg text-text-strong-950'>
+                <div className='text-paragraph-smgraph-lg text-text-strong-950'>
                   Websites
                 </div>
               </div>
@@ -158,7 +160,7 @@ export default function Home() {
             <div className='inline-flex items-start justify-start gap-10 self-stretch border-[0px] border-r border-t border-stroke-soft-200 p-4 lg:p-8'>
               <div className='flex h-fit w-full items-center justify-start gap-4'>
                 <RiCompassDiscoverLine className='text-text-sub-600' />
-                <div className='text-paragraph-lg text-text-strong-950'>
+                <div className='text-paragraph-smgraph-lg text-text-strong-950'>
                   Design Systems
                 </div>
               </div>
@@ -167,7 +169,7 @@ export default function Home() {
             <div className='inline-flex items-start justify-start gap-10 self-stretch border-[0px] border-t border-stroke-soft-200 p-4 lg:p-8'>
               <div className='flex h-fit w-full items-center justify-start gap-4'>
                 <RiBook2Line className='text-text-sub-600' />
-                <div className='text-paragraph-lg text-text-strong-950'>
+                <div className='text-paragraph-smgraph-lg text-text-strong-950'>
                   Branding
                 </div>
               </div>
@@ -175,7 +177,7 @@ export default function Home() {
             <div className='inline-flex items-start justify-start gap-10 self-stretch border-[0px] border-r border-t border-stroke-soft-200 p-4 lg:p-8'>
               <div className='flex h-fit w-full items-center justify-start gap-4'>
                 <RiInstagramLine className='text-text-sub-600' />
-                <div className='text-paragraph-lg text-text-strong-950'>
+                <div className='text-paragraph-smgraph-lg text-text-strong-950'>
                   Social Media
                 </div>
               </div>
@@ -184,7 +186,7 @@ export default function Home() {
             <div className='inline-flex items-start justify-start gap-10 self-stretch border-[0px] border-t border-stroke-soft-200 p-4 lg:p-8'>
               <div className='flex h-fit w-full items-center justify-start gap-4'>
                 <RiMovie2Line className='text-text-sub-600' />
-                <div className='text-paragraph-lg text-text-strong-950'>
+                <div className='text-paragraph-smgraph-lg text-text-strong-950'>
                   Motion Design
                 </div>
               </div>
@@ -192,7 +194,7 @@ export default function Home() {
             <div className='inline-flex items-start justify-start gap-10 self-stretch border-[0px] border-r border-t border-stroke-soft-200 p-4 lg:p-8'>
               <div className='flex h-fit w-full items-center justify-start gap-4'>
                 <RiStore2Line className='text-text-sub-600' />
-                <div className='text-paragraph-lg text-text-strong-950'>
+                <div className='text-paragraph-smgraph-lg text-text-strong-950'>
                   E-Commerces
                 </div>
               </div>
@@ -200,7 +202,7 @@ export default function Home() {
             <div className='inline-flex items-start justify-start gap-10 self-stretch border-[0px] border-t border-stroke-soft-200 p-4 lg:p-8'>
               <div className='flex h-fit w-full items-center justify-start gap-4'>
                 <RiDashboard2Line className='text-text-sub-600' />
-                <div className='text-paragraph-lg text-text-strong-950'>
+                <div className='text-paragraph-smgraph-lg text-text-strong-950'>
                   Dashboards
                 </div>
               </div>
@@ -250,7 +252,7 @@ export default function Home() {
               </Accordion.Trigger>
               <Accordion.Content className='px-[30px]'>
                 After that, we are going to analyze which properties of our
-                references are better for your business growth. Then create a
+                references are betext-paragraph-smr for your business growth. Then create a
                 mixed draft of all those properties to define our prefered way
                 to build.{' '}
               </Accordion.Content>
@@ -290,11 +292,11 @@ export default function Home() {
             <div className='self-stretch'>
               {/* <span className='text-title-h3 text-text-strong-950'>Who? </span>
               <span className='text-title-h3 text-text-soft-400'>
-                Who believe on a better world by design.
+                Who believe on a betext-paragraph-smr world by design.
               </span> */}
               <TextRevealByWord
                 prefix={'Who?'}
-                text='Who believe on a better world by design.'
+                text='Who believe on a betext-paragraph-smr world by design.'
                 velocity={2.5}
                 offset={['75px end', 'end start']}
               />
@@ -363,7 +365,7 @@ export default function Home() {
             />
 
             <div className='shrink grow basis-0'>
-              <span className='text-paragraph-md text-text-strong-950'>
+              <span className='text-paragraph-smgraph-md text-text-strong-950'>
                 Hey there, I'm Marcus (also known as Marcaum), a 22-year-old
                 carioca designer who is passionate about the color green and
                 creating regenerative solutions.
@@ -372,20 +374,20 @@ export default function Home() {
                 With over 8 years of experience, I've worked with innovative
                 companies like V
               </span>
-              <span className='text-paragraph-md text-text-strong-950'>
+              <span className='text-paragraph-smgraph-md text-text-strong-950'>
                 elvet, Lemon Capital (BTG), Eternal Games, GreenPill
               </span>
-              <span className='text-paragraph-md text-text-strong-950'>
+              <span className='text-paragraph-smgraph-md text-text-strong-950'>
                 , and others, crafting solutions that make a meaningful impact
                 on businesses and their users.
                 <br />
                 <br />
                 In 2023, I had the privilege of working at{' '}
               </span>
-              <span className='text-paragraph-md text-text-strong-950'>
+              <span className='text-paragraph-smgraph-md text-text-strong-950'>
                 Framer as a Product Specialist
               </span>
-              <span className='text-paragraph-md text-text-strong-950'>
+              <span className='text-paragraph-smgraph-md text-text-strong-950'>
                 , an experience that deepened my expertise and strengthened my
                 role as an Expert and Partner in the design industry.
                 <br />
@@ -393,18 +395,247 @@ export default function Home() {
                 Now, with Mainnet Design, I'm channeling all of this experience
                 into helping businesses thrive while{' '}
               </span>
-              <span className='text-paragraph-md text-text-strong-950'>
+              <span className='text-paragraph-smgraph-md text-text-strong-950'>
                 focusing on sustainability and innovation
               </span>
-              <span className='text-paragraph-md text-text-strong-950'>
+              <span className='text-paragraph-smgraph-md text-text-strong-950'>
                 . If you're looking for a partner to bring your ideas to life
                 and make a positive impact, let's make it happen.
               </span>
             </div>
+
+            
+
           </div>
+                <div className="flex flex-col items-start justify-center gap-4 self-stretch border-[0px] border-t border-stroke-soft-200 p-4 lg:flex-row lg:items-start lg:p-8">
+                  <h4 className="text-title-h4 text-text-strong-950">And that's our full crew!</h4>
+                </div>
+          <div className="grid grid-cols-1 border-t border-stroke-soft-200  md:grid-cols-2 lg:grid-cols-3">
+              <TeamMember
+                name="Marcus Dutra"
+                role="Founder & CEO"
+                description="Designer and developer focused on creating regenerative solutions."
+                imageUrl="/team/marcus-dutra.png"
+              />
+              <TeamMember
+                name="João Dutra"
+                role="COO"
+                description="Optimizes internal processes and coordinates teams to deliver the best results."
+                imageUrl="/team/joão-dutra.png"
+              />
+              <TeamMember
+                name="Arthur Dutra"
+                role="Motion Designer"
+                description="Creates animations and visual effects that bring digital projects to life."
+                imageUrl="/team/arthur-dutra.png"
+              />
+              <TeamMember
+                name="Manu Alentejo"
+                role="UI/UX Designer"
+                description="Experience designer focused on research and usability."
+                imageUrl="/team/emanuelly-alentejo.png"
+              />
+              <TeamMember
+                name="Victoria Santos"
+                role="Graphic Designer"
+                description="Develops visual identities and graphic materials that communicate brands' essence."
+                imageUrl="/team/victoria-santos.png"
+              />
+              <TeamMember
+                name="Benito Xavier"
+                role="Tech Lead"
+                description="Leads technical development and ensures quality implementation of projects."
+                imageUrl="/team/benito-xavier.png"
+              />
+            </div>
+
         </div>
 
         {/* FAQ */}
+
+        
+
+        <div className='flex h-fit flex-col items-start justify-start self-stretch'>
+          <div className='lg: flex h-fit flex-col items-start justify-start gap-2 self-stretch border-[0px] border-t border-stroke-soft-200 px-4 py-32 lg:px-8'>
+            <div className='self-stretch'>
+              <TextRevealByWord
+                prefix={`How much it costs?`}
+                text='Half the price of an employee, with twice the delivery speed.'
+                velocity={2.5}
+                offset={['75px end', 'end start']}
+              />
+            </div>
+          </div>
+          <div className='flex'>
+            <div className='flex flex-col items-start justify-start gap-4 self-stretch border-t border-r border-stroke-soft-200 p-4 lg:inline-flex lg:p-8'>
+              <div className='flex flex-col items-start justify-center self-stretch'>
+                <div className='text-title-h4 text-text-strong-950'>
+                  Basic Plan
+                </div>
+                <div className='text-title-h6 text-text-sub-600'>
+                  One request at a time
+                </div>
+              </div>
+              <div className='flex flex-col items-start justify-center self-stretch'>
+                <div className='inline-flex items-center justify-start gap-1 self-stretch'>
+                  <div className='text-title-h5 text-text-strong-950'>
+                    $1399/m
+                  </div>
+                  <div className='text-paragraph-smgraph-lg text-text-soft-400 line-through'>
+                    $1999/m
+                  </div>
+                </div>
+                <div className='text-label-sm text-text-sub-600'>
+                  Pause or cancel anytime
+                </div>
+              </div>
+              <RainbowButton className='w-full'
+              onClick={() =>
+                window.open('https://calendly.com/marcaum/design', '_blank')
+              }
+            >
+              Get Started
+            </RainbowButton>
+              <div className='flex flex-col items-start justify-start gap-1 self-stretch'>
+                <div className='inline-flex items-center justify-start gap-2 self-stretch'>
+                  <RiVerifiedBadgeFill className='text-text-sub-600 min-w-[24px]' />
+                  <div className="text-paragraph-sm text-text-sub-600">
+                    One request at a time
+                  </div>
+                </div>
+                <div className='inline-flex items-center justify-start gap-2 self-stretch'>
+                  <RiVerifiedBadgeFill className='text-text-sub-600 min-w-[24px]' />
+                  <div className="text-paragraph-sm text-text-sub-600">
+                    Priority Support. Weekly Check-in Meetings
+                  </div>
+                </div>
+                <div className='inline-flex items-center justify-start gap-2 self-stretch'>
+                  <RiVerifiedBadgeFill className='text-text-sub-600 min-w-[24px]' />
+                  <div className="text-paragraph-sm text-text-sub-600">
+                    Average 48 to 72 hours to delivery
+                  </div>
+                </div>
+                <div className='inline-flex items-center justify-start gap-2 self-stretch'>
+                  <RiVerifiedBadgeFill className='text-text-sub-600 min-w-[24px]' />
+                  <div className="text-paragraph-sm text-text-sub-600">
+                    ﻿﻿Unlimited users
+                  </div>
+                </div>
+                <div className='inline-flex items-center justify-start gap-2 self-stretch'>
+                  <RiVerifiedBadgeFill className='text-text-sub-600 min-w-[24px]' />
+                  <div className="text-paragraph-sm text-text-sub-600">
+                    ﻿﻿Unlimited stock photos and assets
+                  </div>
+                </div>
+                <div className='inline-flex items-center justify-start gap-2 self-stretch'>
+                  <RiVerifiedBadgeFill className='text-text-sub-600 min-w-[24px]' />
+                  <div className="text-paragraph-sm text-text-sub-600">
+                    ﻿﻿Easy credit-card payments
+                  </div>
+                </div>
+                <div className='inline-flex items-center justify-start gap-2 self-stretch'>
+                  <RiVerifiedBadgeFill className='text-text-sub-600 min-w-[24px]' />
+                  <div className="text-paragraph-sm text-text-sub-600">
+                    ﻿﻿Pause or cancel anytime
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Pro Plan */}
+
+            <div className='flex flex-col items-start justify-start gap-4 self-stretch border-t border-r border-stroke-soft-200 p-4 lg:inline-flex lg:p-8'>
+              <div className='flex flex-col items-start justify-center self-stretch'>
+                <div className='text-title-h4 text-text-strong-950'>
+                  Pro Plan
+                </div>
+                <div className='text-title-h6 text-text-sub-600'>
+                  Double requests!
+                </div>
+              </div>
+              <div className='flex flex-col items-start justify-center self-stretch'>
+                <div className='inline-flex items-center justify-start gap-1 self-stretch'>
+                  <div className='text-title-h5 text-text-strong-950'>
+                    $2798/m
+                  </div>
+                  <div className='text-paragraph-smgraph-lg text-text-soft-400 line-through'>
+                    $3499/m
+                  </div>
+                </div>
+                <div className='text-label-sm text-text-sub-600'>
+                  Pause or cancel anytime
+                </div>
+              </div>
+              <RainbowButton className='w-full'
+              onClick={() =>
+                window.open('https://calendly.com/marcaum/design', '_blank')
+              }
+            >
+              Get Started
+            </RainbowButton>
+              <div className='flex flex-col items-start justify-start gap-1 self-stretch'>
+                <div className='inline-flex items-center justify-start gap-2 self-stretch'>
+                  <RiVerifiedBadgeFill className='text-text-sub-600 min-w-[24px]' />
+                  <div className="text-paragraph-sm text-text-sub-600">
+                    Double requests at a time
+                  </div>
+                </div>
+                <div className='inline-flex items-center justify-start gap-2 self-stretch'>
+                  <RiVerifiedBadgeFill className='text-text-sub-600 min-w-[24px]' />
+                  <div className="text-paragraph-sm text-text-sub-600">
+                    Priority Support. Weekly Check-in Meetings
+                  </div>
+                </div>
+                <div className='inline-flex items-center justify-start gap-2 self-stretch'>
+                  <RiVerifiedBadgeFill className='text-text-sub-600 min-w-[24px]' />
+                  <div className="text-paragraph-sm text-text-sub-600">
+                    ﻿﻿Average 48 to 72 hours to delivery
+                  </div>
+                </div>
+                <div className='inline-flex items-center justify-start gap-2 self-stretch'>
+                  <RiVerifiedBadgeFill className='text-text-sub-600 min-w-[24px]' />
+                  <div className="text-paragraph-sm text-text-sub-600">
+                    ﻿﻿Unlimited users
+                  </div>
+                </div>
+                <div className='inline-flex items-center justify-start gap-2 self-stretch'>
+                  <RiVerifiedBadgeFill className='text-text-sub-600 min-w-[24px]' />
+                  <div className="text-paragraph-sm text-text-sub-600">
+                    ﻿﻿Unlimited stock photos and assets
+                  </div>
+                </div>
+                <div className='inline-flex items-center justify-start gap-2 self-stretch'>
+                  <RiVerifiedBadgeFill className='text-text-sub-600 min-w-[24px]' />
+                  <div className="text-paragraph-sm text-text-sub-600">
+                    ﻿﻿Easy credit-card payments
+                  </div>
+                </div>
+                <div className='inline-flex items-center justify-start gap-2 self-stretch'>
+                  <RiVerifiedBadgeFill className='text-text-sub-600 min-w-[24px]' />
+                  <div className="text-paragraph-sm text-text-sub-600">
+                    ﻿﻿Pause or cancel anytime
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className='flex h-fit flex-col items-start justify-start self-stretch'>
+          <div className='lg: flex h-fit flex-col items-start justify-start gap-2 self-stretch border-[0px] border-t border-stroke-soft-200 px-4 py-32 lg:px-8'>
+            <div className='self-stretch'>
+              <TextRevealByWord
+                prefix={`Don't hear just from us.`}
+                text='Listen to what our clients have to say.'
+                velocity={2.5}
+                offset={['75px end', 'end start']}
+              />
+            </div>
+          </div>
+          <div className='flex flex-col items-start justify-start gap-4 self-stretch border-[0px] border-t border-stroke-soft-200 p-4 lg:inline-flex lg:p-8'>
+            <TestimonialCarousel />
+          </div>
+        </div>
 
         <div className='flex h-fit flex-col items-start justify-start self-stretch'>
           <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border-[0px] border-t border-stroke-soft-200 px-4 py-32 lg:px-8'>
@@ -467,7 +698,7 @@ export default function Home() {
                 <Accordion.Content className='px-[30px]'>
                   No, we don't. We only work 1:1 with clients, the closer to C
                   Level, the more smooth will be the project experience and the
-                  better the end result.
+                  betext-paragraph-smr the end result.
                 </Accordion.Content>
               </Accordion.Item>
               <Accordion.Item value='d'>
@@ -514,34 +745,11 @@ export default function Home() {
             </Accordion.Root>
           </div>
         </div>
-        <div className='flex h-fit flex-col items-start justify-start self-stretch'>
-          <div className='lg: flex h-fit flex-col items-start justify-start gap-2 self-stretch border-[0px] border-t border-stroke-soft-200  px-4 py-32 lg:px-8'>
-            <div className='self-stretch'>
               
-              <TextRevealByWord
-                prefix={`Don't hear just from us.`}
-                text='Listen to what our clients have to say.'
-                velocity={2.5}
-                offset={['75px end', 'end start']}
-              />
-            </div>
-          </div>
-          <div className='flex flex-col items-start justify-start gap-4 self-stretch border-[0px] border-t border-stroke-soft-200 p-4 lg:inline-flex lg:p-8'>
-            <TestimonialCarousel/>
-
-            
-          </div>
-        </div>
+        {/* Refer and earn */}
         <div className='flex h-fit flex-col items-start justify-start self-stretch'>
-          <div className='lg: flex h-fit flex-col items-start justify-start gap-2 self-stretch border-[0px] border-t border-stroke-soft-200  px-4 py-32 lg:px-8'>
+          <div className='lg: flex h-fit flex-col items-start justify-start gap-2 self-stretch border-[0px] border-t border-stroke-soft-200 px-4 py-32 lg:px-8'>
             <div className='self-stretch'>
-              {/* <span className='text-title-h3 text-text-strong-950'>
-                Refer and earn.
-              </span>
-              <span className='text-title-h3 text-text-soft-400'>
-                {' '}
-                Send us clients and get free money!
-              </span> */}
               <TextRevealByWord
                 prefix={`Refer and earn.`}
                 text='Send us clients and get $250 for free!'
@@ -551,7 +759,7 @@ export default function Home() {
             </div>
           </div>
           <div className='flex flex-col items-start justify-start gap-4 self-stretch border-[0px] border-t border-stroke-soft-200 p-4 lg:inline-flex lg:p-8'>
-            <div className='text-paragraph-md text-text-sub-600'>
+            <div className='text-paragraph-smgraph-md text-text-sub-600'>
               Too busy to work? Send some clients on our way and receive $250
               for each project closed doing absolutely nothing, free money!
             </div>
