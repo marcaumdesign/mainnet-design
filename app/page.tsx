@@ -407,8 +407,8 @@ export default function Home() {
             
 
           </div>
-                <div className="flex flex-col items-start justify-center gap-4 self-stretch border-[0px] border-t border-stroke-soft-200 p-4 lg:flex-row lg:items-start lg:p-8">
-                  <h4 className="text-title-h4 text-text-strong-950">And that's our full crew!</h4>
+                <div className="flex flex-col items-center justify-start gap-4 self-stretch border-[0px] border-t border-stroke-soft-200 p-4 lg:flex-row lg:items-start lg:p-8">
+                  <h4 className="text-title-h4 text-text-strong-950">The full crew</h4>
                 </div>
           <div className="grid grid-cols-1 border-t border-stroke-soft-200  md:grid-cols-2 lg:grid-cols-3">
               <TeamMember
