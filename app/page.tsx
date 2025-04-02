@@ -440,7 +440,7 @@ export default function Home() {
                 role="Graphic Designer"
                 description="Develops visual identities and graphic materials that communicate brands' essence."
                 imageUrl="/team/victoria-santos.png"
-              />
+              /> 
               <TeamMember
                 name="Benito Xavier"
                 role="Tech Lead"
