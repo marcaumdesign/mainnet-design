@@ -49,7 +49,7 @@ export default function RootLayout({
         'hide-scroll',
       )}
     >
-      <Head>
+      <head>
       {/* // <!-- Meta Pixel Code --> */}
       <script>
         
@@ -94,7 +94,7 @@ export default function RootLayout({
             })(window, document, "clarity", "script", "pyygop0f82");
           `}
         </script>
-      </Head>
+      </head>
 
       <body className='overflow-auto bg-bg-white-0 text-text-strong-950 lg:bg-bg-weak-50'>
         <LenisProvider>
