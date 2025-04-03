@@ -49,9 +49,9 @@ export default function RootLayout({
         'hide-scroll',
       )}
     >
-      {/* <head>
+      <Head>
 
-        <Script strategy='afterInteractive'>
+        {/* <Script strategy='afterInteractive'>
           {`!function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -62,7 +62,7 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq("init", "1177142284032271");
 fbq("track", "PageView");`}
-        </Script>
+        </Script> */}
         <noscript>
           <img
             height='1'
@@ -72,7 +72,7 @@ fbq("track", "PageView");`}
           />
         </noscript>
 
-        <Script
+        {/* <Script
           strategy='afterInteractive'
           async
           src='https://www.googletagmanager.com/gtag/js?id=G-T4FF6715QC'
@@ -83,9 +83,9 @@ fbq("track", "PageView");`}
   gtag('js', new Date());
 
   gtag('config', 'G-T4FF6715QC');`}
-        </Script>
+        </Script> */}
 
-        <Script strategy='afterInteractive' id='clarity'>
+        {/* <Script strategy='afterInteractive' id='clarity'>
           {`
             (function(c,l,a,r,i,t,y){
               c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -93,8 +93,8 @@ fbq("track", "PageView");`}
               y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
             })(window, document, "clarity", "script", "pyygop0f82");
           `}
-        </Script>
-      </head> */}
+        </Script> */}
+      </Head>
 
       <body className='overflow-auto bg-bg-white-0 text-text-strong-950 lg:bg-bg-weak-50'>
         <LenisProvider>
@@ -133,14 +133,7 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 fbq("init", "1177142284032271");
 fbq("track", "PageView");`}
       </Script>
-      <noscript>
-        <img
-          height='1'
-          width='1'
-          style={{ display: 'none' }}
-          src='https://www.facebook.com/tr?id=1177142284032271&ev=PageView&noscript=1'
-        />
-      </noscript>
+      
       {/* <!-- End Meta Pixel Code --> */}
 
       {/* <!-- Google tag (gtag.js) --> */}
