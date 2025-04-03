@@ -27,8 +27,7 @@ const PortfolioMap = () => {
           {projects.map((project) => (
             <a 
               key={project.slug} 
-              href={`/portfolio/${project.slug}`} 
-              target="_blank" 
+              href={`/portfolio/${project.slug}`}               
               rel="noopener noreferrer"
               className="text-text-strong-950 flex items-center text-paragraph-sm hover:text-text-sub-600"
             >

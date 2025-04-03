@@ -52,7 +52,7 @@ const PortfolioPage = () => {
             </div>
             <RiArrowLeftSLine />
             <div
-              className='text-subheading-sm uppercase text-text-soft-400 hover:text-text-strong-950'
+              className='cursor-pointer text-subheading-sm uppercase text-text-soft-400 hover:text-text-strong-950'
               onClick={() => router.push('/portfolio')}
             >
               Portoflio
