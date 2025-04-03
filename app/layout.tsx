@@ -51,7 +51,7 @@ export default function RootLayout({
     >
       <Head>
       {/* // <!-- Meta Pixel Code --> */}
-      <Script>
+      <script>
         
         {`!function(f,b,e,v,n,t,s)
         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -67,7 +67,7 @@ export default function RootLayout({
         
         
         
-      </Script>
+      </script>
 
       <noscript><img height="1" width="1" style={{ display: 'none' }}
         src="https://www.facebook.com/tr?id=1177142284032271&ev=PageView&noscript=1"/>
@@ -75,22 +75,17 @@ export default function RootLayout({
 
       {/* // <!-- End Meta Pixel Code --> */}
 
-        {/* Google Tag Manager */}
-        <Script
-          strategy='afterInteractive'
-          src={`https://www.googletagmanager.com/gtag/js?id=G-T4FF6715QC`}
-        />
-        <Script id='gtag-init' strategy='afterInteractive'>
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-T4FF6715QC');
-          `}
-        </Script>
-        {/* End Google Tag Manager */}
+      {/* <!-- Google tag (gtag.js) --> */}
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T4FF6715QC"></script>
+<script>
+  {`window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-        <Script id='clarity' strategy='afterInteractive'>
+  gtag('config', 'G-T4FF6715QC');`}
+</script>
+
+        <script id='clarity'>
           {`
             (function(c,l,a,r,i,t,y){
               c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -98,7 +93,7 @@ export default function RootLayout({
               y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
             })(window, document, "clarity", "script", "pyygop0f82");
           `}
-        </Script>
+        </script>
       </Head>
 
       <body className='overflow-auto bg-bg-white-0 text-text-strong-950 lg:bg-bg-weak-50'>
