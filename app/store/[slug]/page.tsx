@@ -224,7 +224,7 @@ const ProductPage = () => {
                       <span className='font-bold leading-none text-[#0d111b]'>PPP40</span>
                       <span className='text-[#0d111b]'>
                         {' '}promo code to get a 40% discount for living in a
-                        country choosen for power purchase parity program!
+                        country chosen for the power purchase parity program!
                       </span>
                     </Banner>
                   </div>
@@ -293,7 +293,7 @@ const ProductPage = () => {
                     <span className='text-text-strong-950'>
                       personal and commercial projects
                     </span>
-                    , but you cannot resell the product at any way. For more
+                    , but you cannot resell the product in any way. For more
                     information, please check our{' '}
                     <a
                       href='https://mainnet.design/terms'

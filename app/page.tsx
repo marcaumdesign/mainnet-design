@@ -116,8 +116,7 @@ export default function Home() {
               {/* <span className='text-title-h3 text-text-strong-950'>What? </span> */}
               <TextRevealByWord
                 prefix={'What?'}
-                text=' We are an studio in love with building thing, these are what we
-                can do together'
+                text=' We are a studio in love with building things. These are what we can do together.'
                 velocity={2.5}
                 offset={['75px end', 'end start']}
               />
@@ -222,8 +221,7 @@ export default function Home() {
               </span> */}
               <TextRevealByWord
                 prefix={'How?'}
-                text='Mainnet simplifies the design process and breaks down into 4
-                steps to develop even faster'
+                text='Mainnet simplifies the design process and breaks it down into 4 steps to develop even faster.'
                 velocity={2.5}
                 offset={['75px end', 'end start']}
               />
@@ -296,7 +294,7 @@ export default function Home() {
               </span> */}
               <TextRevealByWord
                 prefix={'Who?'}
-                text='Who believe on a betext-paragraph-smr world by design.'
+                text='Who believe in a better world by design.'
                 velocity={2.5}
                 offset={['75px end', 'end start']}
               />
@@ -352,7 +350,7 @@ export default function Home() {
               </span> */}
               <TextRevealByWord
                 prefix={`Who's behind Mainnet?`}
-                text='What makes us different from others agencies and studios'
+                text='What makes us different from other agencies and studios'
                 velocity={2.5}
                 offset={['175px end', 'end start']}
               />
@@ -625,7 +623,7 @@ export default function Home() {
           <div className='lg: flex h-fit flex-col items-start justify-start gap-2 self-stretch border-[0px] border-t border-stroke-soft-200 px-4 py-32 lg:px-8'>
             <div className='self-stretch'>
               <TextRevealByWord
-                prefix={`Don't hear just from us.`}
+                prefix={`Don't just hear from us.`}
                 text='Listen to what our clients have to say.'
                 velocity={2.5}
                 offset={['75px end', 'end start']}
