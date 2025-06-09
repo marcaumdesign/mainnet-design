@@ -45,12 +45,13 @@ const icons: Record<Works, RemixiconComponentType> = {
   dashboard: RiBook2Line,
 };
 
-const PortfolioCard: React.FC<PortfolioProps> = ({
+const PortfolioCard: React.FC<PortfolioProps & { maxWidth?: string }> = ({
   work,
   name,
   link,
   type,
   slug,
+  maxWidth = '300px',
 }) => {
   const variant = Array.isArray(work) && work.length > 1 ? work[0] : work[0];
   const isProject = type === 'project';
@@ -61,7 +62,10 @@ const PortfolioCard: React.FC<PortfolioProps> = ({
       href={`/portfolio/${slug}`}
       className='flex items-center border border-stroke-soft-200 text-title-h6 text-text-strong-950 hover:border-stroke-sub-300'
     >
-      <div className='flex w-full max-w-[300px] md:max-w-[1200px] flex-col bg-bg-white-0'>
+      <div
+        className='flex w-full flex-col bg-bg-white-0 md:max-w-[1200px]'
+        style={{ maxWidth }}
+      >
         <img
           className='h-auto max-h-[25vh] w-full object-cover transition-all duration-1000 ease-in-out md:max-h-[35vh] lg:max-h-[45vh]'
           src={imageUrl}
