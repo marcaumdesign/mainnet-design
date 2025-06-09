@@ -145,7 +145,7 @@ export const portfolio: PortfolioProps[] =
     "craftedIn": "Rio de Janeiro, Brasil"
   },
   {
-    "name": "Lemon Capital | BTG",
+    "name": "Lemon | BTG",
     "slug": "lemon-capital",
     "publishedAt": "12/2023",
     "link": "https://hilemon.me/",
