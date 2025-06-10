@@ -599,7 +599,7 @@ const config = {
     },
     extend: {
       fontFamily: {
-        sans: ['var(--font-sans)'],
+        sans: ['var(--font-sans)', 'Arial', 'Helvetica', 'sans-serif'],
         mono: ['var(--font-geist-mono)'],
       },
       borderRadius: {
