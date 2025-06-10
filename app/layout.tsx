@@ -8,7 +8,7 @@ import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
 import { Inter as FontSans } from 'next/font/google';
-import localFont from 'next/font/local';
+import { GeistMono } from 'geist/font/mono';
 import Head from 'next/head';
 import Script from 'next/script';
 import './globals.css';
@@ -20,11 +20,7 @@ const inter = FontSans({
   variable: '--font-sans',
 });
 
-const geistMono = localFont({
-  src: './fonts/GeistMono[wght].woff2',
-  variable: '--font-geist-mono',
-  weight: '100 900',
-});
+
 
 export const metadata: Metadata = {
   title: 'Mainnet Design',
@@ -44,7 +40,7 @@ export default function RootLayout({
       suppressHydrationWarning
       className={cn(
         inter.variable,
-        geistMono.variable,
+        GeistMono.variable,
         'antialiased',
         'hide-scroll',
       )}
