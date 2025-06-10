@@ -7,7 +7,7 @@ import Clarity from '@microsoft/clarity';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
-import { Inter as FontSans } from 'next/font/google';
+import { Inter } from 'next/font/google'
 import localFont from 'next/font/local';
 import Head from 'next/head';
 import Script from 'next/script';
@@ -15,7 +15,7 @@ import './globals.css';
 import LenisProvider from '@/providers/LenisProvider';
 const projectId = 'pyygop0f82';
 
-const inter = FontSans({
+const inter = Inter({
   subsets: ['latin'],
   variable: '--font-sans',
 });
