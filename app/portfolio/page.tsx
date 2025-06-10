@@ -43,7 +43,7 @@ const Page = () => {
 
         <div className='w-full flex-col border-t border-stroke-soft-200 md:grid md:grid-cols-2'>
           {items.map((item) => (
-            <PortfolioCard maxWidth='500px' key={item.name} {...item} />
+            <PortfolioCard key={item.name} {...item} />
           ))}
         </div>
       </div>
