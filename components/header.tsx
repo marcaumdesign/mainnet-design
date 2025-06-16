@@ -34,7 +34,14 @@ export default function Header({ size, portfolio = [], slug }: HeaderProps) {
         </Link>
 
         <div className='flex items-center gap-2'>
-          <Button.Root mode='stroke' variant='neutral' className='h-[42px] text-label-md w-fit px-2 md:px-2'>
+          <Button.Root
+            mode='stroke'
+            variant='neutral'
+            className='h-[42px] w-fit px-2 text-label-md md:px-2'
+            onClick={() => {
+              window.open('./portfolio');
+            }}
+          >
             View Work
           </Button.Root>
 
@@ -42,7 +49,7 @@ export default function Header({ size, portfolio = [], slug }: HeaderProps) {
             onClick={() =>
               window.open('https://calendly.com/marcaum/design', '_blank')
             }
-            className=' w-fit px-2 md:px-2'
+            className='w-fit px-2 md:px-2'
           >
             Get Started
           </RainbowButton>
