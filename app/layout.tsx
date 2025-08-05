@@ -62,6 +62,18 @@ export default function RootLayout({
           as="image"
           type="image/svg+xml"
         />
+        <link
+          rel="preload"
+          href="/lotties/logo-lightmode.lottie"
+          as="fetch"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/lotties/logo-darkmode.lottie"
+          as="fetch"
+          crossOrigin="anonymous"
+        />
         
         {/* Critical CSS inline */}
         <style dangerouslySetInnerHTML={{

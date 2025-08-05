@@ -7,7 +7,7 @@ import type React from 'react';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import AnimatedVerticalRuler from './animated-vertical-ruler';
-import { log } from 'console';
+
 
 const SegmentedLoader: React.FC = () => {
   const [isDarkMode, setDarkMode] = useState<null | boolean>(null);
@@ -25,6 +25,13 @@ const SegmentedLoader: React.FC = () => {
       window.matchMedia('(prefers-color-scheme: dark)').matches;
 
     setDarkMode(mode);
+    
+    // Listen for theme changes
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleChange = (e: MediaQueryListEvent) => setDarkMode(e.matches);
+    
+    mediaQuery.addEventListener('change', handleChange);
+    return () => mediaQuery.removeEventListener('change', handleChange);
   }, []);
 
   useEffect(() => {
@@ -68,7 +75,7 @@ const SegmentedLoader: React.FC = () => {
           <AnimatedVerticalRuler variant='left' />
           <AnimatedVerticalRuler variant='right' />
           <div className='w-[100%] items-center gap-2 md:w-1/2'>
-            <span className='mr-2 text-gray-500'>
+            <div className='mr-2 text-gray-500 w-full h-auto'>
               <DotLottieReact
                 src={
                   isDarkMode
@@ -77,18 +84,9 @@ const SegmentedLoader: React.FC = () => {
                 }
                 loop
                 autoplay
+                style={{ width: '100%', height: 'auto' }}
               />
-              {/* <DotLottieReact
-                src='/lotties/logo-darkmode.lottie'
-                loop
-                autoplay
-              />
-              <DotLottieReact
-                src='/lotties/logo-lightmode.lottie'
-                loop
-                autoplay
-              /> */}
-            </span>
+            </div>
           </div>
         </motion.div>
       )}

@@ -18,6 +18,9 @@ export function middleware(request: NextRequest) {
     "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " +
     "font-src 'self' https://fonts.gstatic.com; " +
     "img-src 'self' data: https: blob:; " +
+    "media-src 'self' data: blob:; " +
+    "worker-src 'self' blob:; " +
+    "child-src 'self' blob:; " +
     "connect-src 'self' https://vitals.vercel-insights.com https://region1.google-analytics.com https://www.google-analytics.com https://analytics.google.com https://www.clarity.ms; " +
     "frame-src 'self' https://calendly.com;"
   );
