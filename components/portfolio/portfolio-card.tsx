@@ -54,7 +54,7 @@ const PortfolioCard: React.FC<PortfolioProps> = ({
 }) => {
   const variant = Array.isArray(work) && work.length > 1 ? work[0] : work[0];
   const isProject = type === 'project';
-  const imageUrl = `/images/portfolio/${slug}/${variant}.png`;
+  const imageUrl = `/images/portfolio/${slug}/${variant}.webp`;
 
   return (
     <Link
