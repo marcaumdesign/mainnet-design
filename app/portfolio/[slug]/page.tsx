@@ -1,6 +1,7 @@
 'use client';
 
 import { useRouter, useParams } from 'next/navigation';
+import Image from 'next/image';
 import { PortfolioProps, portfolio } from '@/data/portfolio';
 import Header from '@/components/header';
 import {
@@ -24,7 +25,7 @@ const PortfolioPage = () => {
   const { slug } = useParams() as { slug: string };
 
   const item = portfolio.find((item) => item.slug === slug);
-  const thumbnail = `/images/portfolio/${slug}/thumbnail.webp`;
+  const thumbnail = `./images/portfolio/${slug}/thumbnail.webp`;
 
   if (!item) {
     return <div>Item não encontrado</div>;
@@ -34,10 +35,13 @@ const PortfolioPage = () => {
     <div className='relative flex w-full flex-col items-center'>
       <Header size='full' slug={slug} portfolio={portfolio} />
       <div className='relative inline-flex h-fit w-full max-w-[1100px] flex-col items-start justify-start border-l border-r border-stroke-soft-200 bg-bg-white-0 pt-[90px]'>
-        <img
+        <Image
           className='h-auto w-full border-t border-stroke-soft-200 object-cover'
-          src={thumbnail}
+          src={`/images/portfolio/${slug}/thumbnail.webp`}
           alt={item.name}
+          width={1920}
+          height={1080}
+          priority
         />
         <div className='absolute left-[-50px] flex w-full items-start'>
           <VerticalRuler className='fixed top-0' />
