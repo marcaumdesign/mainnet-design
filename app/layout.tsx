@@ -3,7 +3,7 @@ import { NotificationProvider } from '@/components/ui/notification-provider';
 import { Provider as TooltipProvider } from '@/components/ui/tooltip';
 import { ThemeProvider } from '@/providers/ThemeProvider';
 import { cn } from '@/utils/cn';
-import Clarity from '@microsoft/clarity';
+
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
@@ -18,11 +18,15 @@ const projectId = 'pyygop0f82';
 const inter = FontSans({
   subsets: ['latin'],
   variable: '--font-sans',
+  display: 'swap',
+  preload: true,
 });
 
 export const metadata: Metadata = {
   title: 'Mainnet Design',
   description: 'Design made to last.',
+  viewport: 'width=device-width, initial-scale=1',
+  robots: 'index, follow',
 };
 
 export default function RootLayout({
@@ -30,8 +34,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  Clarity.init(projectId);
-
+  // Clarity init moved to lazyOnload script for better performance
   return (
     <html
       lang='en'
@@ -44,6 +47,45 @@ export default function RootLayout({
       )}
     >
       <Head>
+        {/* Preconnect to external domains */}
+        <link rel="preconnect" href="https://connect.facebook.net" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://www.clarity.ms" />
+        <link rel="preconnect" href="https://media.contra.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        
+        {/* Preload critical resources */}
+        <link
+          rel="preload"
+          href="/images/logo.svg"
+          as="image"
+          type="image/svg+xml"
+        />
+        
+        {/* Critical CSS inline */}
+        <style dangerouslySetInnerHTML={{
+          __html: `
+            /* Critical styles to prevent layout shifts */
+            body { margin: 0; padding: 0; }
+            .min-h-screen { min-height: 100vh; }
+            .fixed { position: fixed; }
+            .relative { position: relative; }
+            .flex { display: flex; }
+            .h-\\[500px\\] { height: 500px; }
+            .h-\\[154px\\] { height: 154px; }
+            .w-\\[154px\\] { width: 154px; }
+            .min-h-\\[24px\\] { min-height: 24px; }
+            .rounded-full { border-radius: 9999px; }
+            .object-cover { object-fit: cover; }
+            .overflow-auto { overflow: auto; }
+            .antialiased { -webkit-font-smoothing: antialiased; }
+            /* Hide scrollbar */
+            .hide-scroll::-webkit-scrollbar { display: none; }
+            .hide-scroll { scrollbar-width: none; -ms-overflow-style: none; }
+          `
+        }} />
+        
         <noscript>
           <img
             height='1'
@@ -78,8 +120,8 @@ export default function RootLayout({
         {/* Google Tag Manager */}
       </body>
 
-      {/* // <!-- Meta Pixel Code --> */}
-      <Script strategy='afterInteractive'>
+      {/* <!-- Meta Pixel Code --> */}
+      <Script strategy='lazyOnload' id='meta-pixel'>
         {`!function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -92,30 +134,25 @@ fbq("init", "1177142284032271");
 fbq("track", "PageView");`}
       </Script>
 
-      {/* <!-- End Meta Pixel Code --> */}
-
       {/* <!-- Google tag (gtag.js) --> */}
       <Script
-        strategy='afterInteractive'
-        async
+        strategy='lazyOnload'
         src='https://www.googletagmanager.com/gtag/js?id=G-T4FF6715QC'
-      ></Script>
-      <Script strategy='afterInteractive'>
+        id='gtag-script'
+      />
+      <Script strategy='lazyOnload' id='gtag-config'>
         {`window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-T4FF6715QC');`}
       </Script>
 
-      <Script strategy='afterInteractive' id='clarity'>
-        {`
-            (function(c,l,a,r,i,t,y){
+      <Script strategy='lazyOnload' id='clarity'>
+        {`(function(c,l,a,r,i,t,y){
               c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
               t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
               y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-            })(window, document, "clarity", "script", "pyygop0f82");
-          `}
+            })(window, document, "clarity", "script", "pyygop0f82");`}
       </Script>
     </html>
   );

@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import * as Accordion from '@/components/ui/accordion2';
 import {
   RiBankCard2Line,
@@ -88,9 +89,11 @@ export default function Home() {
         </div>
 
         <div className='flex h-[500px] flex-col items-start justify-end gap-2.5 self-stretch'>
-          <HyperText onlyOnce className='text-text-sub-600'>
-            {currentTime}
-          </HyperText>
+          <div className='text-text-sub-600 min-h-[24px]'>
+            <HyperText onlyOnce className='text-text-sub-600'>
+              {currentTime}
+            </HyperText>
+          </div>
 
           <div className='text-title-h1 text-text-strong-950 md:text-title-h0'>
             Softwares Designed to Last.
@@ -357,9 +360,14 @@ export default function Home() {
             </div>
           </div>
           <div className='flex flex-col items-center justify-start gap-4 self-stretch border-[0px] border-t border-stroke-soft-200 p-4 lg:flex-row lg:items-start lg:p-8'>
-            <img
+            <Image
               className='top-[150px] h-[154px] w-[154px] rounded-full object-cover lg:sticky'
-              src='images/marcaum.jpg'
+              src='/images/marcaum.jpg'
+              alt='Marcus Dutra - Founder Mainnet Design'
+              width={154}
+              height={154}
+              priority
+              sizes="(max-width: 768px) 154px, 154px"
             />
 
             <div className='shrink grow basis-0'>
