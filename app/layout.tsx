@@ -7,23 +7,17 @@ import Clarity from '@microsoft/clarity';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google'
-import localFont from 'next/font/local';
+import { Inter as FontSans } from 'next/font/google';
+import { GeistMono } from 'geist/font/mono';
 import Head from 'next/head';
 import Script from 'next/script';
 import './globals.css';
 import LenisProvider from '@/providers/LenisProvider';
 const projectId = 'pyygop0f82';
 
-const inter = Inter({
+const inter = FontSans({
   subsets: ['latin'],
   variable: '--font-sans',
-});
-
-const geistMono = localFont({
-  src: './fonts/GeistMono[wght].woff2',
-  variable: '--font-geist-mono',
-  weight: '100 900',
 });
 
 export const metadata: Metadata = {
@@ -44,25 +38,12 @@ export default function RootLayout({
       suppressHydrationWarning
       className={cn(
         inter.variable,
-        geistMono.variable,
+        GeistMono.variable,
         'antialiased',
         'hide-scroll',
       )}
     >
       <Head>
-
-        {/* <Script strategy='afterInteractive'>
-          {`!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq("init", "1177142284032271");
-fbq("track", "PageView");`}
-        </Script> */}
         <noscript>
           <img
             height='1'
@@ -71,29 +52,6 @@ fbq("track", "PageView");`}
             src='https://www.facebook.com/tr?id=1177142284032271&ev=PageView&noscript=1'
           />
         </noscript>
-
-        {/* <Script
-          strategy='afterInteractive'
-          async
-          src='https://www.googletagmanager.com/gtag/js?id=G-T4FF6715QC'
-        ></Script>
-        <Script strategy='afterInteractive'>
-          {`window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-T4FF6715QC');`}
-        </Script> */}
-
-        {/* <Script strategy='afterInteractive' id='clarity'>
-          {`
-            (function(c,l,a,r,i,t,y){
-              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-            })(window, document, "clarity", "script", "pyygop0f82");
-          `}
-        </Script> */}
       </Head>
 
       <body className='overflow-auto bg-bg-white-0 text-text-strong-950 lg:bg-bg-weak-50'>
@@ -133,7 +91,7 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 fbq("init", "1177142284032271");
 fbq("track", "PageView");`}
       </Script>
-      
+
       {/* <!-- End Meta Pixel Code --> */}
 
       {/* <!-- Google tag (gtag.js) --> */}

@@ -13,7 +13,7 @@ const Logo: React.FC<LogoProps> = ({ className }) => {
 <path d="M68.2462 27.3516L47.8124 27.3516L22.1836 92.9998L42.6174 92.9998L68.2462 27.3516Z"/>
 </svg>
 
-      <div className='text-title-h4 text-text-strong-950'>Mainnet</div>
+      {/* <div className='text-title-h4 text-text-strong-950'>Mainnet</div> */}
     </div>
   );
 };

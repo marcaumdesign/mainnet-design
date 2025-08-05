@@ -408,7 +408,7 @@ export default function Home() {
                 <div className="flex flex-col items-center justify-start gap-4 self-stretch border-[0px] border-t border-stroke-soft-200 p-4 lg:flex-row lg:items-start lg:p-8">
                   <h4 className="text-title-h4 text-text-strong-950">The full crew</h4>
                 </div>
-          <div className="grid grid-cols-1 border-t border-stroke-soft-200  md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-2 border-t border-stroke-soft-200  md:grid-cols-2 lg:grid-cols-3">
               <TeamMember
                 name="Marcus Dutra"
                 role="Founder & CEO"
@@ -464,8 +464,8 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className='flex'>
-            <div className='flex flex-col items-start justify-start gap-4 self-stretch border-t border-r border-stroke-soft-200 p-4 lg:inline-flex lg:p-8'>
+          <div className='md:flex w-full'>
+            <div className='w-full flex flex-col items-start justify-start gap-4 self-stretch border-t border-r border-stroke-soft-200 p-4 lg:inline-flex lg:p-8'>
               <div className='flex flex-col items-start justify-center self-stretch'>
                 <div className='text-title-h4 text-text-strong-950'>
                   Basic Plan
@@ -542,7 +542,7 @@ export default function Home() {
 
             {/* Pro Plan */}
 
-            <div className='flex flex-col items-start justify-start gap-4 self-stretch border-t border-r border-stroke-soft-200 p-4 lg:inline-flex lg:p-8'>
+            <div className='w-full flex flex-col items-start justify-start gap-4 self-stretch border-t border-r border-stroke-soft-200 p-4 lg:inline-flex lg:p-8'>
               <div className='flex flex-col items-start justify-center self-stretch'>
                 <div className='text-title-h4 text-text-strong-950'>
                   Pro Plan
