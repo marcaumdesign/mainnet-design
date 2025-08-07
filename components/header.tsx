@@ -30,7 +30,15 @@ export default function Header({ size, portfolio = [], slug }: HeaderProps) {
           href='/'
           className='flex items-center text-title-h6 text-text-strong-950'
         >
-          <Logo className='size-16 object-contain' />
+          {/* Mobile: só o favicon */}
+          <div className='block md:hidden'>
+            <Logo variant='favicon' className='size-12 object-contain' />
+          </div>
+          
+          {/* Desktop: logo horizontal com texto */}
+          <div className='hidden md:block'>
+            <Logo variant='horizontal' className='size-12 object-contain' />
+          </div>
         </Link>
 
         <div className='flex items-center gap-2'>

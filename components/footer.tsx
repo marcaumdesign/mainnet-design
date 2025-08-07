@@ -15,7 +15,7 @@ const Footer = (props: { className?: string }) => {
       
       <div className={`flex-col flex md:flex-row align-top justify-between  ${props.className || ''}`}>
         <div className='p-4 lg:p-8 w-full inline-flex flex-col items-start justify-start gap-3 border-b border-stroke-soft-200'>
-          <Logo />
+          <Logo variant='horizontal' />
           <div className='max-w-[300px] text-paragraph-sm text-text-sub-600'>
           "The Lord is my shepherd; I shall not want. He maketh me to lie down in green pastures: he leadeth me beside the still waters."
           </div>
