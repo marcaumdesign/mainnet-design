@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import * as Tag from '@/components/ui/tag';
 import * as Button from '@/components/ui/button';
 
@@ -62,11 +63,16 @@ const PortfolioCard: React.FC<PortfolioProps> = ({
       className='flex items-center border border-stroke-soft-200 text-title-h6 text-text-strong-950 hover:border-stroke-sub-300'
     >
       <div className='flex w-full flex-col bg-bg-white-0'>
-        <img
-          className='h-auto max-h-[25vh] w-full object-cover transition-all duration-1000 ease-in-out md:max-h-[35vh] lg:max-h-[45vh]'
-          src={imageUrl}
-          alt={name}
-        />
+        <div className='relative h-auto max-h-[25vh] w-full md:max-h-[35vh] lg:max-h-[45vh] overflow-hidden'>
+          <Image
+            src={imageUrl}
+            alt={name}
+            width={400}
+            height={300}
+            className='h-full w-full object-cover transition-all duration-1000 ease-in-out hover:scale-105'
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          />
+        </div>
         <div className='flex items-center justify-between px-4 py-4'>
           <div className='text-label-md text-text-strong-950'>{name}</div>
           <div className='flex items-center gap-2'>

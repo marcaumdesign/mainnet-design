@@ -3,6 +3,7 @@
 import { useRouter, useParams } from 'next/navigation';
 import { PortfolioProps, portfolio } from '@/data/portfolio';
 import Header from '@/components/header';
+import Image from 'next/image';
 import {
   RiArrowLeftFill,
   RiArrowLeftSLine,
@@ -34,11 +35,17 @@ const PortfolioPage = () => {
     <div className='relative flex w-full flex-col items-center'>
       <Header size='full' slug={slug} portfolio={portfolio} />
       <div className='pt-[90px] relative inline-flex h-fit w-full max-w-[1100px] flex-col items-start justify-start border-l border-r border-stroke-soft-200 bg-bg-white-0'>
-      <img
-          className='h-auto w-full border-t border-stroke-soft-200 object-cover'
+      <div className='relative h-auto w-full border-t border-stroke-soft-200'>
+        <Image
           src={thumbnail}
           alt={item.name}
+          width={1100}
+          height={600}
+          className='h-auto w-full object-cover'
+          priority
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1100px"
         />
+      </div>
         <div className='absolute left-[-50px] flex w-full items-start'>
           <VerticalRuler className='fixed top-0' />
         </div>

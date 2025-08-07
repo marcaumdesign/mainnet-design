@@ -33,10 +33,10 @@ const WorkDisplay: React.FC<WorkDisplayProps> = ({ slug }) => {
             <Image
               src={`/images/portfolio/${slug}/${work}.png`}
               alt={`${work} image`}
-              layout='responsive'
-              width={100}
-              height={300}
+              width={1100}
+              height={600}
               className='w-full border-t border-stroke-soft-200'
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1100px"
             />
           </div>
         ))}
