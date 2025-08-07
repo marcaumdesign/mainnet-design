@@ -548,7 +548,7 @@ export default function Home() {
                   Pro Plan
                 </div>
                 <div className='text-title-h6 text-text-sub-600'>
-                  Double requests!
+                  Double requests
                 </div>
               </div>
               <div className='flex flex-col items-start justify-center self-stretch'>
