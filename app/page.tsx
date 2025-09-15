@@ -276,7 +276,7 @@ export default function Home() {
               </Accordion.Trigger>
               <Accordion.Content className='px-[30px]'>
                 After your feedbacks, we are going to reiterate and polish the
-                whole project to leave your and your client experience seamless.
+                whole project to leave you and your client experience seamless.
                 After that we launch your project online!
               </Accordion.Content>
             </Accordion.Item>
@@ -402,6 +402,7 @@ export default function Home() {
               </span>
             </div>
           </div>
+
           {/* <div className='flex flex-col items-center justify-start gap-4 self-stretch border-[0px] border-t border-stroke-soft-200 p-4 lg:flex-row lg:items-start lg:p-8'>
             <h4 className='text-title-h4 text-text-strong-950'>
               The full crew
@@ -632,11 +633,11 @@ export default function Home() {
             <TestimonialCarousel />
           </div>
         </div>
-
+*/}
         <div className='flex h-fit flex-col items-start justify-start self-stretch'>
           <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border-[0px] border-t border-stroke-soft-200 px-4 py-32 lg:px-8'>
             <div className='self-stretch'>
-              {/* <span className='text-title-h3 text-text-strong-950'>
+              <span className='text-title-h3 text-text-strong-950'>
                 Questions?
               </span>
               <span className='text-title-h3 text-text-soft-400'>
@@ -662,7 +663,7 @@ export default function Home() {
                 </Accordion.Trigger>
                 <Accordion.Content className='px-[30px]'>
                   For design, prices starts at $1999 fixed rate. And for
-                  development, prices starts at $30/h.
+                  development, prices starts at $60/h.
                 </Accordion.Content>
               </Accordion.Item>
 
@@ -693,8 +694,7 @@ export default function Home() {
                 </Accordion.Trigger>
                 <Accordion.Content className='px-[30px]'>
                   No, we don't. We only work 1:1 with clients, the closer to C
-                  Level, the more smooth will be the project experience and the
-                  betext-paragraph-smr the end result.
+                  Level, the smoother will be the project experience and better will be the delivery.
                 </Accordion.Content>
               </Accordion.Item>
               <Accordion.Item value='d'>
@@ -734,13 +734,13 @@ export default function Home() {
                   >
                     click here
                   </a>{' '}
-                  to book a quick call or send me email at:
+                  to book a quick call or send me an email at:
                   marcus@mainnet.design
                 </Accordion.Content>
               </Accordion.Item>
             </Accordion.Root>
           </div>
-        </div>
+        </div> 
 
         {/* Refer and earn */}
         <div className='flex h-fit flex-col items-start justify-start self-stretch'>
