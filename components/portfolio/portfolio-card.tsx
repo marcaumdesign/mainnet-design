@@ -76,7 +76,7 @@ const PortfolioCard: React.FC<PortfolioProps> = ({
         <div className='flex items-center justify-between px-4 py-4'>
           <div className='text-label-md text-text-strong-950'>{name}</div>
           <div className='flex items-center gap-2'>
-            <Tag.Root variant='stroke' className="whitespace-nowrap w-fit">
+            <Tag.Root variant='gray' className="whitespace-nowrap w-fit">
               <Tag.Icon as={icons[variant]} />
               {capitalizer(variant)}
             </Tag.Root>
