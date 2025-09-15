@@ -93,7 +93,7 @@ export default function Home() {
           </HyperText>
 
           <div className='text-title-h1 text-text-strong-950 md:text-title-h0'>
-            Softwares Designed to Last.
+            Software Designed to Last.
           </div>
         </div>
       </div>
@@ -116,7 +116,7 @@ export default function Home() {
               {/* <span className='text-title-h3 text-text-strong-950'>What? </span> */}
               <TextRevealByWord
                 prefix={'What?'}
-                text=' We are a studio in love with building things. These are what we can do together.'
+                text='We’re a studio that loves to build. Here’s what we can do with you.'
                 velocity={2.5}
                 offset={['75px end', 'end start']}
               />
@@ -221,7 +221,7 @@ export default function Home() {
               </span> */}
               <TextRevealByWord
                 prefix={'How?'}
-                text='Mainnet simplifies the design process and breaks it down into 4 steps to develop even faster.'
+                text='Mainnet streamlines the design process into four simple steps so you can build faster.'
                 velocity={2.5}
                 offset={['75px end', 'end start']}
               />
@@ -250,9 +250,9 @@ export default function Home() {
               </Accordion.Trigger>
               <Accordion.Content className='px-[30px]'>
                 After that, we are going to analyze which properties of our
-                references are betext-paragraph-smr for your business growth. Then create a
-                mixed draft of all those properties to define our prefered way
-                to build.{' '}
+                references are betext-paragraph-smr for your business growth.
+                Then create a mixed draft of all those properties to define our
+                prefered way to build.{' '}
               </Accordion.Content>
             </Accordion.Item>
 
@@ -293,8 +293,8 @@ export default function Home() {
                 Who believe on a betext-paragraph-smr world by design.
               </span> */}
               <TextRevealByWord
-                prefix={'Who?'}
-                text='Who believe in a better world by design.'
+                prefix={'Who we are?'}
+                text='A team that believes in building a better world through design.'
                 velocity={2.5}
                 offset={['75px end', 'end start']}
               />
@@ -350,7 +350,7 @@ export default function Home() {
               </span> */}
               <TextRevealByWord
                 prefix={`Who's behind Mainnet?`}
-                text='What makes us different from other agencies and studios'
+                text='Meet the team that makes us stand apart from every other agency.'
                 velocity={2.5}
                 offset={['175px end', 'end start']}
               />
@@ -401,59 +401,55 @@ export default function Home() {
                 and make a positive impact, let's make it happen.
               </span>
             </div>
-
-            
-
           </div>
-                <div className="flex flex-col items-center justify-start gap-4 self-stretch border-[0px] border-t border-stroke-soft-200 p-4 lg:flex-row lg:items-start lg:p-8">
-                  <h4 className="text-title-h4 text-text-strong-950">The full crew</h4>
-                </div>
-          <div className="grid grid-cols-2 border-t border-stroke-soft-200  md:grid-cols-2 lg:grid-cols-3">
-              <TeamMember
-                name="Marcus Dutra"
-                role="Founder & CEO"
-                description="Designer and developer focused on creating regenerative solutions."
-                imageUrl="/team/marcus-dutra.png"
-              />
-              <TeamMember
-                name="João Dutra"
-                role="COO"
-                description="Optimizes internal processes and coordinates teams to deliver the best results."
-                imageUrl="/team/joão-dutra.png"
-              />
-              <TeamMember
-                name="Arthur Dutra"
-                role="Motion Designer"
-                description="Creates animations and visual effects that bring digital projects to life."
-                imageUrl="/team/arthur-dutra.png"
-              />
-              <TeamMember
-                name="Manu Alentejo"
-                role="UI/UX Designer"
-                description="Experience designer focused on research and usability."
-                imageUrl="/team/emanuelly-alentejo.png"
-              />
-              <TeamMember
-                name="Victoria Santos"
-                role="Graphic Designer"
-                description="Develops visual identities and graphic materials that communicate brands' essence."
-                imageUrl="/team/victoria-santos.png"
-              /> 
-              <TeamMember
-                name="Benito Xavier"
-                role="Tech Lead"
-                description="Leads technical development and ensures quality implementation of projects."
-                imageUrl="/team/benito-xavier.png"
-              />
-            </div>
-
+          {/* <div className='flex flex-col items-center justify-start gap-4 self-stretch border-[0px] border-t border-stroke-soft-200 p-4 lg:flex-row lg:items-start lg:p-8'>
+            <h4 className='text-title-h4 text-text-strong-950'>
+              The full crew
+            </h4>
+          </div>
+          <div className='grid grid-cols-2 border-t border-stroke-soft-200 md:grid-cols-2 lg:grid-cols-3'>
+            <TeamMember
+              name='Marcus Dutra'
+              role='Founder & CEO'
+              description='Designer and developer focused on creating regenerative solutions.'
+              imageUrl='/team/marcus-dutra.png'
+            />
+            <TeamMember
+              name='João Dutra'
+              role='COO'
+              description='Optimizes internal processes and coordinates teams to deliver the best results.'
+              imageUrl='/team/joão-dutra.png'
+            />
+            <TeamMember
+              name='Arthur Dutra'
+              role='Motion Designer'
+              description='Creates animations and visual effects that bring digital projects to life.'
+              imageUrl='/team/arthur-dutra.png'
+            />
+            <TeamMember
+              name='Manu Alentejo'
+              role='UI/UX Designer'
+              description='Experience designer focused on research and usability.'
+              imageUrl='/team/emanuelly-alentejo.png'
+            />
+            <TeamMember
+              name='Victoria Santos'
+              role='Graphic Designer'
+              description="Develops visual identities and graphic materials that communicate brands' essence."
+              imageUrl='/team/victoria-santos.png'
+            />
+            <TeamMember
+              name='Benito Xavier'
+              role='Tech Lead'
+              description='Leads technical development and ensures quality implementation of projects.'
+              imageUrl='/team/benito-xavier.png'
+            />
+          </div> */}
         </div>
 
-        {/* FAQ */}
+        {/* How much it costs? */}
 
-        
-
-        <div className='flex h-fit flex-col items-start justify-start self-stretch'>
+        {/* <div className='flex h-fit flex-col items-start justify-start self-stretch'>
           <div className='lg: flex h-fit flex-col items-start justify-start gap-2 self-stretch border-[0px] border-t border-stroke-soft-200 px-4 py-32 lg:px-8'>
             <div className='self-stretch'>
               <TextRevealByWord
@@ -464,8 +460,8 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className='md:flex w-full'>
-            <div className='w-full flex flex-col items-start justify-start gap-4 self-stretch border-t border-r border-stroke-soft-200 p-4 lg:inline-flex lg:p-8'>
+          <div className='w-full md:flex'>
+            <div className='flex w-full flex-col items-start justify-start gap-4 self-stretch border-r border-t border-stroke-soft-200 p-4 lg:inline-flex lg:p-8'>
               <div className='flex flex-col items-start justify-center self-stretch'>
                 <div className='text-title-h4 text-text-strong-950'>
                   Basic Plan
@@ -487,62 +483,63 @@ export default function Home() {
                   Pause or cancel anytime
                 </div>
               </div>
-              <RainbowButton className='w-full'
-              onClick={() =>
-                window.open('https://calendly.com/marcaum/design', '_blank')
-              }
-            >
-              Get Started
-            </RainbowButton>
+              <RainbowButton
+                className='w-full'
+                onClick={() =>
+                  window.open('https://calendly.com/marcaum/design', '_blank')
+                }
+              >
+                Get Started
+              </RainbowButton>
               <div className='flex flex-col items-start justify-start gap-1 self-stretch'>
                 <div className='inline-flex items-center justify-start gap-2 self-stretch'>
-                  <RiVerifiedBadgeFill className='text-text-sub-600 min-w-[24px]' />
-                  <div className="text-paragraph-sm text-text-sub-600">
+                  <RiVerifiedBadgeFill className='min-w-[24px] text-text-sub-600' />
+                  <div className='text-paragraph-sm text-text-sub-600'>
                     One request at a time
                   </div>
                 </div>
                 <div className='inline-flex items-center justify-start gap-2 self-stretch'>
-                  <RiVerifiedBadgeFill className='text-text-sub-600 min-w-[24px]' />
-                  <div className="text-paragraph-sm text-text-sub-600">
+                  <RiVerifiedBadgeFill className='min-w-[24px] text-text-sub-600' />
+                  <div className='text-paragraph-sm text-text-sub-600'>
                     Priority Support. Weekly Check-in Meetings
                   </div>
                 </div>
                 <div className='inline-flex items-center justify-start gap-2 self-stretch'>
-                  <RiVerifiedBadgeFill className='text-text-sub-600 min-w-[24px]' />
-                  <div className="text-paragraph-sm text-text-sub-600">
+                  <RiVerifiedBadgeFill className='min-w-[24px] text-text-sub-600' />
+                  <div className='text-paragraph-sm text-text-sub-600'>
                     Average 48 to 72 hours to delivery
                   </div>
                 </div>
                 <div className='inline-flex items-center justify-start gap-2 self-stretch'>
-                  <RiVerifiedBadgeFill className='text-text-sub-600 min-w-[24px]' />
-                  <div className="text-paragraph-sm text-text-sub-600">
+                  <RiVerifiedBadgeFill className='min-w-[24px] text-text-sub-600' />
+                  <div className='text-paragraph-sm text-text-sub-600'>
                     ﻿﻿Unlimited users
                   </div>
                 </div>
                 <div className='inline-flex items-center justify-start gap-2 self-stretch'>
-                  <RiVerifiedBadgeFill className='text-text-sub-600 min-w-[24px]' />
-                  <div className="text-paragraph-sm text-text-sub-600">
+                  <RiVerifiedBadgeFill className='min-w-[24px] text-text-sub-600' />
+                  <div className='text-paragraph-sm text-text-sub-600'>
                     ﻿﻿Unlimited stock photos and assets
                   </div>
                 </div>
                 <div className='inline-flex items-center justify-start gap-2 self-stretch'>
-                  <RiVerifiedBadgeFill className='text-text-sub-600 min-w-[24px]' />
-                  <div className="text-paragraph-sm text-text-sub-600">
+                  <RiVerifiedBadgeFill className='min-w-[24px] text-text-sub-600' />
+                  <div className='text-paragraph-sm text-text-sub-600'>
                     ﻿﻿Easy credit-card payments
                   </div>
                 </div>
                 <div className='inline-flex items-center justify-start gap-2 self-stretch'>
-                  <RiVerifiedBadgeFill className='text-text-sub-600 min-w-[24px]' />
-                  <div className="text-paragraph-sm text-text-sub-600">
+                  <RiVerifiedBadgeFill className='min-w-[24px] text-text-sub-600' />
+                  <div className='text-paragraph-sm text-text-sub-600'>
                     ﻿﻿Pause or cancel anytime
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Pro Plan */}
+            
 
-            <div className='w-full flex flex-col items-start justify-start gap-4 self-stretch border-t border-r border-stroke-soft-200 p-4 lg:inline-flex lg:p-8'>
+            <div className='flex w-full flex-col items-start justify-start gap-4 self-stretch border-r border-t border-stroke-soft-200 p-4 lg:inline-flex lg:p-8'>
               <div className='flex flex-col items-start justify-center self-stretch'>
                 <div className='text-title-h4 text-text-strong-950'>
                   Pro Plan
@@ -564,60 +561,61 @@ export default function Home() {
                   Pause or cancel anytime
                 </div>
               </div>
-              <RainbowButton className='w-full'
-              onClick={() =>
-                window.open('https://calendly.com/marcaum/design', '_blank')
-              }
-            >
-              Get Started
-            </RainbowButton>
+              <RainbowButton
+                className='w-full'
+                onClick={() =>
+                  window.open('https://calendly.com/marcaum/design', '_blank')
+                }
+              >
+                Get Started
+              </RainbowButton>
               <div className='flex flex-col items-start justify-start gap-1 self-stretch'>
                 <div className='inline-flex items-center justify-start gap-2 self-stretch'>
-                  <RiVerifiedBadgeFill className='text-text-sub-600 min-w-[24px]' />
-                  <div className="text-paragraph-sm text-text-sub-600">
+                  <RiVerifiedBadgeFill className='min-w-[24px] text-text-sub-600' />
+                  <div className='text-paragraph-sm text-text-sub-600'>
                     Double requests at a time
                   </div>
                 </div>
                 <div className='inline-flex items-center justify-start gap-2 self-stretch'>
-                  <RiVerifiedBadgeFill className='text-text-sub-600 min-w-[24px]' />
-                  <div className="text-paragraph-sm text-text-sub-600">
+                  <RiVerifiedBadgeFill className='min-w-[24px] text-text-sub-600' />
+                  <div className='text-paragraph-sm text-text-sub-600'>
                     Priority Support. Weekly Check-in Meetings
                   </div>
                 </div>
                 <div className='inline-flex items-center justify-start gap-2 self-stretch'>
-                  <RiVerifiedBadgeFill className='text-text-sub-600 min-w-[24px]' />
-                  <div className="text-paragraph-sm text-text-sub-600">
+                  <RiVerifiedBadgeFill className='min-w-[24px] text-text-sub-600' />
+                  <div className='text-paragraph-sm text-text-sub-600'>
                     ﻿﻿Average 48 to 72 hours to delivery
                   </div>
                 </div>
                 <div className='inline-flex items-center justify-start gap-2 self-stretch'>
-                  <RiVerifiedBadgeFill className='text-text-sub-600 min-w-[24px]' />
-                  <div className="text-paragraph-sm text-text-sub-600">
+                  <RiVerifiedBadgeFill className='min-w-[24px] text-text-sub-600' />
+                  <div className='text-paragraph-sm text-text-sub-600'>
                     ﻿﻿Unlimited users
                   </div>
                 </div>
                 <div className='inline-flex items-center justify-start gap-2 self-stretch'>
-                  <RiVerifiedBadgeFill className='text-text-sub-600 min-w-[24px]' />
-                  <div className="text-paragraph-sm text-text-sub-600">
+                  <RiVerifiedBadgeFill className='min-w-[24px] text-text-sub-600' />
+                  <div className='text-paragraph-sm text-text-sub-600'>
                     ﻿﻿Unlimited stock photos and assets
                   </div>
                 </div>
                 <div className='inline-flex items-center justify-start gap-2 self-stretch'>
-                  <RiVerifiedBadgeFill className='text-text-sub-600 min-w-[24px]' />
-                  <div className="text-paragraph-sm text-text-sub-600">
+                  <RiVerifiedBadgeFill className='min-w-[24px] text-text-sub-600' />
+                  <div className='text-paragraph-sm text-text-sub-600'>
                     ﻿﻿Easy credit-card payments
                   </div>
                 </div>
                 <div className='inline-flex items-center justify-start gap-2 self-stretch'>
-                  <RiVerifiedBadgeFill className='text-text-sub-600 min-w-[24px]' />
-                  <div className="text-paragraph-sm text-text-sub-600">
+                  <RiVerifiedBadgeFill className='min-w-[24px] text-text-sub-600' />
+                  <div className='text-paragraph-sm text-text-sub-600'>
                     ﻿﻿Pause or cancel anytime
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </div> 
 
         <div className='flex h-fit flex-col items-start justify-start self-stretch'>
           <div className='lg: flex h-fit flex-col items-start justify-start gap-2 self-stretch border-[0px] border-t border-stroke-soft-200 px-4 py-32 lg:px-8'>
@@ -644,7 +642,7 @@ export default function Home() {
               <span className='text-title-h3 text-text-soft-400'>
                 {' '}
                 We have answers
-              </span> */}
+              </span> 
               <TextRevealByWord
                 prefix={`Questions?`}
                 text='We have answers'
@@ -743,7 +741,7 @@ export default function Home() {
             </Accordion.Root>
           </div>
         </div>
-              
+
         {/* Refer and earn */}
         <div className='flex h-fit flex-col items-start justify-start self-stretch'>
           <div className='lg: flex h-fit flex-col items-start justify-start gap-2 self-stretch border-[0px] border-t border-stroke-soft-200 px-4 py-32 lg:px-8'>
