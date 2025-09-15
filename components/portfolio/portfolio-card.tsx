@@ -60,7 +60,7 @@ const PortfolioCard: React.FC<PortfolioProps> = ({
   return (
     <Link
       href={`/portfolio/${slug}`}
-      className='flex items-center border border-stroke-soft-200 text-title-h6 text-text-strong-950 hover:border-stroke-sub-300'
+      className='flex items-center border-b border-l border-stroke-soft-200 text-title-h6 text-text-strong-950 hover:border-stroke-sub-300'
     >
       <div className='flex w-full flex-col bg-bg-white-0'>
         <div className='relative h-auto max-h-[25vh] w-full md:max-h-[35vh] lg:max-h-[45vh] overflow-hidden'>
