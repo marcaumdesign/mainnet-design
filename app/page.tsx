@@ -617,7 +617,7 @@ export default function Home() {
             </div>
           </div>
         </div> 
-
+*/}
         <div className='flex h-fit flex-col items-start justify-start self-stretch'>
           <div className='lg: flex h-fit flex-col items-start justify-start gap-2 self-stretch border-[0px] border-t border-stroke-soft-200 px-4 py-32 lg:px-8'>
             <div className='self-stretch'>
@@ -633,17 +633,11 @@ export default function Home() {
             <TestimonialCarousel />
           </div>
         </div>
-*/}
+
         <div className='flex h-fit flex-col items-start justify-start self-stretch'>
           <div className='flex h-fit flex-col items-start justify-start gap-2 self-stretch border-[0px] border-t border-stroke-soft-200 px-4 py-32 lg:px-8'>
             <div className='self-stretch'>
-              <span className='text-title-h3 text-text-strong-950'>
-                Questions?
-              </span>
-              <span className='text-title-h3 text-text-soft-400'>
-                {' '}
-                We have answers
-              </span> 
+              
               <TextRevealByWord
                 prefix={`Questions?`}
                 text='We have answers'
