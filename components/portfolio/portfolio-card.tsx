@@ -54,7 +54,7 @@ const PortfolioCard: React.FC<PortfolioProps> = ({
 }) => {
   const variant = Array.isArray(work) && work.length > 1 ? work[0] : work[0];
   const isProject = type === 'project';
-  const imageUrl = `/images/portfolio/${slug}/${variant}.png`;
+  const imageUrl = `/images/portfolio/${slug}/${variant}.webp`;
 
   return (
     <Link
@@ -70,7 +70,7 @@ const PortfolioCard: React.FC<PortfolioProps> = ({
         <div className='flex items-center justify-between px-4 py-4'>
           <div className='text-label-md text-text-strong-950'>{name}</div>
           <div className='flex items-center gap-2'>
-            <Tag.Root variant='stroke'>
+            <Tag.Root variant='stroke' className="whitespace-nowrap w-fit">
               <Tag.Icon as={icons[variant]} />
               {capitalizer(variant)}
             </Tag.Root>

@@ -31,11 +31,14 @@ const WorkDisplay: React.FC<WorkDisplayProps> = ({ slug }) => {
           </div>
         </div>
             <Image
-              src={`/images/portfolio/${slug}/${work}.png`}
+              src={`/images/portfolio/${slug}/${work}.webp`}
               alt={`${work} image`}
-              layout='responsive'
-              width={100}
-              height={300}
+              width={1920}
+              height={1080}
+              style={{
+                width: '100%',
+                height: 'auto',
+              }}
               className='w-full border-t border-stroke-soft-200'
             />
           </div>

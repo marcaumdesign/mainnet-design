@@ -1,6 +1,7 @@
 'use client';
 
 import { useRouter, useParams } from 'next/navigation';
+import Image from 'next/image';
 import { PortfolioProps, portfolio } from '@/data/portfolio';
 import Header from '@/components/header';
 import {
@@ -24,7 +25,7 @@ const PortfolioPage = () => {
   const { slug } = useParams() as { slug: string };
 
   const item = portfolio.find((item) => item.slug === slug);
-  const thumbnail = `/images/portfolio/${slug}/thumbnail.png`;
+  const thumbnail = `./images/portfolio/${slug}/thumbnail.webp`;
 
   if (!item) {
     return <div>Item não encontrado</div>;
@@ -33,16 +34,19 @@ const PortfolioPage = () => {
   return (
     <div className='relative flex w-full flex-col items-center'>
       <Header size='full' slug={slug} portfolio={portfolio} />
-      <div className='pt-[90px] relative inline-flex h-fit w-full max-w-[1100px] flex-col items-start justify-start border-l border-r border-stroke-soft-200 bg-bg-white-0'>
-      <img
+      <div className='relative inline-flex h-fit w-full max-w-[1100px] flex-col items-start justify-start border-l border-r border-stroke-soft-200 bg-bg-white-0 pt-[90px]'>
+        <Image
           className='h-auto w-full border-t border-stroke-soft-200 object-cover'
-          src={thumbnail}
+          src={`/images/portfolio/${slug}/thumbnail.webp`}
           alt={item.name}
+          width={1920}
+          height={1080}
+          priority
         />
         <div className='absolute left-[-50px] flex w-full items-start'>
           <VerticalRuler className='fixed top-0' />
         </div>
-        <div className='flex h-fit flex-col items-start justify-center gap-4 self-stretch border-t border-stroke-soft-200 p-4 md:p-8 '>
+        <div className='flex h-fit flex-col items-start justify-center gap-4 self-stretch border-t border-stroke-soft-200 p-4 md:p-8'>
           <div className='inline-flex items-center justify-center gap-1'>
             <div
               className='cursor-pointer text-subheading-sm uppercase text-text-soft-400 hover:text-text-strong-950'
@@ -52,7 +56,7 @@ const PortfolioPage = () => {
             </div>
             <RiArrowLeftSLine />
             <div
-              className='text-subheading-sm uppercase text-text-soft-400 hover:text-text-strong-950'
+              className='cursor-pointer text-subheading-sm uppercase text-text-soft-400 hover:text-text-strong-950'
               onClick={() => router.push('/portfolio')}
             >
               Portoflio
@@ -132,7 +136,7 @@ const PortfolioPage = () => {
             </div>
           </div>
         </div>
-        
+
         {item.work.length < 1 || <WorkDisplay slug={item.slug} />}
         {/* <div className='h-[150px] w-full border-t border-stroke-soft-200'>
           <StripedBackground />
